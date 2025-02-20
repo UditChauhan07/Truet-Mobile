@@ -1,0 +1,187 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: "DM Sans", serif;
+  }
+  
+  .card {
+    width: 100%;
+    /* max-width: 400px;     */
+    background: white;
+    border-radius: 12px;
+    
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto 1rem;
+    width: 50%;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 36px;
+    color: #2B3674;
+    margin-bottom: 0.5rem;
+    
+  }
+  
+  .subtitle {
+    text-align: start;
+    color: #A3AED0;
+    margin-bottom: 1rem;
+    font-family: "DM Sans", serif;
+    font-weight: 400;
+    font-size: 1rem;
+    
+  }
+  
+  .google-btn {
+    width: 100%;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F4F7FE;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.90rem;
+    color: #2B3674;
+    border: none;
+    height: 50px;
+  }
+  
+  .google-btn .icon {
+    margin-right: 8px;
+  }
+  
+  .divider {
+    text-align: center;
+    color: #9ca3af;
+    margin: 1rem 0;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #2B3674;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E0E5F2;
+    border-radius: 15px;
+    box-sizing: border-box;
+    height: 50px;
+  }
+  
+  .eye-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 105px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .remember {
+    font-size: 0.875rem;
+    color: #374151;
+  }
+  
+  .forgot {
+    font-size: 0.875rem;
+    color: #4318ff;
+  }
+  
+  .signin-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #4318FF;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  
+  .signin-btn:hover {
+    background: #4318ff;
+  }
+  
+  .footer-text {
+    text-align: start;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #2B3674;
+  }
+  
+  .link {
+    color: #4318ff;
+  }
+  
+  .copyright {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-top: 2rem;    
+  }
+  
+  .Bg-image{
+    background-image: url('/public/sign-bg.png');
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  padding: 5rem 1rem; 
+  
+  }
+
+  .maineInner{
+    padding: 1rem;
+  }
+  form {
+    position: relative;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    color: #A3AED0;
+  }
+.divider::before,
+.divider::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #E0E5F2;
+  margin: 0 15px;
+}
+
+input::placeholder {
+    color: #A3AED0; /* Change this to any color you want */
+    opacity: 1; /* Ensures full color visibility */
+  }
+ 
+  .footer-text a{
+    font-weight: 800;
+  }

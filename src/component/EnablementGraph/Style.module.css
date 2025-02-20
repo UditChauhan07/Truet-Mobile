@@ -1,0 +1,89 @@
+.graphPrice{
+    font-family: "DM Sans", serif;
+    font-size: 34px;
+    line-height: 25px;
+    color: #2B3674;
+    margin: 0;
+    font-weight: 600;
+
+
+}
+
+.TotalSpent{
+    font-family: "DM Sans", serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #A3AED0;
+}
+
+.growthPercent{
+    font-size: 12px;
+    font-weight: 500;
+    color: #05CD99;
+}
+
+.graphDetail{
+    display: flex;
+}
+
+.flexSo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dateStyl{
+    background-color: #F4F7FE;
+    border-radius: 7px;
+    padding: 3px 11px;
+    height: 33px;
+    border: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dateStyl img{
+    width: 16px;
+}
+
+.BarDesign{
+    border: none;
+    width: 33px;
+    height: 33px;
+    border-radius: 10px;
+    background-color: #F4F7FE;
+}
+
+.charContro{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.Ontrack{
+    text-align: center;
+    position: relative;
+    color: #05CD99;
+    font-size: 1rem;
+    font-weight: 800;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Ontrack::before{
+    position: absolute;
+    content: "\2713";
+    width: 16px;
+    font-size: 11px;
+    height: 16px;
+    border-radius: 20px;
+    background-color: #05CD99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    left: 35%;
+
+}
