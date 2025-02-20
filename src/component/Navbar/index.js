@@ -6,6 +6,7 @@ import Menubar from "../images/menubar.svg";
 import FilterIcom from "../images/FilterIcom.svg";
 import styles from "./style.module.css";
 
+
 function Navbar() {
   return (
     <div className={styles.HeaderTop}>

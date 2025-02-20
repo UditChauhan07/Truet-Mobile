@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar";
 import styles from "../Library/Library.module.css";
+import Footer from "../Footer/index";
 const countries = [
   { code: "US", name: "United States", flag: "Flag-img.png" },
   { code: "IN", name: "India", flag: "Flag-img.png" },
@@ -495,6 +496,7 @@ const Library = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </selection>
   );
 };
