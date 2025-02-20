@@ -4,6 +4,7 @@ import Navbar from '../Navbar/index';
 import Graph from '../EnablementGraph/index';
 import WeeklyRevenue from '../images/Weekly-revenue.svg';
 
+
 const Index = () => {
     return (
         <div className={styles.p1}>
