@@ -59,7 +59,7 @@ const Graph = () => {
       </ResponsiveContainer>
 
       {/* Status */}
-      <p className={styles.Ontrack}> On Track</p>
+      <p className={styles.Ontrack}><span><img src="svg/track-icon.svg" alt=""/></span>  On Track</p>
     </div>
   );
 };

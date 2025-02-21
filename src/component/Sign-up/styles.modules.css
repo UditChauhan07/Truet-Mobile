@@ -53,6 +53,13 @@
     color: #2B3674;
     border: none;
     height: 50px;
+    gap: 10px;
+  }
+  .google-btn p{
+    color: #2B3674;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0px;
   }
   
   .google-btn .icon {

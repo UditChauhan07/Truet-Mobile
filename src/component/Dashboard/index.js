@@ -68,7 +68,7 @@ const Index = () => {
                 </div>
               </div>
              
-              <div className={styles.chartsvg}>
+              <div className={styles.chartsvg2}>
                 <img src="/Pie-chart.svg" />
               </div>
             </div>

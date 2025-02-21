@@ -135,6 +135,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 5px;
 }
 
 .dropdown {
@@ -191,7 +192,9 @@
 .KnowledgeTittle h2 {
     font-size: 20px;
     font-weight: 500;
-    margin-block: 20px;
+    /* margin-block: 20px; */
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .slideMain {
@@ -247,8 +250,11 @@
 
 .source {
     display: flex;
+    gap: 5px;
 }
-
+.source span{
+    color: #4318FF;
+}
 .accessDiv {
     background-color: #11047A;
     padding: 8px 16px;
@@ -274,7 +280,9 @@
 .resourcesTittle h2 {
     font-size: 20px;
     font-weight: 500;
-    margin-block: 20px;
+    /* margin-block: 20px; */
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .business {
@@ -382,8 +390,9 @@
     border: 1px solid #ECECEC;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     padding: 16px;
+    margin-bottom: 5rem;
 }
 
 .securityDetails h2 {
@@ -470,3 +479,13 @@
 }
 
 .option {}
+
+@media (max-width:400px) {
+    .shareDiv {
+        display: block;
+       
+    }
+    .source{
+        margin-bottom: 10px;
+    }
+}

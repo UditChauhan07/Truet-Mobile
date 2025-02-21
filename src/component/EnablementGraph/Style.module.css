@@ -70,11 +70,12 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    gap: 5px;
 }
 
-.Ontrack::before{
+/* .Ontrack::before{
     position: absolute;
-    content: "\2713";
+    content: "";
     width: 16px;
     font-size: 11px;
     height: 16px;
@@ -86,4 +87,4 @@
     color: #fff;
     left: 35%;
 
-}
+} */
