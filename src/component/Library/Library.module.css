@@ -72,6 +72,7 @@
 
 .bytesMain strong {
     color: #2B3674;
+    font-size: 14px;
 }
 
 .boardContainer {
@@ -107,7 +108,7 @@
 }
 
 .amount {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     color: #1f2937;
     margin-bottom: 0px;
