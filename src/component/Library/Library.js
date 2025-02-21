@@ -400,53 +400,7 @@ const Library = () => {
         </div>
         <div className={styles.resourcesMain}>
           <div className={styles.resourcesTittle}>
-            <h2>The Knowledge Matrix</h2>
-          </div>
-          <div className={styles.business}>
-            <div className={styles.header}>
-              <div>
-                <img src="/fire-icon.svg" />
-              </div>
-              <div className={styles.resourcesDatails}>
-                <p>Business Design</p>
-                <b> New lession is available</b>
-              </div>
-            </div>
-            <div className={styles.centretitle}>
-              <h2>What do you need to know to create better products?</h2>
-            </div>
-            <div className={styles.footer}>
-              <div className={styles.bottom}>
-                <div className={styles.time}>
-                  <img src="/timer.svg" />
-                  <span>85 mint</span>
-                </div>
-                <div className={styles.video}>
-                  <img src="/slow_motion_video.svg" />
-                  <span>Video format</span>
-                </div>
-              </div>
-              <div className={styles.startdiv}>
-                <div>
-                  <img src="/Avatars-Group.png" />
-                </div>
-                <div>
-                  <div className={styles.started}>
-                    <p>Get Started</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.security}>
-            <div className={styles.securityDetails}>
-              <img src="/thumb-icon.svg" />
-              <h2>Control card security in-app with a tap</h2>
-              <p>Discover our cards benefits, with one tap.</p>
-            </div>
-            <div className={styles.cards}>
-              <p>Cards</p>
-            </div>
+            <h2>Other Resources</h2>
           </div>
           <div className={styles.teamDiv}>
             <div className={styles.teamcontent}>
@@ -494,6 +448,53 @@ const Library = () => {
               </div>
             </div>
           </div>
+          <div className={styles.business}>
+            <div className={styles.header}>
+              <div>
+                <img src="/fire-icon.svg" />
+              </div>
+              <div className={styles.resourcesDatails}>
+                <p>Business Design</p>
+                <b> New lession is available</b>
+              </div>
+            </div>
+            <div className={styles.centretitle}>
+              <h2>What do you need to know to create better products?</h2>
+            </div>
+            <div className={styles.footer}>
+              <div className={styles.bottom}>
+                <div className={styles.time}>
+                  <img src="/timer.svg" />
+                  <span>85 mint</span>
+                </div>
+                <div className={styles.video}>
+                  <img src="/slow_motion_video.svg" />
+                  <span>Video format</span>
+                </div>
+              </div>
+              <div className={styles.startdiv}>
+                <div>
+                  <img src="/Avatars-Group.png" />
+                </div>
+                <div>
+                  <div className={styles.started}>
+                    <p>Get Started</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.security}>
+            <div className={styles.securityDetails}>
+              <img src="/thumb-icon.svg" />
+              <h2>Control card security in-app with a tap</h2>
+              <p>Discover our cards benefits, with one tap.</p>
+            </div>
+            <div className={styles.cards}>
+              <p>Cards</p>
+            </div>
+          </div>
+        
         </div>
       </div>
       <Footer></Footer>

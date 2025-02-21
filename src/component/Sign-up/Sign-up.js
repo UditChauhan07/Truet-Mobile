@@ -25,7 +25,8 @@ const SignUp = () => {
           <p className="subtitle">Enter your email and password to sign in!</p>
 
           <button className="google-btn">
-            <FaGoogle className="icon" /> Sign in with Google
+            <img src="svg/Google-Logo.svg"/>
+            <p>Sign in with Google</p>
           </button>
           <div className="divider">or</div>
           <form>
@@ -64,7 +65,7 @@ const SignUp = () => {
             </div>            
             <button
               className="signin-btn"
-              onClick={() => navigate("/dashboard")}
+              onClick={() => navigate("/home")}
             >
               Sign In
             </button>

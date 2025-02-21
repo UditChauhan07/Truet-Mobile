@@ -1,4 +1,4 @@
-.Navbar{
+.Navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,14 +7,14 @@
 
 }
 
-.sidebar{
+.sidebar {
     display: flex;
     gap: 20px;
     align-items: center;
 
 }
 
-.searchbar{
+.searchbar {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -22,12 +22,12 @@
     padding: 0.5rem 1rem 1rem 1rem;
 }
 
-.searchinput{
-width: 100%;
+.searchinput {
+    width: 100%;
 
 }
 
-.searchinput input{
+.searchinput input {
     width: 90%;
     border-radius: 50px;
     height: 49px;
@@ -38,7 +38,7 @@ width: 100%;
 
 }
 
-.filterIcon{
+.filterIcon {
     /* border: 1px solid #000; */
     border-radius: 100px;
     /* width: 49px; */
@@ -50,17 +50,92 @@ width: 100%;
     padding: 10px;
 }
 
-.filterIcon img{
+.filterIcon img {
     width: 35px;
     height: 26px;
     width: 100%;
 }
-.HeaderTop{
-  overflow: hidden;
-  background-color: #ffffff;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 11;
-      
+
+.HeaderTop {
+    overflow: hidden;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+
+}
+
+
+/* Off canvas CSS start */
+.menuTittle {
+    color: #64748B;
+}
+
+.MenuS {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    background-color: #E7EAEE;
+}
+
+.crm p {
+    margin-bottom: -5px;
+    color: #000;
+    font-weight: 500;
+}
+
+.learning {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    padding: 16px;
+}
+
+.learn p {
+    margin-bottom: -5px;
+    color: #000;
+    font-weight: 500;
+}
+.notificationDiv{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.profile{
+    padding-block: 24px;
+}
+.profileTittle{
+    color: #64748B;
+}
+.profilePerson{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.personName{
+    margin-bottom: 0px;
+}
+.email{
+    text-decoration: none;
+    color: #A0ABBB;
+}
+.logOutMain{
+    background-color: #E7EAEE;
+    margin-top: 16px;
+}
+.logOutDiv{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding-block: 16px;
+    gap: 10px;
+}
+
+.logout{
+    margin-bottom: 0px;
+    color: #000;
+    font-weight: 500;
 }

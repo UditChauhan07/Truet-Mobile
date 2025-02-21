@@ -1,22 +1,25 @@
-
 .bottomNav {
     position: fixed;
     bottom: 5px;
     left: 0;
-    width: 100%;    
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;  
-       
+    align-items: center;
+    z-index: 11;
+
 }
 
 .navItem {
     text-align: center;
     color: #A0AEC0;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.tab{
+.tab {
     background: white;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -26,3 +29,34 @@
     width: 80%;
 }
 
+/* Active State */
+.activeSvg {
+    filter: invert(39%) sepia(141%) saturate(3000%) hue-rotate(220deg) brightness(60%) contrast(212%);
+}
+
+.activeText {
+    color: #2B3674 !important;
+    font-weight: 800;
+}
+
+
+
+/* TRUET AI CSS START */
+.logo {
+    text-align: center;
+}
+.logo p{
+    color: #2B3674;
+    font-size: 14px;
+    width: 80%;
+    margin: 10px auto;
+
+}
+.logo a{
+    color: #2B3674;
+}
+.radiationDiv img{
+    top: 40%;
+    position: absolute;
+    left: 0;
+}
