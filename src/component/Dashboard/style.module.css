@@ -25,14 +25,11 @@
     border: 1px solid #ECECEC;
     padding: 10px;
     border-radius: 12px;
-
 }
 
 .WeeklyRevenue{
-    margin: 30px 0 10px 0;
+    margin: 20px 0 20px 0;
 }
-
-
 .WeeklyRevenue img{
 width: 100%;
 

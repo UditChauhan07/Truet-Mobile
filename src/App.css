@@ -57,3 +57,21 @@ body {
 input[type="checkbox"] {
   accent-color: #4318ff;
 }
+
+@supports (-webkit-touch-callout: none) {
+  .slideCard img {
+      width: 100%;
+  }
+}
+.slideCard img {
+  width: 100vw; 
+  max-width: 100%;
+  height: auto;
+}
+
+.slideCard img {
+  width: 100%; 
+  max-width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+}
