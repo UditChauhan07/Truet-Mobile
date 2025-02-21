@@ -67,9 +67,7 @@ const Index = () => {
                   )}
                 </div>
               </div>
-              <div className={styles.visitors}>
-                <h1>2.579</h1> <span>Visitors</span>
-              </div>
+             
               <div className={styles.chartsvg}>
                 <img src="/Pie-chart.svg" />
               </div>
