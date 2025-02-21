@@ -192,7 +192,7 @@ const Library = () => {
                       <img src="/share-icon.svg" />
                     </div>
                     <div className={styles.accessDiv}>
-                      <p>Access now</p>
+                      <p>Access</p>
                     </div>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ const Library = () => {
                       <img src="/share-icon.svg" />
                     </div>
                     <div className={styles.accessDiv}>
-                      <p>Access now</p>
+                      <p>Access</p>
                     </div>
                   </div>
                 </div>
@@ -248,7 +248,7 @@ const Library = () => {
                       <img src="/share-icon.svg" />
                     </div>
                     <div className={styles.accessDiv}>
-                      <p>Access now</p>
+                      <p>Access</p>
                     </div>
                   </div>
                 </div>
@@ -276,7 +276,7 @@ const Library = () => {
                       <img src="/share-icon.svg" />
                     </div>
                     <div className={styles.accessDiv}>
-                      <p>Access now</p>
+                      <p>Access</p>
                     </div>
                   </div>
                 </div>
@@ -306,7 +306,7 @@ const Library = () => {
                       <img src="/share-icon.svg" />
                     </div>
                     <div className={styles.accessDiv}>
-                      <p>Access now</p>
+                      <p>Access</p>
                     </div>
                   </div>
                 </div>
@@ -334,7 +334,7 @@ const Library = () => {
                       <img src="/share-icon.svg" />
                     </div>
                     <div className={styles.accessDiv}>
-                      <p>Access now</p>
+                      <p>Access</p>
                     </div>
                   </div>
                 </div>
@@ -362,7 +362,7 @@ const Library = () => {
                       <img src="/share-icon.svg" />
                     </div>
                     <div className={styles.accessDiv}>
-                      <p>Access now</p>
+                      <p>Access</p>
                     </div>
                   </div>
                 </div>
@@ -390,7 +390,7 @@ const Library = () => {
                       <img src="/share-icon.svg" />
                     </div>
                     <div className={styles.accessDiv}>
-                      <p>Access now</p>
+                      <p>Access</p>
                     </div>
                   </div>
                 </div>
