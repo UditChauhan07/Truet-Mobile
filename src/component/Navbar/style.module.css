@@ -129,7 +129,7 @@
 .logOutDiv{
     display: flex;
     align-items: center;
-    justify-self: center;
+    justify-content: center;
     padding-block: 16px;
     gap: 10px;
 }

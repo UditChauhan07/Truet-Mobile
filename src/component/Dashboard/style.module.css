@@ -168,7 +168,9 @@ width: 100%;
     align-items: center;
     justify-content: space-between;
 }
-
+.tableTittle h2{
+font-size: 22px;
+}
 /* Table.module.css */
 
 .tableContainer {
