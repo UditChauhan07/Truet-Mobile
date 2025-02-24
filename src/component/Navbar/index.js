@@ -113,8 +113,53 @@ function Navbar() {
         <div className={styles.searchinput}>
           <input type="text" placeholder="Search here" />
         </div>
-        <div className={styles.filterIcon}>
+        <div className={styles.filterIcon} data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom1" aria-controls="offcanvasBottom1" >
           <img src={FilterIcom} />
+        </div>
+        {/* Filler  bootom Canvas*/}
+        <div id="FiltterCANVA">
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom1" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header">
+              {/* <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5> */}
+              {/* <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> */}
+            </div>
+            <div class="offcanvas-body small">
+             <div className={styles.filterMain}>
+              <div className={styles.FlterTittle}>
+                <h2>Filter</h2>
+                <div>
+                  <div className={styles.checkDiv} id="filterCheck">
+                    <div><p>Daily Traffic</p></div>
+                    <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></div>
+                  </div>
+                  <div className={styles.checkDiv} id="filterCheck">
+                    <div><p>Pie Chart</p></div>
+                    <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></div>
+                  </div>
+                  <div className={styles.checkDiv} id="filterCheck">
+                    <div><p>Weekly Revenue</p></div>
+                    <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></div>
+                  </div>
+                  <div className={styles.checkDiv} id="filterCheck">
+                    <div><p>Total Spent</p></div>
+                    <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></div>
+                  </div>
+                </div>
+
+                <div className={styles.BothBtn}>
+                  <div className={styles.showBtn}>
+                    <p>Show</p>
+                  </div>
+                  <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
+                    <p>Close</p>
+                  </div>
+
+                </div>
+              </div>
+
+             </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

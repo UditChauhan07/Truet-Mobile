@@ -39,10 +39,9 @@
 }
 
 .filterIcon {
-    /* border: 1px solid #000; */
-    border-radius: 100px;
-    /* width: 49px; */
-    height: 29px;
+    border-radius: 50%;
+    width: 49px;
+    height: 45px;
     background-color: #3843FF;
     display: flex;
     align-items: center;
@@ -62,7 +61,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 11;
+    z-index: 1;
 
 }
 
@@ -99,34 +98,42 @@
     color: #000;
     font-weight: 500;
 }
-.notificationDiv{
+
+.notificationDiv {
     display: flex;
     align-items: center;
     gap: 50px;
 }
-.profile{
+
+.profile {
     padding-block: 24px;
 }
-.profileTittle{
+
+.profileTittle {
     color: #64748B;
 }
-.profilePerson{
+
+.profilePerson {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.personName{
+
+.personName {
     margin-bottom: 0px;
 }
-.email{
+
+.email {
     text-decoration: none;
     color: #A0ABBB;
 }
-.logOutMain{
+
+.logOutMain {
     background-color: #E7EAEE;
     margin-top: 16px;
 }
-.logOutDiv{
+
+.logOutDiv {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,8 +141,48 @@
     gap: 10px;
 }
 
-.logout{
+.logout {
     margin-bottom: 0px;
     color: #000;
     font-weight: 500;
+}
+
+
+/* Filter Bottom  Cnavas */
+.FlterTittle h2 {
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.checkDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkDiv p {
+    color: #000;
+}
+
+.showBtn {
+    margin-top: 20px;
+    background-color: #6B4EFF;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    
+}
+
+.showBtn p {
+    margin-bottom: 0px;
+    text-align: center;
+}
+.closeBtn {
+    margin-top: 20px;
+}
+.closeBtn p{
+    margin-bottom: 0px;
+    text-align: center;
+
 }

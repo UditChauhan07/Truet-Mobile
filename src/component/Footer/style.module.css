@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 1;
+    /* z-index: 1; */
 
 }
 
@@ -40,23 +40,3 @@
 }
 
 
-
-/* TRUET AI CSS START */
-.logo {
-    text-align: center;
-}
-.logo p{
-    color: #2B3674;
-    font-size: 14px;
-    width: 80%;
-    margin: 10px auto;
-
-}
-.logo a{
-    color: #2B3674;
-}
-.radiationDiv img{
-    top: 40%;
-    position: absolute;
-    left: 0;
-}

@@ -1,0 +1,88 @@
+.backButton{
+    width: 20%;
+    padding: 20px;
+}
+.backButton img{
+    width: 100%;
+}
+/* TRUET AI CSS START */
+.logo {
+    margin-top: 3rem;
+    text-align: center;
+}
+.logo p{
+    color: #2B3674;
+    font-size: 14px;
+    width: 80%;
+    margin: 10px auto;
+
+}
+.logo a{
+    color: #2B3674;
+}
+.radiationDiv img{
+    top: 40%;
+    position: absolute;
+    left: 0;
+}
+
+.inputAi{
+    padding-inline:20px;
+    position: absolute;
+    bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.inputDiv {
+    border: 1px solid #4751FD;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+.inputDiv input {
+    width: 260px;
+    border: none;
+}
+input:focus {
+    outline: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .bubble {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, rgba(173, 121, 255, 0.8), #4751FD);
+    border-radius: 50%;
+    position: relative;
+    animation: morph 3s infinite ease-in-out, float 4s infinite ease-in-out, glow 1.5s infinite alternate;
+    box-shadow: 0 0 10px rgba(173, 121, 255, 0.8), 
+                0 0 10px rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+@keyframes morph {
+    0% { border-radius: 50% 50% 50% 50%; transform: scale(1); }
+    25% { border-radius: 55% 45% 60% 40%; transform: scale(1.1); }
+    50% { border-radius: 50% 50% 40% 60%; transform: scale(1.2); }
+    75% { border-radius: 45% 55% 50% 50%; transform: scale(1.1); }
+    100% { border-radius: 50% 50% 50% 50%; transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(173, 121, 255, 0.8); border-color: rgba(255, 255, 255, 0.6); }
+    100% { box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(173, 121, 255, 1); border-color: rgba(255, 255, 255, 1); }
+}
