@@ -63,9 +63,12 @@ const Index = () => {
         </div>
 
         <div className={styles.navItem}>
-          <div className={styles.faHome} onClick={() => navigate("/truet-ai")} >
+        <div className={styles.container} onClick={() => navigate("/truet-ai")}>
+                    <div className={styles.bubble}></div>
+                </div>
+          {/* <div className={styles.faHome} onClick={() => navigate("/truet-ai")} >
             <img src="/AI-MIC.svg" alt="Mic" />
-          </div>
+          </div> */}
         </div>
 
       
