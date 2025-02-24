@@ -63,30 +63,15 @@ const Index = () => {
         </div>
 
         <div className={styles.navItem}>
-          <div className={styles.faHome} >
+        <div className={styles.container} onClick={() => navigate("/truet-ai")}>
+                    <div className={styles.bubble}></div>
+                </div>
+          {/* <div className={styles.faHome} onClick={() => navigate("/truet-ai")} >
             <img src="/AI-MIC.svg" alt="Mic" />
-          </div>
+          </div> */}
         </div>
 
-        <div id="footerCANVA">
-          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-            <div class="offcanvas-header">
-              {/* <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5> */}
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body small">
-              <div className={styles.logo}>
-                <img src="svg/Truet-Icon.svg" alt="" />
-                <p>Get quick answers to any questions from the <a href="">Organization Library</a></p>
-
-              </div>
-
-              <div className={styles.radiationDiv}>
-                <img src="images/radiation-Img.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
+      
 
       </div>
     </div>

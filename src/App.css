@@ -44,13 +44,20 @@ body {
 }
 
 #footerCANVA .offcanvas.offcanvas-bottom {
-  height: 100vh !important;
+  height: 82vh !important;
+}
+#FiltterCANVA .offcanvas.offcanvas-bottom {
+  height: 50vh !important;
+}
+#filterCheck input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  
 }
 
 @media screen and (min-width: 768px) {
   .App {
     display: none;
-
   }
 }
 
@@ -58,7 +65,7 @@ input[type="checkbox"] {
   accent-color: #4318ff;
 }
 
-@supports (-webkit-touch-callout: none) {
+/* @supports (-webkit-touch-callout: none) {
   .slideCard img {
       width: 100%;
   }
@@ -74,4 +81,4 @@ input[type="checkbox"] {
   max-width: 100%; 
   height: auto; 
   object-fit: cover; 
-}
+} */

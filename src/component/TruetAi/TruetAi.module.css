@@ -1,44 +1,62 @@
-.bottomNav {
-    position: fixed;
-    bottom: 5px;
-    left: 0;
+.backButton {
+    width: 15%;
+    padding: 20px;
+}
+
+.backButton img {
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    /* z-index: 1; */
-
 }
 
-.navItem {
+/* TRUET AI CSS START */
+.logo {
+    margin-top: 3rem;
     text-align: center;
-    color: #A0AEC0;
+}
+
+.logo p {
+    color: #2B3674;
     font-size: 14px;
+    width: 80%;
+    margin: 10px auto;
+
+}
+
+.logo a {
+    color: #2B3674;
+}
+
+.radiationDiv img {
+    top: 40%;
+    position: absolute;
+    left: 0;
+}
+
+.inputAi {
+    padding-left: 20px;
+    padding-right: 10px;
+    position: absolute;
+    bottom: 1%;
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.tab {
-    background: white;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 0;
-    border-radius: 20px 20px 20px 20px;
-    width: 80%;
+.inputDiv {
+    border: 1px solid #4751FD;
+    border-radius: 20px;
+    padding: 10px;
+
 }
 
-/* Active State */
-.activeSvg {
-    filter: invert(39%) sepia(141%) saturate(3000%) hue-rotate(220deg) brightness(60%) contrast(212%);
+.inputDiv input {
+    width: 240px;
+    border: none;
 }
 
-.activeText {
-    color: #2B3674 !important;
-    font-weight: 800;
+input:focus {
+    outline: none;
 }
-
 
 .container {
     display: flex;
