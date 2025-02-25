@@ -41,7 +41,7 @@ const Index = () => {
               />
             </i>
             <span className={isActive("/sales") ? styles.activeText : ""}>
-            Sales
+              Sales
             </span>
           </div>
 
@@ -63,15 +63,18 @@ const Index = () => {
         </div>
 
         <div className={styles.navItem}>
-        <div className={styles.container} onClick={() => navigate("/truet-ai")}>
-                    <div className={styles.bubble}></div>
-                </div>
+          <div className={styles.container} onClick={() => navigate("/truet-ai")}>
+            <div className={styles.bubble}>
+              <div className={styles.micIcon}><img src='svg/mic-icon.svg' /></div>
+
+            </div>
+          </div>
           {/* <div className={styles.faHome} onClick={() => navigate("/truet-ai")} >
             <img src="/AI-MIC.svg" alt="Mic" />
           </div> */}
         </div>
 
-      
+
 
       </div>
     </div>
