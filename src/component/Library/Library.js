@@ -148,7 +148,7 @@ const Library = () => {
 
           <div className={styles.contentDetails}>
             <div className={styles.visualImg}><img src="images/Visual-Img.png" alt=""/></div>
-            <div className={styles.content}>
+            <div className={styles.contents}>
               <h2>Audio Visual Byte – Immersive Sound & Vision Technology</h2>
               <p>Elevate Your Senses with Cutting-Edge Audio-Visual Innovation</p>
               <hr className={styles.modalLine}/>
