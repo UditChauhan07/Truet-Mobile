@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar";
 import styles from "../Library/Library.module.css";
 import Footer from "../Footer/index";
+import Modal from "../Modal/Modal";
+
 const countries = [
   { code: "US", name: "US", flag: "UsFlag-img.png" },
   { code: "IN", name: "India", flag: "images/indiaflag.png" },
@@ -10,7 +12,8 @@ const countries = [
 ];
 
 const Library = () => {
-
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [showCart, setShowCart] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
   const [isOpen, setIsOpen] = useState(false);
   const [openSections, setOpenSections] = useState({
@@ -26,6 +29,9 @@ const Library = () => {
     setSelectedCountry(country);
     setIsOpen(false);
   };
+
+
+
   return (
     <selection>
       <Navbar></Navbar>
@@ -137,18 +143,38 @@ const Library = () => {
             </div>
           </div>
         </div>
+        {/* Modal to show full description */}
+        <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+
+          <div className={styles.contentDetails}>
+            <div className={styles.visualImg}><img src="images/Visual-Img.png" alt=""/></div>
+            <div className={styles.content}>
+              <h2>Audio Visual Byte – Immersive Sound & Vision Technology</h2>
+              <p>Elevate Your Senses with Cutting-Edge Audio-Visual Innovation</p>
+              <hr className={styles.modalLine}/>
+              <h5>Audio Visual Byte</h5>
+              <p>Experience crystal-clear sound, vivid visuals, and seamless connectivity—perfect for business, education, and entertainment. Upgrade today!</p>
+
+              <div className={styles.shareButton}>
+                <p>Share</p>
+              </div>
+            </div>
+          </div>
+        </Modal>
         <div className={styles.bytesMain}>
           <div className={styles.bytesflex}>
-            <div className={styles.Bytes}>
+            <div className={styles.Bytes} onClick={() => setModalOpen(true)}>
               <div className={styles.vidIcon}>
                 <img src="/video-icon.svg" />
               </div>
+
               <div className={styles.bytesTittle}>
                 <p>Audio Visual Byte</p>
                 <strong>Product Description</strong>
               </div>
             </div>
-            <div className={styles.Bytes}>
+
+            <div className={styles.Bytes} onClick={() => setModalOpen(true)}>
               <div className={styles.vidIcon}>
                 <img src="/video-icon.svg" />
               </div>
@@ -159,7 +185,7 @@ const Library = () => {
             </div>
           </div>
           <div className={styles.bytesflex}>
-            <div className={styles.Bytes}>
+            <div className={styles.Bytes}onClick={() => setModalOpen(true)}>
               <div className={styles.vidIcon}>
                 <img src="/sell-icon.svg" />
               </div>
@@ -168,7 +194,7 @@ const Library = () => {
                 <strong>Score 70+</strong>
               </div>
             </div>
-            <div className={styles.Bytes}>
+            <div className={styles.Bytes}onClick={() => setModalOpen(true)}>
               <div className={styles.vidIcon}>
                 <img src="/deal-Icon.svg" />
               </div>
@@ -179,7 +205,7 @@ const Library = () => {
             </div>
           </div>
           <div className={styles.bytesflex}>
-            <div className={styles.Bytes}>
+            <div className={styles.Bytes} onClick={() => setModalOpen(true)}>
               <div className={styles.vidIcon}>
                 <img src="/video-icon.svg" />
               </div>
@@ -188,7 +214,7 @@ const Library = () => {
                 <strong>Application Instructions</strong>
               </div>
             </div>
-            <div className={styles.Bytes}>
+            <div className={styles.Bytes} onClick={() => setModalOpen(true)}>
               <div className={styles.vidIcon}>
                 <img src="/inforaphic-icon.svg" />
               </div>
@@ -199,7 +225,7 @@ const Library = () => {
             </div>
           </div>
           <div className={styles.bytesflex}>
-            <div className={styles.Bytes}>
+            <div className={styles.Bytes} onClick={() => setModalOpen(true)}>
               <div className={styles.vidIcon}>
                 <img src="/dollor-icon.svg" />
               </div>
@@ -208,7 +234,7 @@ const Library = () => {
                 <strong>$50,200</strong>
               </div>
             </div>
-            <div className={styles.Bytes}>
+            <div className={styles.Bytes} onClick={() => setModalOpen(true)}>
               <div className={styles.vidIcon}>
                 <img src="/inforaphic-icon.svg" />
               </div>
@@ -268,6 +294,8 @@ const Library = () => {
           </div>
           <hr className={styles.line} />
         </div>
+
+
         <div className={styles.KnowledgeDiv}>
           <div className={styles.KnowledgeTittle}>
             <h2>The Knowledge Matrix</h2>
@@ -511,8 +539,8 @@ const Library = () => {
                 <h2>Team members (Ask a Question)</h2>
               </div>
               <div>
-                <a  href="intent://contacts/#Intent;action=android.intent.action.VIEW;scheme=content;end;" >
-                <img src="/add-icon.svg" />
+                <a href="intent://contacts/#Intent;action=android.intent.action.VIEW;scheme=content;end;" >
+                  <img src="/add-icon.svg" />
                 </a>
               </div>
             </div>

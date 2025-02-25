@@ -11,7 +11,7 @@
     justify-content: space-between;
     padding-inline: 1rem;
     margin-bottom: 10px;
-    
+
 
 }
 
@@ -21,7 +21,7 @@
 
 .Quick h2 {
     font-weight: bold;
- 
+
     font-size: 20px;
     color: #2B3674;
 }
@@ -66,7 +66,7 @@
 .bytesMain p {
     margin-bottom: 0px;
     font-size: 14px;
-        /* font-size: calc(10px + (4 * ((100vw - 320px) / 105)));   */
+    /* font-size: calc(10px + (4 * ((100vw - 320px) / 105)));   */
     color: #A3AED0;
 }
 
@@ -253,9 +253,11 @@
     display: flex;
     gap: 5px;
 }
-.source span{
+
+.source span {
     color: #4318FF;
 }
+
 .accessDiv {
     background-color: #11047A;
     padding: 8px 16px;
@@ -484,9 +486,10 @@
 .filtersContainer {
     width: 100%;
     /* padding: 10px; */
-  
+
 }
-.menuTittle{
+
+.menuTittle {
     color: #191D23;
     font-size: 22px;
     font-weight: bold;
@@ -525,10 +528,11 @@ h4 {
 
 .filterOptions {
     margin-top: 5px;
-    
+
 }
 
-.checkbox, .radio {
+.checkbox,
+.radio {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -538,31 +542,63 @@ h4 {
     cursor: pointer;
 }
 
-.checkbox input, .radio input {
+.checkbox input,
+.radio input {
     accent-color: #7C3AED;
     width: 16px;
     height: 16px;
 }
 
-.checkbox span, .radio span {
+.checkbox span,
+.radio span {
     cursor: pointer;
+}
+
+/* Modale CSS start */
+.visualImg img {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.modalLine {
+    margin-block: 1rem;
+}
+.shareButton{
+    height: 50px;
+    background-color: #4318FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+.shareButton p{
+    color: #ffff;
 }
 
 
 @media (max-width:410px) {
     .shareDiv {
         display: block;
-       
+
     }
-    .source{
+
+    .source {
         margin-bottom: 10px;
     }
-    .bytesMain p{
+
+    .bytesMain p {
         font-size: 10px;
     }
-    .Bytes{
-    padding: 6px 7px;
-    border-radius: 15px;
-    min-height: 80px;
+
+    .Bytes {
+        padding: 6px 7px;
+        border-radius: 15px;
+        min-height: 80px;
     }
 }
