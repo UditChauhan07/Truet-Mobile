@@ -63,6 +63,23 @@ input:focus {
     justify-content: center;
     align-items: center;
 
+}.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.micIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+}
+
+.micIcon img {
+    width: 20px;
 }
 
 .bubble {
@@ -71,9 +88,7 @@ input:focus {
     background: radial-gradient(circle, rgba(173, 121, 255, 0.8), #4751FD);
     border-radius: 50%;
     position: relative;
-    animation: morph 3s infinite ease-in-out, float 4s infinite ease-in-out, glow 1.5s infinite alternate;
-    box-shadow: 0 0 0px rgba(173, 121, 255, 0.8),
-        0 0 10px rgba(255, 255, 255, 0.6);
+    animation: morph 3s infinite ease-in-out, float 4s infinite ease-in-out;
     border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
@@ -118,17 +133,6 @@ input:focus {
     }
 }
 
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(173, 121, 255, 0.8);
-        border-color: rgba(255, 255, 255, 0.6);
-    }
-
-    100% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(173, 121, 255, 1);
-        border-color: rgba(255, 255, 255, 1);
-    }
-}
 
 @media (max-width:330px) {
     .inputDiv input {

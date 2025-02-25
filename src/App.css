@@ -46,14 +46,25 @@ body {
 #footerCANVA .offcanvas.offcanvas-bottom {
   height: 82vh !important;
 }
+
 #FiltterCANVA .offcanvas.offcanvas-bottom {
   height: 50vh !important;
 }
-#filterCheck input[type="checkbox"]{
+
+#filterCheck input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  
+
 }
+
+
+
+:root,
+[data-bs-theme=light] {
+  --bs-body-line-height: 17px !important;
+}
+
+
 
 @media screen and (min-width: 768px) {
   .App {

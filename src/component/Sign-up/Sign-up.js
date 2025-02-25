@@ -26,7 +26,7 @@ const SignUp = () => {
 
           <button className="google-btn">
             <img src="svg/Google-Logo.svg"/>
-            <p>Sign in with Google</p>
+            <a href="https://accounts.google.com/signin">Sign in with Google</a>
           </button>
           <div className="divider">or</div>
           <form>
@@ -38,12 +38,12 @@ const SignUp = () => {
                 className="input"
               />
             </div>
-            <div className="input-group relative">
+            <div className="input-group2 relative">
               <label>Password*</label>
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Min. 8 characters"
-                className="input"
+                className="input2"
               />
               <button
                 type="button"
@@ -71,10 +71,9 @@ const SignUp = () => {
             </button>
           </form>
           <p className="footer-text">
-            Not registered yet? 
-            <a href="#" className="link">
-               Create an Account
-            </a>
+            Not registered yet? <a href="#" className="link">Create an Account</a>
+          
+            
           </p>
           <p className="copyright">
             &copy; 2025 Truet. All Rights Reserved for the usage of terms

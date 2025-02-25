@@ -10,8 +10,17 @@ const countries = [
 ];
 
 const Library = () => {
+
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
   const [isOpen, setIsOpen] = useState(false);
+  const [openSections, setOpenSections] = useState({
+    dealflow: true,
+    pipeline: true,
+    sortby: true,
+  });
+  const toggleSection = (section) => {
+    setOpenSections({ ...openSections, [section]: !openSections[section] });
+  };
 
   const handleSelect = (country) => {
     setSelectedCountry(country);
@@ -19,18 +28,112 @@ const Library = () => {
   };
   return (
     <selection>
-        <Navbar></Navbar>
+      <Navbar></Navbar>
       <div className={styles.LibraryMain}>
         <div className={styles.Library}>
           <div className={styles.Quick}>
             <h2>Quick Bytes</h2>
           </div>
-          <div className={styles.shortMain}>
+          <div className={styles.shortMain} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight2">
             <div className={styles.shortTittle}>
               <p>Short by</p>
             </div>
             <div className={styles.shortIcon}>
               <img src="/Vector.svg" />
+            </div>
+          </div>
+
+
+
+
+        </div>
+        {/* Offcanvas */}
+        <div id="offCANVAS">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
+            <div className="offcanvas-header">
+              <h5 className={styles.menuTittle}>Filters</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div className={styles.filtersContainer}>
+                {/* <h2>Filters</h2> */}
+                {/* Dealflow Section */}
+                <div className={styles.filterSection}>
+                  <div className={styles.sectionHeader} onClick={() => toggleSection("dealflow")}>
+                    <h4>Dealflow</h4>
+                    <span className={openSections.dealflow ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+                  </div>
+                  {openSections.dealflow && (
+                    <div className={styles.filterOptions}>
+                      <label className={styles.checkbox}>
+                        <input type="checkbox" defaultChecked />
+                        <span>All Open Deals</span>
+                      </label>
+                      <label className={styles.checkbox}>
+                        <input type="checkbox" />
+                        <span>Members only deals</span>
+                      </label>
+                    </div>
+                  )}
+                </div>
+
+                {/* Pipeline Section */}
+                <div className={styles.filterSection}>
+                  <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
+                    <h4>Pipeline</h4>
+                    <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+                  </div>
+                  {openSections.pipeline && (
+                    <div className={styles.filterOptions}>
+                      <label className={styles.checkbox}>
+                        <input type="checkbox" defaultChecked />
+                        <span>Polyflex 5.0 PDS</span>
+                      </label>
+                      <label className={styles.checkbox}>
+                        <input type="checkbox" />
+                        <span>Polyflex 5.0 PDS</span>
+                      </label>
+                      <label className={styles.checkbox}>
+                        <input type="checkbox" />
+                        <span>Polyflex 5.0 PDS</span>
+                      </label>
+                      <label className={styles.checkbox}>
+                        <input type="checkbox" />
+                        <span>Greater than $500</span>
+                      </label>
+                    </div>
+                  )}
+                </div>
+
+                {/* Sort by Section */}
+                <div className={styles.filterSection}>
+                  <div className={styles.sectionHeader} onClick={() => toggleSection("sortby")}>
+                    <h4>Sort by</h4>
+                    <span className={openSections.sortby ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+                  </div>
+                  {openSections.sortby && (
+                    <div className={styles.filterOptions}>
+                      <label className={styles.radio}>
+                        <input type="radio" name="sort" defaultChecked />
+                        <span>Most Relevant First</span>
+                      </label>
+                      <label className={styles.radio}>
+                        <input type="radio" name="sort" />
+                        <span>Most Relevant First</span>
+                      </label>
+                      <label className={styles.radio}>
+                        <input type="radio" name="sort" />
+                        <span>Most Relevant First</span>
+                      </label>
+                      <label className={styles.radio}>
+                        <input type="radio" name="sort" />
+                        <span>Most Relevant First</span>
+                      </label>
+                    </div>
+                  )}
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -408,7 +511,9 @@ const Library = () => {
                 <h2>Team members (Ask a Question)</h2>
               </div>
               <div>
+                <a  href="intent://contacts/#Intent;action=android.intent.action.VIEW;scheme=content;end;" >
                 <img src="/add-icon.svg" />
+                </a>
               </div>
             </div>
             <div className={styles.member}>
@@ -494,7 +599,7 @@ const Library = () => {
               <p>Cards</p>
             </div>
           </div>
-        
+
         </div>
       </div>
       <Footer></Footer>

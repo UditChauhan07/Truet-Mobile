@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     min-height: 100vh;
     background-color: #fff;
@@ -25,7 +25,7 @@
   .title {
     font-size: 1.5rem;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 30px;
     color: #2B3674;
     margin-bottom: 0.5rem;
     
@@ -56,11 +56,12 @@
     height: 50px;
     gap: 10px;
   }
-  .google-btn p{
+  .google-btn a{
     color: #2B3674;
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 0px;
+    text-decoration: none;
   }
   
   .google-btn .icon {
@@ -77,6 +78,7 @@
     margin-bottom: 1rem;
   }
   
+  
   .input-group label {
     display: block;
     font-size: 0.875rem;
@@ -84,7 +86,26 @@
     font-weight: 500;
     color: #2B3674;
   }
+  .input-group2 {
+    margin-bottom: 1rem;
+  }
   
+  
+  .input-group2 label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #2B3674;
+  }
+  .input2 {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E0E5F2;
+    border-radius: 0px 15px 15px 0px;
+    box-sizing: border-box;
+    height: 50px;
+  }
   .input {
     width: 100%;
     padding: 0.75rem;
@@ -151,8 +172,9 @@
     text-align: center;
     font-size: 0.75rem;
     color: #9ca3af;
-    margin-top: 2rem;    
+    margin-bottom: 0rem;  
   }
+ 
   
   .Bg-image{
     background-image: url('/public/sign-bg.png');

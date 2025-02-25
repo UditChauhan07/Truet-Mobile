@@ -481,6 +481,74 @@
 
 .option {}
 
+.filtersContainer {
+    width: 100%;
+    /* padding: 10px; */
+  
+}
+.menuTittle{
+    color: #191D23;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.filterSection {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.arrowDown {
+    font-size: 14px;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.arrowUp {
+    font-size: 14px;
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.filterOptions {
+    margin-top: 5px;
+    
+}
+
+.checkbox, .radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.checkbox input, .radio input {
+    accent-color: #7C3AED;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox span, .radio span {
+    cursor: pointer;
+}
+
+
 @media (max-width:410px) {
     .shareDiv {
         display: block;
@@ -488,5 +556,13 @@
     }
     .source{
         margin-bottom: 10px;
+    }
+    .bytesMain p{
+        font-size: 12px;
+    }
+    .Bytes{
+    padding: 6px 7px;
+    border-radius: 15px;
+    min-height: 80px;
     }
 }
