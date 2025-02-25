@@ -511,7 +511,7 @@ const Library = () => {
                 <h2>Team members (Ask a Question)</h2>
               </div>
               <div>
-                <a  href="intent://contacts/#Intent;action=android.intent.action.VIEW;scheme=content;end;">
+                <a  href="intent://contacts/#Intent;action=android.intent.action.VIEW;scheme=content;end;" >
                 <img src="/add-icon.svg" />
                 </a>
               </div>
