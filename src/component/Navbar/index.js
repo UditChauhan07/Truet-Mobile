@@ -116,8 +116,10 @@ function Navbar() {
         <div className={styles.filterIcon} data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom1" aria-controls="offcanvasBottom1" >
           <img src={FilterIcom} />
         </div>
-        {/* Filler  bootom Canvas*/}
-        <div id="FiltterCANVA">
+       
+      </div>
+       {/* Filler  bootom Canvas*/}
+       <div id="FiltterCANVA">
           <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom1" aria-labelledby="offcanvasBottomLabel">
             <div class="offcanvas-header">
               {/* <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5> */}
@@ -161,7 +163,6 @@ function Navbar() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
