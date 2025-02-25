@@ -3,10 +3,10 @@ import Navbar from "../Navbar";
 import styles from "../Library/Library.module.css";
 import Footer from "../Footer/index";
 const countries = [
-  { code: "US", name: "US", flag: "Flag-img.png" },
-  { code: "IN", name: "India", flag: "Flag-img.png" },
-  { code: "FR", name: "France", flag: "Flag-img.png" },
-  { code: "DE", name: "Germany", flag: "Flag-img.png" },
+  { code: "US", name: "US", flag: "UsFlag-img.png" },
+  { code: "IN", name: "India", flag: "images/indiaflag.png" },
+  { code: "FR", name: "France", flag: "images/france.png" },
+  { code: "DE", name: "Germany", flag: "images/germany.png" },
 ];
 
 const Library = () => {
