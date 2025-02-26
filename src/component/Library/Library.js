@@ -7,12 +7,15 @@ import { useNavigate } from "react-router-dom";
 
 const countries = [
   { code: "US", name: "US", flag: "UsFlag-img.png" },
-  { code: "IN", name: "India", flag: "images/indiaflag.png" },
+  { code: "UAE", name: "UAE", flag: "images/uaeFlag.png" },
   { code: "FR", name: "France", flag: "images/france.png" },
   { code: "DE", name: "Germany", flag: "images/germany.png" },
 ];
 
 const Library = () => {
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(null);
   // const [showCart, setShowCart] = useState(false);
@@ -105,7 +108,9 @@ const Library = () => {
     "/images/Visual-Img5.png",
     "images/Visual-Img6.png",
   ];
-
+  const videoLinks = [
+    "https://www.youtube.com/embed/nWhnp5Fhe6w",
+  ];
   const icons = [
     "/video-icon.svg",
     "/video-icon.svg",
@@ -137,7 +142,7 @@ const Library = () => {
               <p>Short by</p>
             </div>
             <div className={styles.shortIcon}>
-              <img src="/Vector.svg" alt=""/>
+              <img src="/Vector.svg" alt="" />
             </div>
           </div>
 
@@ -239,18 +244,22 @@ const Library = () => {
         {isModalOpen && selectedIndex !== null && (
           <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
             <div className={styles.contentDetails}>
+              <div className={styles.modTitle}><h5>{modalsubheading[selectedIndex]}</h5>
+              </div>
               <div className={styles.visualImg}>
-                <img src={images[selectedIndex]} alt="Selected Visual" />
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={videoLinks[selectedIndex]}
+                  title="Embedded Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
               <div className={styles.contents}>
-                <h2>{modaltitles[selectedIndex]}</h2>
-                <p>{modalsubtitles[selectedIndex]}</p>
-                <hr className={styles.modalLine} />
                 <h5>{modalsubheading[selectedIndex]}</h5>
                 <p>{subdescriptions[selectedIndex]}</p>
-                <div className={styles.shareButton}>
-                  <p>Share</p>
-                </div>
+             
               </div>
             </div>
           </Modal>
@@ -280,7 +289,7 @@ const Library = () => {
             </div>
           </div>
           <div className={styles.bytesflex}>
-            <div className={styles.Bytes} onClick={() => handleOpenModal(2)}>
+            <div className={styles.Bytes} >
               <div className={styles.vidIcon}>
                 <img src={icons[2]} alt="icon" />
 
@@ -290,7 +299,7 @@ const Library = () => {
                 <strong>{subtitles[2]}</strong>
               </div>
             </div>
-            <div className={styles.Bytes} onClick={() => handleOpenModal(3)}>
+            <div className={styles.Bytes} >
               <div className={styles.vidIcon}>
                 <img src={icons[3]} alt="icon" />
 
@@ -312,7 +321,7 @@ const Library = () => {
                 <strong>{subtitles[4]}</strong>
               </div>
             </div>
-            <div className={styles.Bytes} onClick={() => handleOpenModal(5)}>
+            <div className={styles.Bytes} >
               <div className={styles.vidIcon}>
                 <img src={icons[5]} alt="icon" />
 
@@ -369,7 +378,14 @@ const Library = () => {
                       alt={selectedCountry.name}
                       className={styles.flag}
                     />
-                    <span className={styles.arrow}>{isOpen ? "▲" : "▼"}</span>
+                    {/* <span className={styles.arrow}>{isOpen ? "▲" : "▼"}</span> */}
+                    <span className={styles.arrow}>
+                      <img
+                        src={isOpen ? "svg/Arrowdoun.svg" : "svg/ArrowDown.svg"}
+                        alt="Arrow"
+                        className={styles.arrowImage}
+                      />
+                    </span>
                   </div>
                   {isOpen && (
                     <ul className={styles.menu}>
@@ -404,42 +420,14 @@ const Library = () => {
           <div className={styles.slideMain}>
             <div className={styles.slideDiv}>
               <div className={styles.slideCard}>
-                <img src="/card-Img1.png" alt=""/>
+                <img src="images/card-Img1.png" alt="" />
                 <div className={styles.cardDeatils}>
                   <div className={styles.content}>
                     <h2>Capturing Distributor Mind</h2>
                     <p>By Manny Gates</p>
                   </div>
                   <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt=""/>
-                  </div>
-                </div>
-                <div className={styles.shareDiv}>
-                  <div className={styles.source}>
-                    <p>Source: </p>
-                    <span>Official LMS</span>
-                  </div>
-                  <div className={styles.accessMain}>
-                    <div className={styles.share}>
-                      <img src="/share-icon.svg" alt=""/>
-                    </div>
-                    <div className={styles.accessDiv}>
-                      <p>Access</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.slideDiv}>
-              <div className={styles.slideCard}>
-                <img src="/card-Img1.png" alt=""/>
-                <div className={styles.cardDeatils}>
-                  <div className={styles.content}>
-                    <h2>Capturing Distributor Mind</h2>
-                    <p>By Manny Gates</p>
-                  </div>
-                  <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt=""/>
+                    <img src="/Avatars-Group.png" alt="" />
                   </div>
                 </div>
                 <div className={styles.shareDiv}>
@@ -460,24 +448,24 @@ const Library = () => {
             </div>
             <div className={styles.slideDiv}>
               <div className={styles.slideCard}>
-                <img src="/card-Img1.png" alt=""/>
+                <img src="images/card-Img2.png" alt="" />
                 <div className={styles.cardDeatils}>
                   <div className={styles.content}>
-                    <h2>Capturing Distributor Mind</h2>
+                    <h2>Safety Datasheet</h2>
                     <p>By Manny Gates</p>
                   </div>
                   <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt=""/>
+                    <img src="/Avatars-Group.png" alt="" />
                   </div>
                 </div>
                 <div className={styles.shareDiv}>
                   <div className={styles.source}>
                     <p>Source: </p>
-                    <span>Official LMS</span>
+                    <span>Polyglass.com</span>
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt=""/>
+                      <img src="/share-icon.svg" alt="" />
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -488,24 +476,52 @@ const Library = () => {
             </div>
             <div className={styles.slideDiv}>
               <div className={styles.slideCard}>
-                <img src="/card-Img1.png" alt=""/>
+                <img src="images/card-Img3.png" alt="" />
                 <div className={styles.cardDeatils}>
                   <div className={styles.content}>
-                    <h2>Capturing Distributor Mind</h2>
+                    <h2>Product Datasheets</h2>
                     <p>By Manny Gates</p>
                   </div>
                   <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt=""/>
+                    <img src="/Avatars-Group.png" alt="" />
                   </div>
                 </div>
                 <div className={styles.shareDiv}>
                   <div className={styles.source}>
                     <p>Source: </p>
-                    <span>Official LMS</span>
+                    <span>Polyglass.com</span>
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt=""/>
+                      <img src="/share-icon.svg" alt="" />
+                    </div>
+                    <div className={styles.accessDiv}>
+                      <p>Access</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.slideDiv}>
+              <div className={styles.slideCard}>
+                <img src="images/card-Img4.png" alt="" />
+                <div className={styles.cardDeatils}>
+                  <div className={styles.content}>
+                    <h2>PolyGlass Case Studies</h2>
+                    <p>By Manny Gates</p>
+                  </div>
+                  <div className={styles.user}>
+                    <img src="/Avatars-Group.png" alt="" />
+                  </div>
+                </div>
+                <div className={styles.shareDiv}>
+                  <div className={styles.source}>
+                    <p>Source: </p>
+                    <span>Polyglass.com</span>
+                  </div>
+                  <div className={styles.accessMain}>
+                    <div className={styles.share}>
+                      <img src="/share-icon.svg" alt="" />
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -518,24 +534,24 @@ const Library = () => {
           <div className={styles.slideMain}>
             <div className={styles.slideDiv}>
               <div className={styles.slideCard}>
-                <img src="/polly-glass.png" alt=""/>
+                <img src="images/polly-glass.png" alt="" />
                 <div className={styles.cardDeatils}>
                   <div className={styles.content}>
-                    <h2>Capturing Distributor Mind</h2>
-                    <p>By Manny Gates</p>
+                    <h2>PolyGlass Sales Process</h2>
+                    <p>By Peter Will</p>
                   </div>
                   <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt=""/>
+                    <img src="images/Avatars-Group2.png" alt="" />
                   </div>
                 </div>
                 <div className={styles.shareDiv}>
                   <div className={styles.source}>
                     <p>Source: </p>
-                    <span>Official LMS</span>
+                    <span>Salesforce</span>
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt=""/>
+                      <img src="/share-icon.svg" alt="" />
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -546,14 +562,14 @@ const Library = () => {
             </div>
             <div className={styles.slideDiv}>
               <div className={styles.slideCard}>
-                <img src="/polly-glass.png" alt=""/>
+                <img src="images/polly-glass2.png" alt="" />
                 <div className={styles.cardDeatils}>
                   <div className={styles.content}>
-                    <h2>Capturing Distributor Mind</h2>
+                    <h2>Opportunity Management</h2>
                     <p>By Manny Gates</p>
                   </div>
                   <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt=""/>
+                    <img src="images/Avatars-Group3.png" alt="" />
                   </div>
                 </div>
                 <div className={styles.shareDiv}>
@@ -563,7 +579,7 @@ const Library = () => {
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt=""/>
+                      <img src="/share-icon.svg" alt="" />
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -574,14 +590,14 @@ const Library = () => {
             </div>
             <div className={styles.slideDiv}>
               <div className={styles.slideCard}>
-                <img src="/polly-glass.png" alt=""/>
+                <img src="images/polly-glass3.png" alt="" />
                 <div className={styles.cardDeatils}>
                   <div className={styles.content}>
-                    <h2>Capturing Distributor Mind</h2>
-                    <p>By Manny Gates</p>
+                    <h2>Outreach Best Practices</h2>
+                    <p>By Mark Benjamin</p>
                   </div>
                   <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt=""/>
+                    <img src="/Avatars-Group.png" alt="" />
                   </div>
                 </div>
                 <div className={styles.shareDiv}>
@@ -591,7 +607,7 @@ const Library = () => {
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt=""/>
+                      <img src="/share-icon.svg" alt="" />
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -602,14 +618,14 @@ const Library = () => {
             </div>
             <div className={styles.slideDiv}>
               <div className={styles.slideCard}>
-                <img src="/polly-glass.png" alt=""/>
+                <img src="images/polly-glass4.png" alt="" />
                 <div className={styles.cardDeatils}>
                   <div className={styles.content}>
-                    <h2>Capturing Distributor Mind</h2>
+                    <h2>Sales Playbook</h2>
                     <p>By Manny Gates</p>
                   </div>
                   <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt=""/>
+                    <img src="/Avatars-Group.png" alt="" />
                   </div>
                 </div>
                 <div className={styles.shareDiv}>
@@ -619,7 +635,7 @@ const Library = () => {
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt=""/>
+                      <img src="/share-icon.svg" alt="" />
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -641,7 +657,7 @@ const Library = () => {
               </div>
               <div>
                 <a href="intent://contacts/#Intent;action=android.intent.action.VIEW;scheme=content;end;" >
-                  <img src="/add-icon.svg" alt=""/>
+                  <img src="/add-icon.svg" alt="" />
                 </a>
               </div>
             </div>
@@ -653,62 +669,96 @@ const Library = () => {
                   <text>Creative Director</text>
                 </div>
               </div>
-              <div className={styles.option}>
-                <img src="/option.svg" alt=""/>
+              <div className={styles.menuContainer}>
+                {/* Clickable Div with Image */}
+                <div className={styles.option} onClick={() => setIsOpen2(!isOpen2)}>
+                  <img src="/option.svg" alt="Menu" />
+                </div>
+
+                {/* Dropdown Menu */}
+                {isOpen2 && (
+                  <div className={styles.menuDropdown}>
+                    <p>Remove</p>
+                    <p>Chat</p>
+                  </div>
+                )}
               </div>
+
             </div>
             <div className={styles.member}>
               <div className={styles.memberDetails} onClick={handleChatNavigation}>
-                <img src="/Profile2.png" alt=""/>
+                <img src="/Profile2.png" alt="" />
                 <div className={styles.name}>
                   <p>Christian Mad</p>
                   <text>Product Designer</text>
                 </div>
               </div>
-              <div className={styles.option}>
-                <img src="/option.svg" alt=""/>
+              <div className={styles.menuContainer}>
+                {/* Clickable Div with Image */}
+                <div className={styles.option} onClick={() => setIsOpen3(!isOpen3)}>
+                  <img src="/option.svg" alt="Menu" />
+                </div>
+
+                {/* Dropdown Menu */}
+                {isOpen3 && (
+                  <div className={styles.menuDropdown}>
+                    <p>Remove</p>
+                    <p>Chat</p>
+                  </div>
+                )}
               </div>
             </div>
             <div className={styles.member}>
               <div className={styles.memberDetails} onClick={handleChatNavigation}>
-                <img src="/Profile3.png" alt=""/>
+                <img src="/Profile3.png" alt="" />
                 <div className={styles.name}>
                   <p>Jason Statham</p>
                   <text>Junior Graphic Designer</text>
                 </div>
               </div>
-              <div className={styles.option}>
-                <img src="/option.svg" alt=""/>
+              <div className={styles.menuContainer}>
+                {/* Clickable Div with Image */}
+                <div className={styles.option} onClick={() => setIsOpen4(!isOpen4)}>
+                  <img src="/option.svg" alt="Menu" />
+                </div>
+
+                {/* Dropdown Menu */}
+                {isOpen4 && (
+                  <div className={styles.menuDropdown}>
+                    <p>Remove</p>
+                    <p>Chat</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
           <div className={styles.business}>
             <div className={styles.header}>
               <div>
-                <img src="/fire-icon.svg" alt=""/>
+                <img src="/fire-icon.svg" alt="" />
               </div>
               <div className={styles.resourcesDatails}>
-                <p>Business Design</p>
-                <b> New lession is available</b>
+                <p>Sales opportunity</p>
+                <b>Start selling Polypoin OPDS</b>
               </div>
             </div>
             <div className={styles.centretitle}>
-              <h2>What do you need to know to create better products?</h2>
+              <h2>Start your onboarding process to be eligible and considered for selling</h2>
             </div>
             <div className={styles.footer}>
               <div className={styles.bottom}>
                 <div className={styles.time}>
                   <img src="/timer.svg" alt="" />
-                  <span>85 mint</span>
+                  <span>85 min</span>
                 </div>
                 <div className={styles.video}>
-                  <img src="/slow_motion_video.svg" alt=""/>
+                  <img src="/slow_motion_video.svg" alt="" />
                   <span>Video format</span>
                 </div>
               </div>
               <div className={styles.startdiv}>
                 <div>
-                  <img src="/Avatars-Group.png" alt=""/>
+                  <img src="/Avatars-Group.png" alt="" />
                 </div>
                 <div>
                   <div className={styles.started}>
@@ -720,12 +770,12 @@ const Library = () => {
           </div>
           <div className={styles.security}>
             <div className={styles.securityDetails}>
-              <img src="/thumb-icon.svg" alt=""/>
-              <h2>Control card security in-app with a tap</h2>
-              <p>Discover our cards benefits, with one tap.</p>
+              <img src="/thumb-icon.svg" alt="" />
+              <h2>Apply for more sales opportunities in your region.</h2>
+              <p>Discover products to boost your revenue.</p>
             </div>
             <div className={styles.cards}>
-              <p>Cards</p>
+              <p>Find sales opportunities.</p>
             </div>
           </div>
 
