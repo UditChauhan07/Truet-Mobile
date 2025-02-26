@@ -16,7 +16,7 @@ function Navbar() {
   // Logout function
   const handleLogout = () => {
     navigate("/"); 
-    window.location.reload(); // Page ko refresh karne ke liye
+    window.location.reload(); 
   };
   
   return (
