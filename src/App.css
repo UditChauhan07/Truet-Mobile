@@ -11,7 +11,7 @@
 .dm-sans {
   font-family: "DM Sans", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  /* font-weight: <weight>; */
   font-style: normal;
 }
 
@@ -65,7 +65,7 @@ body {
 }
 
 .offcanvas-body {
-  padding: 10px 20px  20px 20px !important;
+  padding: 0px 20px  20px 20px !important;
 }
 
 @media screen and (min-width: 768px) {

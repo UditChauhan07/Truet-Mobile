@@ -61,6 +61,7 @@
     align-items: center;
     gap: 10px;
     border-radius: 20px;
+    min-height: 70px;
 }
 
 .bytesMain p {
@@ -210,7 +211,7 @@
 }
 
 .slideCard {
-
+min-width: 280px;
     padding: 16px;
     border: 1px solid #ECECEC;
     border-radius: 20px;
@@ -568,6 +569,16 @@ h4 {
     font-size: 22px;
     font-weight: bold;
 }
+.contents h5 {
+    color: #191D23;
+    font-weight: bold;
+    font-size: 16px;
+}
+.contents p{
+    line-height: 24px;
+    color: #000000;
+    font-size: 14px;
+}
 
 .modalLine {
     margin-block: 1rem;
@@ -584,6 +595,7 @@ h4 {
 }
 .shareButton p{
     color: #ffff;
+    margin-bottom: 0px;
 }
 
 
