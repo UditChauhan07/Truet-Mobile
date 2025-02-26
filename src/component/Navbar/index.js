@@ -16,6 +16,7 @@ function Navbar() {
   // Logout function
   const handleLogout = () => {
     navigate("/"); 
+    window.location.reload();
   };
   return (
     <div className={styles.HeaderTop}>
@@ -26,7 +27,7 @@ function Navbar() {
 
         <div className={styles.sidebar}>
           <div className={styles.language}>
-            <img src={language} />
+            <img src={language}/>
           </div>
 
           <div className={styles.Profile}>

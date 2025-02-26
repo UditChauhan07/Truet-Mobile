@@ -40,6 +40,7 @@ const WeeklyRevenue = () => {
           <Bar dataKey="revenue2" stackId="a" fill="#63C7FF" barSize={10} radius={[0, 0, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
+      
     </div>
   );
 };
