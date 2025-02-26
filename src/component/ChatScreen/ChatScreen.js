@@ -9,7 +9,7 @@ const ChatScreen = () => {
         navigate("/sales");
       };
   return (
-    <div>
+    <div className={styles.ChatMian}>
         <div className={styles.backPage} onClick={handlebackChat}><img src='svg/Cross-Icon.svg'/></div>
       <div className={styles.chatContainer}>
       <div className={styles.timestamp}>09:41 AM</div>

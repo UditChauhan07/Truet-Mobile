@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import styles from "./style.module.css";
 import Navbar from "../Navbar/index";
 import Graph from "../EnablementGraph/index";
