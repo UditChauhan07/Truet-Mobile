@@ -211,7 +211,7 @@
 }
 
 .slideCard {
-
+min-width: 280px;
     padding: 16px;
     border: 1px solid #ECECEC;
     border-radius: 20px;

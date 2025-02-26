@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import styles from "./style.module.css";
 import Navbar from "../Navbar/index";
 import Graph from "../EnablementGraph/index";
-import WeeklyRevenue from "../images/Weekly-revenue.svg";
+// import WeeklyRevenue from "../images/Weekly-revenue.svg";
+import WeeklyRevenue from "../chartAndGraphs/WeeklyRevenue";
+import DailyTraffic from "../chartAndGraphs/DailyTraffic";
 import Footer from "../Footer/index";
+import PieChartComponent from "../chartAndGraphs/pieChart"
 
 const Index = () => {
   const [isOpen2, setIsOpen2] = useState(false);
@@ -22,12 +25,15 @@ const Index = () => {
           </div>
 
           <div className={styles.WeeklyRevenue}>
-            <img src={WeeklyRevenue} />
+            {/* <img src={WeeklyRevenue} /> */}
+            <WeeklyRevenue />
           </div>
 
           {/* dashbord  dic start*/}
           <div className={styles.MainTraffic}>
-            <div className={styles.trafficDiv}>
+<DailyTraffic></DailyTraffic>
+
+            {/* <div className={styles.trafficDiv}>
               <div className={styles.trafficMain}>
                 <div className={styles.trafficTittle}>
                   <h2>Daily Traffic</h2>
@@ -43,9 +49,11 @@ const Index = () => {
               <div className={styles.chartsvg}>
                 <img src="/chart.svg" />
               </div>
-            </div>
+            </div> */}
             <div className={styles.trafficDiv}>
-              <div className={styles.trafficMain}>
+
+              <PieChartComponent></PieChartComponent>
+              {/* <div className={styles.trafficMain}>
                 <div className={styles.trafficTittle}>
                   <h2>Pie Chart</h2>
                 </div>
@@ -66,16 +74,16 @@ const Index = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </div> */}
              
-              <div className={styles.chartsvg2}>
+              {/* <div className={styles.chartsvg2}>
                 <img src="/Pie-chart.svg" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className={styles.tableMain}>
             <div className={styles.tableTittle}>
-              <h2>Check table</h2>
+              <h2>Check Table</h2>
               <div>
                 <img src="/More-icon.svg" />
               </div>
@@ -98,7 +106,7 @@ const Index = () => {
                     </td>
                     <td>17.5%</td>
                     <td>2.458</td>
-                    <td>24.Ja</td>
+                    <td>24.January</td>
                   </tr>
                   <tr>
                     <td>
@@ -114,7 +122,7 @@ const Index = () => {
                     </td>
                     <td>10.8%</td>
                     <td>1.465</td>
-                    <td>22.Jun</td>
+                    <td>22.June</td>
                   </tr>
                   <tr>
                     <td>
@@ -124,11 +132,11 @@ const Index = () => {
                         checked
                         readOnly
                       />{" "}
-                      <spn>Weekly Update</spn>
+                      <span>Weekly Update</span>
                     </td>
                     <td>21.3%</td>
                     <td>2.965</td>
-                    <td>22.Ju</td>
+                    <td>22.July</td>
                   </tr>
                 </tbody>
               </table>
