@@ -16,7 +16,9 @@ function Navbar() {
   // Logout function
   const handleLogout = () => {
     navigate("/"); 
+    window.location.reload(); // Page ko refresh karne ke liye
   };
+  
   return (
     <div className={styles.HeaderTop}>
       <nav className={styles.Navbar}>
