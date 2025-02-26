@@ -10,16 +10,21 @@ import { Offcanvas } from "bootstrap";
 import { useNavigate } from "react-router-dom";
 
 
+
 function Navbar() {
   const navigate = useNavigate(); 
 
   // Logout function
   const handleLogout = () => {
     navigate("/"); 
-    window.location.reload();
+
+    window.location.reload(); 
+
   };
+  
   return (
     <div className={styles.HeaderTop}>
+           
       <nav className={styles.Navbar}>
         <div className={styles.logo}>
           <img src={PolyLogo} />
@@ -28,6 +33,7 @@ function Navbar() {
         <div className={styles.sidebar}>
           <div className={styles.language}>
             <img src={language}/>
+           
           </div>
 
           <div className={styles.Profile}>

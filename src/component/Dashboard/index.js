@@ -83,7 +83,7 @@ const Index = () => {
           </div>
           <div className={styles.tableMain}>
             <div className={styles.tableTittle}>
-              <h2>Check Table</h2>
+              <h2>Top Chart Sales Reps</h2>
               <div>
                 <img src="/More-icon.svg" />
               </div>
@@ -92,51 +92,127 @@ const Index = () => {
             <div className={styles.tableContainer}>
               <table className={styles.table}>
                 <thead>
+                  <tr className={styles.Headingtable}>
+                    <th>Name</th>
+                    <th>Target</th>
+                    <th>Amount</th>
+                    <th>Diff</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                      <span>Paula Cramer</span>
+                    </td>
+                    <td>$93.43k</td>
+                    <td>$266.31k</td>
+                    <td>$172.86k</td>
+                  </tr>
                   <tr>
-                    <th>NAME</th>
-                    <th>PROGRESS</th>
-                    <th>QUANTITY</th>
-                    <th>DATE</th>
+                    <td>
+                      <span>Jessica Lanue</span>
+                    </td>
+                    <td>$93.43k</td>
+                    <td>$266.31k</td>
+                    <td>$172.86k</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span>Jasmine kim</span>
+                    </td>
+                    <td>$93.43k</td>
+                    <td>$266.31k</td>
+                    <td>$172.86k</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span>Kate Block</span>
+                    </td>
+                    <td>$93.43k</td>
+                    <td>$266.31k</td>
+                    <td>$172.86k</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span>Kim Logan</span>
+                    </td>
+                    <td>$93.43k</td>
+                    <td>$266.31k</td>
+                    <td>$172.86k</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className={` ${styles.tableMain} ${styles.tableMain1}`}>
+            <div className={styles.tableTittle}>
+              <h2>Top Chart Product</h2>
+              <div>
+                <img src="/More-icon.svg" />
+              </div>
+            </div>
+
+            <div className={styles.tableContainer}>
+              <table className={styles.table}>
+                <thead>
+                  <tr className={styles.Headingtable}>
+                    <th>Name</th>
+                    <th>Target</th>
+                    <th>Amount</th>
+                    <th>Diff</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>
-                      <input type="checkbox" /> <span>Horizon UI PRO</span>
+                      <span>Jasmine kim</span>
                     </td>
-                    <td>17.5%</td>
-                    <td>2.458</td>
-                    <td>24.January</td>
+                    <td>$93.43k</td>
+                    <td>$266.31k</td>
+                    <td>$172.86k</td>
                   </tr>
                   <tr>
                     <td>
                       <div>
-                        <input
-                          type="checkbox"
-                          className={styles.checked}
-                          checked
-                          readOnly
-                        />{" "}
-                        <span>Horizon UI Free</span>
+                        
+                        <span>Allison Kauffman</span>
                       </div>
                     </td>
-                    <td>10.8%</td>
-                    <td>1.465</td>
-                    <td>22.June</td>
+                    <td>$93.45k</td>
+                    <td>$266.31k</td>
+                    <td>$172.86k</td>
                   </tr>
                   <tr>
                     <td>
-                      <input
-                        type="checkbox"
-                        className={styles.checked}
-                        checked
-                        readOnly
-                      />{" "}
-                      <span>Weekly Update</span>
+                      {" "}
+                      <span>Paula Cramer</span>
                     </td>
-                    <td>21.3%</td>
-                    <td>2.965</td>
-                    <td>22.July</td>
+                    <td>$93.45k</td>
+                    <td>$266.31k</td>
+                    <td>$172.86k</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      {" "}
+                      <span>Kim Logan</span>
+                    </td>
+                    <td>$93.45k</td>
+                    <td>$266.31k</td>
+                    <td>$172.86k</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      {" "}
+                      <span>Jonny Brew</span>
+                    </td>
+                    <td>$93.45k</td>
+                    <td>$266.31k</td>
+                    <td>$172.86k</td>
                   </tr>
                 </tbody>
               </table>

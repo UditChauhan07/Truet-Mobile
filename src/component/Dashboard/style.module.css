@@ -54,10 +54,21 @@ width: 100%;
 
 }
 
+.tableMain1 {
+    margin-bottom: 5rem !important;
+    margin-top: 1rem;
+    
+}
+
 .trafficMain {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.Headingtable{
+    background-color: #F8F8F8;
+    margin: 5px 0 0 0;
 }
 
 .trafficTittle h2 {
@@ -155,10 +166,13 @@ width: 100%;
 }
 
 .tableMain {
+
     border: 1px solid #ECECEC;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
+
+
     padding: 16px;
 }
 
@@ -193,6 +207,7 @@ font-weight: 600;
     color: #2B3674;
     font-size: 14px;
     font-weight: 600;
+    margin: 10px 0 0 0;
   }
   
   th, td {
