@@ -7,9 +7,16 @@ import FilterIcom from "../images/FilterIcom.svg";
 import styles from "./style.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Offcanvas } from "bootstrap";
+import { useNavigate } from "react-router-dom";
 
 
 function Navbar() {
+  const navigate = useNavigate(); 
+
+  // Logout function
+  const handleLogout = () => {
+    navigate("/"); 
+  };
   return (
     <div className={styles.HeaderTop}>
       <nav className={styles.Navbar}>
@@ -92,7 +99,7 @@ function Navbar() {
                   </div>
 
                 </div>
-                <div className={styles.logOutMain}>
+                <div className={styles.logOutMain} onClick={handleLogout}>
                   <div className={styles.logOutDiv} >
                     <div>
                       <img src="svg/Left-icon.svg" alt="" />

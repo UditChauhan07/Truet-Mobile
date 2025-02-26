@@ -64,7 +64,9 @@ body {
   --bs-body-line-height: 17px !important;
 }
 
-
+.offcanvas-body {
+  padding: 10px 20px  20px 20px !important;
+}
 
 @media screen and (min-width: 768px) {
   .App {
