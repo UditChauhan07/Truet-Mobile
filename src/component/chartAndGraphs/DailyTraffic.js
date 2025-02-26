@@ -17,7 +17,7 @@ const DailyTraffic = () => {
     <div className="daily-traffic-container">
       {/* Header */}
       <div className="daily-traffic-header">
-        <h3>Daily Traffic</h3>
+        <h3>Daily Leads</h3>
         <span className="growth">▲+2.45%</span>
       </div>
 

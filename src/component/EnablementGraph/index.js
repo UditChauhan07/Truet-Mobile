@@ -14,13 +14,14 @@ import {
 } from "recharts";
 
 const data = [
-  { month: "SEP", value1: 50, value2: 40 },
-  { month: "OCT", value1: 60, value2: 50 },
-  { month: "NOV", value1: 80, value2: 60 },
-  { month: "DEC", value1: 65, value2: 55 },
-  { month: "JAN", value1: 90, value2: 70 },
-  { month: "FEB", value1: 85, value2: 75 },
+  { month: "SEP", "My Sales":40, "My Team":60},
+  { month: "OCT", "My Sales":35, "My Team":55},
+  { month: "NOV", "My Sales":60, "My Team":80},
+  { month: "DEC", "My Sales":55, "My Team":65},
+  { month: "JAN", "My Sales":70, "My Team":90},
+  { month: "FEB", "My Sales":75, "My Team":85},
 ];
+
 
 const Graph = () => {
   const [startDate, setStartDate] = useState(new Date()); // Default current month
@@ -50,7 +51,7 @@ const Graph = () => {
         <div className={styles.graphDetail}>
           <div>
             <h2 className={styles.graphPrice}>$37.5K</h2>
-            <p className={styles.TotalSpent}>Total Spent</p>
+            <p className={styles.TotalSpent}>My Sales</p>
           </div>
           <p className={styles.growthPercent}>+2.45%</p>
         </div>
@@ -91,14 +92,22 @@ const Graph = () => {
           <XAxis dataKey="month" stroke="#bbb" />
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <Tooltip />
-          <Line type="monotone" dataKey="value1" stroke="#4c3cff" strokeWidth={3} dot={{ r: 4 }} />
-          <Line type="monotone" dataKey="value2" stroke="#63c7ff" strokeWidth={3} dot={{ r: 4 }} />
+          <Line type="monotone" dataKey="My Sales" stroke="#4318FF" strokeWidth={3} dot={{ r: 4 }} />
+          <Line type="monotone" dataKey="My Team" stroke="#6AD2FF" strokeWidth={3} dot={{ r: 4 }} />
         </LineChart>
       </ResponsiveContainer>
 
       {/* Status */}
-      <p className={styles.Ontrack}><span><img src="svg/track-icon.svg" alt="" /></span>  On Track</p>
+      <p className={styles.TotalSpent1}>Team Target:<sapn className={styles.myTargetblue}> $95,000</sapn> </p>
+      <div className={styles.TrackControl}>
+        <p className={styles.TotalSpent1}>My Target:<span className={styles.myTargetPurpule}> $55,000</span> </p>
+      <p className={styles.Ontrack}><span><img src="svg/track-icon.svg" alt="" /></span>  On Track</p></div>
+
+     
+
     </div>
+
+    
   );
 };
 
