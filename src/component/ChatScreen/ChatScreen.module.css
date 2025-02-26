@@ -1,78 +1,84 @@
-.backPage{
+.ChatMian{
+    height: 100vh;
+    background-color: #fff;
+}
+.backPage {
     padding: 20px;
     float: right;
     width: 14%;
-} 
-.backPage img{
-width: 100%;
 }
+
+.backPage img {
+    width: 100%;
+}
+
 .chatContainer {
     margin: auto;
     padding: 10px;
-    top: 65%;
+    /* top: 65%; */
+    bottom: 0;
     position: absolute;
     width: 100%;
-  }
-  
-  .timestamp {
+}
+
+.timestamp {
     text-align: center;
     color: gray;
     font-size: 12px;
     margin-bottom: 10px;
-  }
-  
-  .message {
+}
+
+.message {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
-  }
-  
-  .sender {
+}
+
+.sender {
     justify-content: flex-end;
-  }
-  
-  .receiver {
+}
+
+.receiver {
     justify-content: flex-start;
-  }
-  
-  .profilePic {
+}
+
+.profilePic {
     width: 24px;
     height: 24px;
     background: gray;
     border-radius: 50%;
     margin: 0 5px;
-  }
-  
-  .bubble {
+}
+
+.bubble {
     padding: 8px 12px;
     border-radius: 20px;
     font-size: 14px;
     max-width: 60%;
-  }
-  
-  .sender .bubble {
+}
+
+.sender .bubble {
     background: #755dfc;
     color: white;
     border-top-right-radius: 5px;
-  }
-  
-  .receiver .bubble {
+}
+
+.receiver .bubble {
     background: #f1f1f1;
     color: black;
     border-top-left-radius: 5px;
-  }
-  
-  .typingIndicator {
+}
+
+.typingIndicator {
     color: gray;
     font-size: 12px;
     /* margin-left: 30px; */
-  }
-  
-  .input {
+}
+
+.input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 20px;
     margin-top: 10px;
-  }
-  
+}
