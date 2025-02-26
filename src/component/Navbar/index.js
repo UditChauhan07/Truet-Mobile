@@ -32,7 +32,15 @@ function Navbar() {
 
         <div className={styles.sidebar}>
           <div className={styles.language}>
-            <img src={language}/>
+           
+            <select
+          className={styles.dropdown1}>
+          <option>English</option>
+          <option>Spanish</option>
+          <option>Italian</option>
+        </select>
+        {/* <img src={language}/> */}
+
            
           </div>
 
@@ -49,7 +57,7 @@ function Navbar() {
       <div id="offCANVAS">
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
           <div className="offcanvas-header">
-            <h5 className={styles.menuTittle}>Menu</h5>
+            {/* <h5 className={styles.menuTittle}>Menu</h5> */}
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
