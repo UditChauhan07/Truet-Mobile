@@ -104,34 +104,34 @@ const Index = () => {
                     <td>
                       <span>Paula Cramer</span>
                     </td>
-                    <td>$93.43k</td>
-                    <td>$266.31k</td>
-                    <td>$172.86k</td>
+                    <td>$123.43k</td>
+                    <td>$456.32k</td>
+                    <td>$190.06k</td>
                   </tr>
                   <tr>
                     <td>
                       <span>Jessica Lanue</span>
                     </td>
-                    <td>$93.43k</td>
-                    <td>$266.31k</td>
-                    <td>$172.86k</td>
+                    <td>$140.83k</td>
+                    <td>$377.91k</td>
+                    <td>$857.95k</td>
                   </tr>
                   <tr>
                     <td>
                       <span>Jasmine kim</span>
                     </td>
-                    <td>$93.43k</td>
-                    <td>$266.31k</td>
-                    <td>$172.86k</td>
+                    <td>$102.85k</td>
+                    <td>$866.31k</td>
+                    <td>$132.87k</td>
                   </tr>
 
                   <tr>
                     <td>
                       <span>Kate Block</span>
                     </td>
-                    <td>$93.43k</td>
-                    <td>$266.31k</td>
-                    <td>$172.86k</td>
+                    <td>$73.43k</td>
+                    <td>$287.31k</td>
+                    <td>$672.86k</td>
                   </tr>
 
                   <tr>
@@ -181,18 +181,18 @@ const Index = () => {
                         <span>Allison Kauffman</span>
                       </div>
                     </td>
-                    <td>$93.45k</td>
-                    <td>$266.31k</td>
-                    <td>$172.86k</td>
+                    <td>$0.00k</td>
+                    <td>$170.31k</td>
+                    <td>$110.86k</td>
                   </tr>
                   <tr>
                     <td>
                       {" "}
                       <span>Paula Cramer</span>
                     </td>
-                    <td>$93.45k</td>
-                    <td>$266.31k</td>
-                    <td>$172.86k</td>
+                    <td>$267.45k</td>
+                    <td>$378.55k</td>
+                    <td>$110.88k</td>
                   </tr>
 
                   <tr>
@@ -210,9 +210,9 @@ const Index = () => {
                       {" "}
                       <span>Jonny Brew</span>
                     </td>
-                    <td>$93.45k</td>
-                    <td>$266.31k</td>
-                    <td>$172.86k</td>
+                    <td>$00.00k</td>
+                    <td>$436.59K</td>
+                    <td>$120.36K</td>
                   </tr>
                 </tbody>
               </table>

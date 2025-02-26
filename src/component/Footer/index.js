@@ -65,7 +65,7 @@ const Index = () => {
         <div className={styles.navItem}>
           <div className={styles.container} onClick={() => navigate("/truet-ai")}>
             <div className={styles.bubble}>
-              <div className={styles.micIcon}><img src='svg/mic-icon.svg' /></div>
+              <div className={styles.micIcon}><img src='svg/Ai-Footer.svg' /></div>
 
             </div>
           </div>
