@@ -64,6 +64,8 @@
     position: fixed;
     top: 0;
     width: 100%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    border-radius: 0px 0px 10px 10px;
     z-index: 1;
 
 }

@@ -8,7 +8,7 @@
 .EnabledDash{
     background-color:#F9FBFF;
     padding: 1rem;
-    margin-top: 10rem;
+    margin-top: 9.5rem;
 }
 
 .EnabledDash h3{
@@ -38,7 +38,7 @@ width: 100%;
 /* dashborad CSS start */
 .MainTraffic {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 10px;
 }
 
@@ -47,7 +47,9 @@ width: 100%;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     margin-bottom: 20px;
-    padding: 16px;
+    padding: 10px;
+    min-height: 212px;
+    max-height: 212px;
     width: 50%;
 
 }
@@ -165,8 +167,16 @@ width: 100%;
     align-items: center;
     justify-content: space-between;
 }
+.table span{
+    font-size: 14px ;
+    font-weight: 600;
+    color: #2B3674 ;
+}
+
 .tableTittle h2{
-font-size: 22px;
+font-size: 18px;
+color: #2B3674;
+font-weight: 600;
 }
 /* Table.module.css */
 
@@ -180,6 +190,9 @@ font-size: 22px;
     border-collapse: collapse;
     overflow: auto;
     white-space: nowrap;
+    color: #2B3674;
+    font-size: 14px;
+    font-weight: 600;
   }
   
   th, td {
@@ -189,7 +202,9 @@ font-size: 22px;
   
   th {
     color: #a0a0a0;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 14px;
+    color:#A3AED0
   }
   
   .checked {

@@ -40,6 +40,7 @@
     border: none;
     display: flex;
     font-size: 14px;
+    color: #A3AED0;
     gap: 5px;
     align-items: center;
 }
