@@ -65,7 +65,7 @@ body {
 }
 
 .offcanvas-body {
-  padding: 10px 20px  20px 20px !important;
+  padding: 0px 20px  20px 20px !important;
 }
 
 @media screen and (min-width: 768px) {
