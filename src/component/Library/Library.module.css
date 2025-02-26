@@ -560,8 +560,13 @@ h4 {
     border-radius: 20px 20px 0px 0px;
 }
 
-.content {
+.contents {
     padding: 20px;
+}
+.contents h2 {
+    color: #191D23;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .modalLine {
