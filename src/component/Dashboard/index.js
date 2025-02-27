@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./style.module.css";
 import Navbar from "../Navbar/index";
 import Graph from "../EnablementGraph/index";
@@ -32,29 +32,11 @@ const Index = () => {
 
           {/* dashbord  dic start*/}
           <div className={styles.MainTraffic}>
-<DailyTraffic></DailyTraffic>
-
-            {/* <div className={styles.trafficDiv}>
-              <div className={styles.trafficMain}>
-                <div className={styles.trafficTittle}>
-                  <h2>Daily Traffic</h2>
-                </div>
-                <div className={styles.trafficGrow}>
-                  <img src="/arrow_drop_up.svg" />
-                  <p>+2.45%</p>
-                </div>
-              </div>
-              <div className={styles.visitors}>
-                <h1>2.579</h1> <span>Visitors</span>
-              </div>
-              <div className={styles.chartsvg}>
-                <img src="/chart.svg" />
-              </div>
-            </div> */}
+            <DailyTraffic></DailyTraffic>
             <div className={styles.trafficDiv}>
 
               <PieChartComponent></PieChartComponent>
-              
+
             </div>
           </div>
           <div className={styles.tableMain}>
@@ -77,7 +59,7 @@ const Index = () => {
                   </tr>
                 </thead>
                 <tbody>
-                <tr>
+                  <tr>
                     <td>
                       <span>Jasmine Kim</span>
                     </td>
@@ -154,7 +136,7 @@ const Index = () => {
                   <tr>
                     <td>
                       <div>
-                        
+
                         <span>Bruno</span>
                       </div>
                     </td>
