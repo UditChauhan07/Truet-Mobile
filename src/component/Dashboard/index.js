@@ -54,32 +54,7 @@ const Index = () => {
             <div className={styles.trafficDiv}>
 
               <PieChartComponent></PieChartComponent>
-              {/* <div className={styles.trafficMain}>
-                <div className={styles.trafficTittle}>
-                  <h2>Pie Chart</h2>
-                </div>
-                <div className={styles.dropdown}>
-                  <button
-                    className={styles.dropdownButton}
-                    onClick={() => setIsOpen2(!isOpen2)}
-                  >
-                    <p className={styles.mobth}>Monthly</p>
-                  </button>
-                  {isOpen2 && (
-                    <div className={styles.dropdownMenu}>
-                      {options.map((option) => (
-                        <div key={option} onClick={() => setIsOpen2(false)}>
-                          {option}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div> */}
-             
-              {/* <div className={styles.chartsvg2}>
-                <img src="/Pie-chart.svg" />
-              </div> */}
+              
             </div>
           </div>
           <div className={styles.tableMain}>
@@ -96,49 +71,49 @@ const Index = () => {
                 <thead>
                   <tr className={styles.Headingtable}>
                     <th>Name</th>
-                    <th>Target</th>
-                    <th>Amount</th>
-                    <th>Diff</th>
+                    <th>Sale Target</th>
+                    <th> Sale Amount</th>
+                    <th>Diff.</th>
                   </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>
-                      <span>Paula Cramer</span>
+                      <span>Jasmine Kim</span>
                     </td>
-                    <td>$123.43k</td>
-                    <td>$456.32k</td>
-                    <td>$190.06k</td>
+                    <td>$93.45K</td>
+                    <td>$266.31K</td>
+                    <td>$172.86K</td>
                   </tr>
                   <tr>
                     <td>
-                      <span>Jessica Lanue</span>
+                      <span>Allison Kauffman</span>
                     </td>
-                    <td>$140.83k</td>
-                    <td>$377.91k</td>
-                    <td>$857.95k</td>
+                    <td>$6.93K</td>
+                    <td>$146.61K</td>
+                    <td>$139.68K</td>
                   </tr>
                   <tr>
                     <td>
-                      <span>Jasmine kim</span>
+                      <span>Paula Carmer</span>
                     </td>
-                    <td>$102.85k</td>
-                    <td>$866.31k</td>
-                    <td>$132.87k</td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <span>Kate Block</span>
-                    </td>
-                    <td>$73.43k</td>
-                    <td>$287.31k</td>
-                    <td>$672.86k</td>
+                    <td>$0.00K</td>
+                    <td>$95.34K</td>
+                    <td>$95.34K</td>
                   </tr>
 
                   <tr>
                     <td>
                       <span>Kim Logan</span>
+                    </td>
+                    <td>$34.79K</td>
+                    <td>$135.68K</td>
+                    <td>$100.90K</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span>Kate Block</span>
                     </td>
                     <td>$93.43k</td>
                     <td>$266.31k</td>
@@ -162,49 +137,49 @@ const Index = () => {
                 <thead>
                   <tr className={styles.Headingtable}>
                     <th>Name</th>
-                    <th>Target</th>
-                    <th>Amount</th>
-                    <th>Diff</th>
+                    <th>Sale Target</th>
+                    <th>Sale Amount</th>
+                    <th>Diff.</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>
-                      <span>Jasmine kim</span>
+                      <span>Jessica Lanoue</span>
                     </td>
-                    <td>$93.43k</td>
-                    <td>$266.31k</td>
-                    <td>$172.86k</td>
+                    <td>$196.57K</td>
+                    <td>$316.90K</td>
+                    <td>$120.33K</td>
                   </tr>
                   <tr>
                     <td>
                       <div>
                         
-                        <span>Allison Kauffman</span>
+                        <span>Bruno</span>
                       </div>
                     </td>
-                    <td>$0.00k</td>
-                    <td>$170.31k</td>
-                    <td>$110.86k</td>
+                    <td>$0.00K</td>
+                    <td>$170.00K</td>
+                    <td>$170.00K</td>
                   </tr>
                   <tr>
                     <td>
                       {" "}
-                      <span>Paula Cramer</span>
+                      <span>Karla</span>
                     </td>
-                    <td>$267.45k</td>
-                    <td>$378.55k</td>
-                    <td>$110.88k</td>
+                    <td>$267.45K</td>
+                    <td>$367.45K</td>
+                    <td>$100.00K</td>
                   </tr>
 
                   <tr>
                     <td>
                       {" "}
-                      <span>Kim Logan</span>
+                      <span>Niklas</span>
                     </td>
-                    <td>$93.45k</td>
-                    <td>$266.31k</td>
-                    <td>$172.86k</td>
+                    <td>$93.45K</td>
+                    <td>$293.45K</td>
+                    <td>$200.00K</td>
                   </tr>
 
                   <tr>
@@ -212,9 +187,9 @@ const Index = () => {
                       {" "}
                       <span>Jonny Brew</span>
                     </td>
-                    <td>$00.00k</td>
+                    <td>$00.00K</td>
                     <td>$436.59K</td>
-                    <td>$120.36K</td>
+                    <td>$436.59K</td>
                   </tr>
                 </tbody>
               </table>
