@@ -4,6 +4,7 @@ import styles from "../Library/Library.module.css";
 import Footer from "../Footer/index";
 import { useNavigate } from "react-router-dom";
 import QuickBytes from "../QuickBytes/QuickBytes";
+import ShareOption from "../Dashboard/ShareOption"
 
 
 
@@ -47,9 +48,11 @@ const Library = () => {
                     <span>Official LMS</span>
                   </div>
                   <div className={styles.accessMain}>
-                    <div className={styles.share}>
-                      <img src="/share-icon.svg" alt="" />
+                    <div className={styles.share} >
+                    <ShareOption/>
                     </div>
+                   
+
                     <div className={styles.accessDiv}>
                       <p>Access</p>
                     </div>
@@ -76,7 +79,8 @@ const Library = () => {
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt="" />
+                    <ShareOption/>
+
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -104,7 +108,7 @@ const Library = () => {
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt="" />
+                    <ShareOption/>
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -132,7 +136,7 @@ const Library = () => {
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt="" />
+                    <ShareOption/>
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -162,7 +166,7 @@ const Library = () => {
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt="" />
+                    <ShareOption/>
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -190,7 +194,7 @@ const Library = () => {
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt="" />
+                    <ShareOption/>
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -218,7 +222,7 @@ const Library = () => {
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt="" />
+                    <ShareOption/>
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -246,7 +250,7 @@ const Library = () => {
                   </div>
                   <div className={styles.accessMain}>
                     <div className={styles.share}>
-                      <img src="/share-icon.svg" alt="" />
+                    <ShareOption/>
                     </div>
                     <div className={styles.accessDiv}>
                       <p>Access</p>
@@ -267,9 +271,7 @@ const Library = () => {
                 <h2>Team members (Ask a Question)</h2>
               </div>
               <div>
-                <a href="intent://contacts/#Intent;action=android.intent.action.VIEW;scheme=content;end;" >
-                  <img src="/add-icon.svg" alt="" />
-                </a>
+                <ShareOption/>
               </div>
             </div>
             <div className={styles.member}>
