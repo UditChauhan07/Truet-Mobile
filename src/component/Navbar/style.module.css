@@ -181,12 +181,17 @@
 
 
 /* Filter Bottom  Cnavas */
-.FlterTittle h2 {
+
+.FilterTitle {
     color: #000;
     font-size: 24px;
     font-weight: bold;
-
 }
+/* .FlterTittle h2 {
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+} */
 
 .checkDiv {
     display: flex;
@@ -217,4 +222,59 @@
     margin-bottom: 0px;
     text-align: center;
 
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.arrowDown {
+    font-size: 14px;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.arrowUp {
+    font-size: 14px;
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.filterOptions {
+    margin-top: 10px;
+    /* padding-inline: 15px; */
+}
+
+.checkbox,
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px;
+    cursor: pointer;
+    /* justify-content: space-between; */
+}
+
+.checkbox input,
+.radio input {
+    accent-color: #7C3AED;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox span,
+.radio span {
+    cursor: pointer;
 }

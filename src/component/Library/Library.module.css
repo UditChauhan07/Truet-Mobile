@@ -214,7 +214,7 @@
     border: 1px solid #ECECEC;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
-    
+
 }
 
 .slideCard img {
@@ -401,7 +401,7 @@
 }
 
 .securityDetails h2 {
-   
+
     font-size: 20px;
     color: black;
     font-weight: bold;
@@ -482,10 +482,12 @@
     color: #A3AED0;
 
 }
+
 .menuContainer {
     position: relative;
     display: inline-block;
-  }
+}
+
 .option {}
 
 
@@ -500,14 +502,14 @@
     display: flex;
     flex-direction: column;
     min-width: 80px;
-  }
-  
-  .menuDropdown p {
+}
+
+.menuDropdown p {
     margin: 0;
     padding: 6px 10px;
     cursor: pointer;
     font-size: 14px;
-  }
+}
 
 .filtersContainer {
     width: 100%;
@@ -553,8 +555,8 @@ h4 {
 }
 
 .filterOptions {
-    margin-top: 5px;
-
+    margin-top: 20px;
+    padding-inline: 15px;
 }
 
 .checkbox,
@@ -566,6 +568,7 @@ h4 {
     color: #000000;
     margin-bottom: 15px;
     cursor: pointer;
+    justify-content: space-between;
 }
 
 .checkbox input,
@@ -580,11 +583,76 @@ h4 {
     cursor: pointer;
 }
 
+.FolderDiv {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.FolderDiv p {
+    margin-bottom: 0px;
+    color: #090A0A;
+    font-weight: 500;
+}
+
+.search_box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #d3d3e3;
+    border-radius: 25px;
+    padding: 8px 15px;
+    margin-inline: 40px;
+    margin-block:10px;
+}
+
+.search_box input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    color: #6c757d;
+}
+
+.search_box .icon {
+    color: #2c2e83;
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.icon img {
+    width: 15px;
+}
+
+.showBtn {
+    margin-top: 20px;
+    background-color: #6B4EFF;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    
+}
+
+.showBtn p {
+    margin-bottom: 0px;
+    text-align: center;
+}
+.closeBtn {
+    margin-top: 20px;
+}
+.closeBtn p{
+    margin-bottom: 0px;
+    text-align: center;
+
+}
+
+
 /* Modale CSS start */
 .contentDetails {
     padding: 20px;
 }
-.modTitle h5{
+
+.modTitle h5 {
     font-size: 22px;
     font-weight: 500;
     margin-top: 20px;
@@ -596,13 +664,14 @@ h4 {
     width: 100%;
     border-radius: 20px 20px 0px 0px;
 }
+
 .visualImg iframe {
     margin-top: 20px;
     width: 100%;
-    height: 250px; 
+    height: 250px;
     border: none;
     border-radius: 20px;
-  }
+}
 
 .contents {
     padding: 20px;

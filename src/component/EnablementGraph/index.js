@@ -59,7 +59,6 @@ const Graph = () => {
         {/* Dropdown and Chart Button */}
         <div className={styles.charContro}>
         <div className={styles.calendarContainer} ref={calendarRef}>
-      {/* बटन */}
       <button className={styles.dateStyl} onClick={() => setShowCalendar(!showCalendar)}>
         <img src={CalanderIcon} alt="Calendar Icon" />
         This month
