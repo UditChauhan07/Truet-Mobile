@@ -111,6 +111,7 @@ const QuickBytes = () => {
         }
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, [isOpenCalender]);
+
     const table = () => {
         setTableOpen(true)
     }
@@ -137,93 +138,87 @@ const QuickBytes = () => {
                 <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
                     <div className="offcanvas-header">
                         <h5 className={styles.menuTittle}>Filters</h5>
-                        {/* <p data-bs-dismiss="offcanvas" aria-label="Close">Clear All</p> */}
+                        <p data-bs-dismiss="offcanvas" aria-label="Close"><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></p>
                     </div>
                     <div class="offcanvas-body">
-                        <div className={styles.filtersContainer}>
-                            <div className={styles.filterSection}>
-                                <div className={styles.sectionHeader} onClick={() => toggleSection("dealflow")}>
-                                    <h4>Type of Byte</h4>
-                                    <span className={openSections.dealflow ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-                                </div>
-                                {openSections.dealflow && (
-                                    <div className={styles.filterOptions}>
-                                        <label className={styles.checkbox}>
-                                            <span>Audio Visual </span>
-                                            <input type="checkbox" defaultChecked />
+                        {/* Sort by Section */}
+            <div className={styles.filterSection}>
+              <div className={styles.sectionHeader} onClick={() => toggleSection("sortby")}>
+                <h4>Sort by</h4>
+                <span className={openSections.sortby ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+              </div>
+              {openSections.sortby && (
+                <div className={styles.filterOptions}>
+                  <label className={styles.radio}>
+                    <input type="radio" name="sort" defaultChecked />
+                    <span>Most Relevant First</span>
+                  </label>
+                  <label className={styles.radio}>
+                    <input type="radio" name="sort" />
+                    <span>Most Relevant First</span>
+                  </label>
+                  <label className={styles.radio}>
+                    <input type="radio" name="sort" />
+                    <span>Most Relevant First</span>
+                  </label>
+                  <label className={styles.radio}>
+                    <input type="radio" name="sort" />
+                    <span>Most Relevant First</span>
+                  </label>
+                </div>
+              )}
+            </div>
+                    <div className={styles.filterMain}>
+            <div className={styles.filterSection}>
+              <div className={styles.sectionHeader} onClick={() => toggleSection("dealflow")}>
+                <h4>Dealflow</h4>
+                <span className={openSections.dealflow ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+              </div>
+              {openSections.dealflow && (
+                <div className={styles.filterOptions}>
+                  <label className={styles.checkbox}>
+                    <input type="checkbox" defaultChecked />
+                    <span>All Open Deals</span>
+                  </label>
+                  <label className={styles.checkbox}>
+                    <input type="checkbox" />
+                    <span>Members only deals</span>
+                  </label>
+                </div>
+              )}
+            </div>
+            {/* Pipeline Section */}
+            <div className={styles.filterSection}>
+              <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
+                <h4>Pipeline</h4>
+                <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+              </div>
+              {openSections.pipeline && (
+                <div className={styles.filterOptions}>
+                  <label className={styles.checkbox}>
+                    <input type="checkbox" defaultChecked />
+                    <span>Polyflex 5.0 PDS</span>
+                  </label>
+                  <label className={styles.checkbox}>
+                    <input type="checkbox" />
+                    <span>Polyflex 5.0 PDS</span>
+                  </label>
+                  <label className={styles.checkbox}>
+                    <input type="checkbox" />
+                    <span>Polyflex 5.0 PDS</span>
+                  </label>
+                  <label className={styles.checkbox}>
+                    <input type="checkbox" />
+                    <span>Greater than $500</span>
+                  </label>
+                </div>
+              )}
+            </div>
 
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <span>Infographic</span>
-                                            <input type="checkbox" defaultChecked />
 
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <span>Data Model</span>
-                                            <input type="checkbox" defaultChecked />
+            
 
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <span>Insights</span>
-                                            <input type="checkbox" defaultChecked />
-                                        </label>
-                                    </div>
-                                )}
-                            </div>
-                            {/* Input Search Start */}
-                            <div className={styles.SearchMain}>
-                                <div className={styles.FolderDiv}>
-                                    <img src='svg/Folder-Icon.svg' alt='' />
-                                    <p>Explore Topic</p>
-                                </div>
-                                <div>
-                                    <div className={styles.search_box}>
-                                        <span className={styles.icon}><img src='svg/Search_Icon.svg' alt='' /></span>
-                                        <input type="text" placeholder="Search by Topic" />
-                                    </div>
-                                </div>
-
-                                <div className={styles.FolderDiv}>
-                                    <img src='svg/User-check_icon.svg' alt='' />
-                                    <p>Search by Expert</p>
-                                </div>
-                                <div>
-                                    <div className={styles.search_box}>
-                                        <span className={styles.icon}><img src='svg/Search_Icon.svg' alt='' /></span>
-                                        <input type="text" placeholder="Search by Expert Name" />
-                                    </div>
-                                </div>
-                                <div ref={calendarRef} className={styles.container}>
-                                    {/* Calendar Open Button */}
-                                    <div className={styles.FolderDiv} onClick={() => setIsOpenCalender(!isOpenCalender)}>
-                                        <img src="svg/Calendar-icon.svg" alt="Calendar Icon" />
-                                        <p>Published Date Range</p>
-                                    </div>
-
-                                    {/* Calendar Dropdown */}
-                                    {isOpenCalender && (
-                                        <div className={styles.datePickerWrapper}>
-                                            <DatePicker
-                                                selected={startDate}
-                                                onChange={(date) => setStartDate(date)}
-                                                inline
-                                            />
-                                        </div>
-                                    )}
-                                </div>
-                                <div className={styles.BothBtn}>
-                                    <div className={styles.showBtn} aria-label="Close" data-bs-dismiss="offcanvas">
-                                        <p>Show</p>
-                                    </div>
-                                    <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
-                                        <p>Close</p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
+          </div>
 
                     </div>
                 </div>

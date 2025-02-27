@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useRef,useEffect } from "react";
 import PolyLogo from "../images/Polyglass-Logo.png";
 import language from "../images/languagePoly.svg";
 import Profile from "../images/ProfileImg.png";
@@ -8,12 +8,16 @@ import styles from "./style.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Offcanvas } from "bootstrap";
 import { useNavigate, useLocation } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 
 function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [startDate, setStartDate] = useState(null);
+  const [isOpenCalender, setIsOpenCalender] = useState(false);
   const [openSections, setOpenSections] = useState({
     dealflow: true,
     pipeline: true,
@@ -30,6 +34,24 @@ function Navbar() {
     window.location.reload();
 
   };
+   const calendarRef = useRef(null);
+  
+      const handleClickOutside = (event) => {
+          if (calendarRef.current && !calendarRef.current.contains(event.target)) {
+              setIsOpenCalender(false);
+          }
+      };
+      useEffect(() => {
+              if (isOpenCalender) {
+                  setTimeout(() => {
+                      document.addEventListener("mousedown", handleClickOutside);
+                  }, 100);
+              } else {
+                  document.removeEventListener("mousedown", handleClickOutside);
+              }
+              return () => document.removeEventListener("mousedown", handleClickOutside);
+          }, [isOpenCalender]);
+      
   // Path ke basis par Offcanvas ka ID decide karna
   const offcanvasId = location.pathname === "/sales" ? "offcanvasSales" : "offcanvasHome";
   return (
@@ -161,83 +183,90 @@ function Navbar() {
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
-          <div className={styles.filterMain}>
-            <div className={styles.filterSection}>
-              <div className={styles.sectionHeader} onClick={() => toggleSection("dealflow")}>
-                <h4>Dealflow</h4>
-                <span className={openSections.dealflow ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-              </div>
-              {openSections.dealflow && (
-                <div className={styles.filterOptions}>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" defaultChecked />
-                    <span>All Open Deals</span>
-                  </label>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" />
-                    <span>Members only deals</span>
-                  </label>
-                </div>
-              )}
-            </div>
-            {/* Pipeline Section */}
-            <div className={styles.filterSection}>
-              <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
-                <h4>Pipeline</h4>
-                <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-              </div>
-              {openSections.pipeline && (
-                <div className={styles.filterOptions}>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" defaultChecked />
-                    <span>Polyflex 5.0 PDS</span>
-                  </label>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" />
-                    <span>Polyflex 5.0 PDS</span>
-                  </label>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" />
-                    <span>Polyflex 5.0 PDS</span>
-                  </label>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" />
-                    <span>Greater than $500</span>
-                  </label>
-                </div>
-              )}
-            </div>
+        <div className={styles.filtersContainer}>
+                            <div className={styles.filterSection}>
+                                <div className={styles.sectionHeader} onClick={() => toggleSection("dealflow")}>
+                                    <h4>Type of Byte</h4>
+                                    <span className={openSections.dealflow ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+                                </div>
+                                {openSections.dealflow && (
+                                    <div className={styles.filterOptions}>
+                                        <label className={styles.checkbox}>
+                                            <span>Audio Visual </span>
+                                            <input type="checkbox" defaultChecked />
 
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <span>Infographic</span>
+                                            <input type="checkbox" defaultChecked />
 
-            {/* Sort by Section */}
-            <div className={styles.filterSection}>
-              <div className={styles.sectionHeader} onClick={() => toggleSection("sortby")}>
-                <h4>Sort by</h4>
-                <span className={openSections.sortby ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-              </div>
-              {openSections.sortby && (
-                <div className={styles.filterOptions}>
-                  <label className={styles.radio}>
-                    <input type="radio" name="sort" defaultChecked />
-                    <span>Most Relevant First</span>
-                  </label>
-                  <label className={styles.radio}>
-                    <input type="radio" name="sort" />
-                    <span>Most Relevant First</span>
-                  </label>
-                  <label className={styles.radio}>
-                    <input type="radio" name="sort" />
-                    <span>Most Relevant First</span>
-                  </label>
-                  <label className={styles.radio}>
-                    <input type="radio" name="sort" />
-                    <span>Most Relevant First</span>
-                  </label>
-                </div>
-              )}
-            </div>
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <span>Data Model</span>
+                                            <input type="checkbox" defaultChecked />
 
-          </div>
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <span>Insights</span>
+                                            <input type="checkbox" defaultChecked />
+                                        </label>
+                                    </div>
+                                )}
+                            </div>
+                            {/* Input Search Start */}
+                            <div className={styles.SearchMain}>
+                                <div className={styles.FolderDiv}>
+                                    <img src='svg/Folder-Icon.svg' alt='' />
+                                    <p>Explore Topic</p>
+                                </div>
+                                <div>
+                                    <div className={styles.search_box}>
+                                        <span className={styles.icon}><img src='svg/Search_Icon.svg' alt='' /></span>
+                                        <input type="text" placeholder="Search by Topic" />
+                                    </div>
+                                </div>
+
+                                <div className={styles.FolderDiv}>
+                                    <img src='svg/User-check_icon.svg' alt='' />
+                                    <p>Search by Expert</p>
+                                </div>
+                                <div>
+                                    <div className={styles.search_box}>
+                                        <span className={styles.icon}><img src='svg/Search_Icon.svg' alt='' /></span>
+                                        <input type="text" placeholder="Search by Expert Name" />
+                                    </div>
+                                </div>
+                                <div ref={calendarRef} className={styles.container}>
+                                    {/* Calendar Open Button */}
+                                    <div className={styles.FolderDiv} onClick={() => setIsOpenCalender(!isOpenCalender)}>
+                                        <img src="svg/Calendar-icon.svg" alt="Calendar Icon" />
+                                        <p>Published Date Range</p>
+                                    </div>
+
+                                    {/* Calendar Dropdown */}
+                                    {isOpenCalender && (
+                                        <div className={styles.datePickerWrapper}>
+                                            <DatePicker
+                                                selected={startDate}
+                                                onChange={(date) => setStartDate(date)}
+                                                inline
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                                <div className={styles.BothBtn}>
+                                    <div className={styles.showBtn} aria-label="Close" data-bs-dismiss="offcanvas">
+                                        <p>Show</p>
+                                    </div>
+                                    <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
+                                        <p>Close</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
         </div>
       </div>
 

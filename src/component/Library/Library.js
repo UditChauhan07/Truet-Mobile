@@ -271,7 +271,8 @@ const Library = () => {
                 <h2>Team members (Ask a Question)</h2>
               </div>
               <div>
-                <ShareOption/>
+                <img src="/add-icon.svg"/>
+                {/* <ShareOption/> */}
               </div>
             </div>
             <div className={styles.member}>

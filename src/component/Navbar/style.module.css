@@ -252,7 +252,7 @@ h4 {
 
 .filterOptions {
     margin-top: 10px;
-    /* padding-inline: 15px; */
+    padding-inline: 15px;
 }
 
 .checkbox,
@@ -264,7 +264,7 @@ h4 {
     color: #000000;
     margin-bottom: 15px;
     cursor: pointer;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .checkbox input,
@@ -277,4 +277,41 @@ h4 {
 .checkbox span,
 .radio span {
     cursor: pointer;
+}
+
+/* Sales Filter */
+.FolderDiv {
+    display: flex;
+align-items: center;
+justify-content: start;
+gap: 10px;
+}
+.FolderDiv p {
+   
+margin-bottom: 0;
+}
+.search_box {
+    align-items: center;
+    background: #fff;
+    border: 1px solid #d3d3e3;
+    border-radius: 25px;
+    display: flex;
+    margin-block: 10px;
+    /* margin-inline: 40px; */
+    padding: 8px 15px;
+}
+.search_box input {
+    border: none;
+    color: #6c757d;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+}
+.icon {
+    color: #2c2e83;
+    font-size: 18px;
+    margin-right: 8px;
+}
+.icon img {
+    width: 15px;
 }
