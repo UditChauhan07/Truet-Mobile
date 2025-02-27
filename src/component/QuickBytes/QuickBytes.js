@@ -24,6 +24,8 @@ const QuickBytes = () => {
         pipeline: true,
         sortby: true,
     });
+    const [tableOpen, setTableOpen] = useState(false)
+    const [featureOpen, setfeatureOpen] = useState(false)
     const toggleSection = (section) => {
         setOpenSections({ ...openSections, [section]: !openSections[section] });
     };
@@ -103,13 +105,18 @@ const QuickBytes = () => {
         if (isOpenCalender) {
             setTimeout(() => {
                 document.addEventListener("mousedown", handleClickOutside);
-            }, 100); 
+            }, 100);
         } else {
             document.removeEventListener("mousedown", handleClickOutside);
         }
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, [isOpenCalender]);
-
+    const table = () => {
+        setTableOpen(true)
+    }
+    const feature = () => {
+        // setfeatureOpen(true)
+    }
     return (
         <div>
             <div className={styles.Library}>
@@ -205,7 +212,7 @@ const QuickBytes = () => {
                                     )}
                                 </div>
                                 <div className={styles.BothBtn}>
-                                    <div className={styles.showBtn}  aria-label="Close" data-bs-dismiss="offcanvas">
+                                    <div className={styles.showBtn} aria-label="Close" data-bs-dismiss="offcanvas">
                                         <p>Show</p>
                                     </div>
                                     <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
@@ -226,27 +233,157 @@ const QuickBytes = () => {
                 <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
                     <div className={styles.contentDetails}>
                         <div className={styles.modTitle}>
-                            <h5>{modalsubheading[selectedIndex]}</h5>
+                            {videoLinks[selectedIndex] ?
+                                <h5>{modalsubheading[selectedIndex]}</h5>
+                                : null}
+
                         </div>
-                        <div className={styles.visualImg}>
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src={videoLinks[selectedIndex]}
-                                title="Embedded Video"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
-                            
-                        </div>
-                        <div className={styles.ShareIconMain}><ShareOption /></div>
-                        <div className={styles.contents}>
-                            <h5>{modalsubheading[selectedIndex]}</h5>
-                            <p>{subdescriptions[selectedIndex]}</p>
-                        </div>
+                        {videoLinks[selectedIndex] ?
+                            <div className={styles.visualImg}>
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src={videoLinks[selectedIndex]}
+                                    title="Embedded Video"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div> :
+                            <div>
+                                <h2 className={styles.ModalTitle}>Insights</h2>
+                                <div className={styles.sellDiv}>
+                                    <label className={styles.checkbox}>
+                                        <span>Capturing Distributor Mind</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Safety Datasheet</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Product Datasheets</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>PolyGlass Case Studies</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>PolyGlass Sales Process</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Opportunity Management</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Outreach Best Practices</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Salesforce(Official CRM)</span>
+                                        <input type="checkbox" />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>MOfficial LMS</span>
+                                        <input type="checkbox" />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Polyglass.com</span>
+                                        <input type="checkbox" />
+                                    </label>
+                                </div>
+                                <div className={styles.SubmitBtn}>
+                                    <p>Submit</p>
+                                </div>
+                                <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
+                                    <p>Close</p>
+                                </div>
+                            </div>
+                        }
+                        {videoLinks[selectedIndex] ?
+                            <>
+                                <div className={styles.ShareIconMain}><ShareOption /></div>
+                                <div className={styles.contents}>
+                                    <h5>{modalsubheading[selectedIndex]}</h5>
+                                    <p>{subdescriptions[selectedIndex]}</p>
+                                </div>
+                            </>
+                            : null}
+
                     </div>
                 </Modal>
             )}
+
+            {tableOpen ? <Modal isOpen={tableOpen} onClose={() => setTableOpen(false)}>
+                <div className={styles.contentDetails}>
+                    <div className={styles.modTitle}>
+                        <h5>Table data</h5>
+                        <div className={styles.tableContainer}>
+                            <table className={styles.table}>
+                                <thead>
+                                    <tr className={styles.Headingtable}>
+                                        <th>Name</th>
+                                        <th>Company Name</th>
+                                        <th> Status</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span>Emily Carter</span>
+                                        </td>
+                                        <td>NovaTech Solutions</td>
+                                        <td>Active</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>Jason Reynolds</span>
+                                        </td>
+                                        <td>Skyline Innovations</td>
+                                        <td>Inactive</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>Sarah Patel</span>
+                                        </td>
+                                        <td>GreenLeaf Organics</td>
+                                        <td>Active</td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span>Michael Chen</span>
+                                        </td>
+                                        <td>Quantum Dynamics</td>
+                                        <td>Active</td>
+
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </Modal> : null}
+
+            {/* FeatureOpen Div */}
+            {featureOpen ? <Modal isOpen={featureOpen} onClose={() => setfeatureOpen(false)}>
+                <div className={styles.contentDetails}>
+                    <div className={styles.modTitle}>
+
+                        <h5>FEATURER data</h5>
+
+                    </div>
+                </div>
+            </Modal> : null}
+
+
             <div className={styles.bytesMain}>
                 <div className={styles.bytesflex}>
                     <div className={styles.Bytes} onClick={() => handleOpenModal(0)}>
@@ -272,7 +409,7 @@ const QuickBytes = () => {
                     </div>
                 </div>
                 <div className={styles.bytesflex}>
-                    <div className={styles.Bytes} >
+                    <div className={styles.Bytes} onClick={() => handleOpenModal(3)} >
                         <div className={styles.vidIcon}>
                             <img src={icons[2]} alt="icon" />
 
@@ -282,7 +419,7 @@ const QuickBytes = () => {
                             <strong>{subtitles[2]}</strong>
                         </div>
                     </div>
-                    <div className={styles.Bytes} >
+                    <div className={styles.Bytes} onClick={table}>
                         <div className={styles.vidIcon}>
                             <img src={icons[3]} alt="icon" />
 
@@ -304,7 +441,7 @@ const QuickBytes = () => {
                             <strong>{subtitles[4]}</strong>
                         </div>
                     </div>
-                    <div className={styles.Bytes} >
+                    <div className={styles.Bytes} onClick={feature} >
                         <div className={styles.vidIcon}>
                             <img src={icons[5]} alt="icon" />
 
