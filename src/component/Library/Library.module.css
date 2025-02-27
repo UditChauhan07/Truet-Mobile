@@ -706,22 +706,26 @@ h4 {
     margin-block: 1rem;
 }
 
-/* .shareButton {
-    height: 50px;
-    background-color: #4318FF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 2rem;
-} */
+/* Must DO sell Css start */
+.sellDiv{
+    margin-top: 20px;  
+}
+.ModalTitle{
+    color: #000000;
 
-/* .shareButton p {
-    color: #ffff;
+}
+.SubmitBtn{
+    background-color: #6b4eff;
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 30px;
+    padding: 10px;
+}
+.SubmitBtn p{
+    text-align: center;
     margin-bottom: 0px;
-} */
 
+}
 
 @media (max-width:410px) {
     .shareDiv {

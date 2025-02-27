@@ -103,7 +103,7 @@ const QuickBytes = () => {
         if (isOpenCalender) {
             setTimeout(() => {
                 document.addEventListener("mousedown", handleClickOutside);
-            }, 100); 
+            }, 100);
         } else {
             document.removeEventListener("mousedown", handleClickOutside);
         }
@@ -205,7 +205,7 @@ const QuickBytes = () => {
                                     )}
                                 </div>
                                 <div className={styles.BothBtn}>
-                                    <div className={styles.showBtn}  aria-label="Close" data-bs-dismiss="offcanvas">
+                                    <div className={styles.showBtn} aria-label="Close" data-bs-dismiss="offcanvas">
                                         <p>Show</p>
                                     </div>
                                     <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
@@ -226,24 +226,83 @@ const QuickBytes = () => {
                 <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
                     <div className={styles.contentDetails}>
                         <div className={styles.modTitle}>
-                            <h5>{modalsubheading[selectedIndex]}</h5>
+                            {videoLinks[selectedIndex] ?
+                                <h5>{modalsubheading[selectedIndex]}</h5>
+                                : null}
+
                         </div>
-                        <div className={styles.visualImg}>
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src={videoLinks[selectedIndex]}
-                                title="Embedded Video"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
-                            
-                        </div>
-                        <div className={styles.ShareIconMain}><ShareOption /></div>
-                        <div className={styles.contents}>
-                            <h5>{modalsubheading[selectedIndex]}</h5>
-                            <p>{subdescriptions[selectedIndex]}</p>
-                        </div>
+                        {videoLinks[selectedIndex] ?
+                            <div className={styles.visualImg}>
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src={videoLinks[selectedIndex]}
+                                    title="Embedded Video"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div> : <div>
+                                <h2 className={styles.ModalTitle}>Insights</h2>
+                                <div className={styles.sellDiv}>
+                                    <label className={styles.checkbox}>
+                                        <span>Capturing Distributor Mind</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Safety Datasheet</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Product Datasheets</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>PolyGlass Case Studies</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>PolyGlass Sales Process</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Opportunity Management</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Outreach Best Practices</span>
+                                        <input type="checkbox" defaultChecked />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Salesforce(Official CRM)</span>
+                                        <input type="checkbox" />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>MOfficial LMS</span>
+                                        <input type="checkbox" />
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <span>Polyglass.com</span>
+                                        <input type="checkbox" />
+                                    </label>
+                                </div>
+                                <div className={styles.SubmitBtn}>
+                                    <p>Submit</p>
+                                </div>
+                                <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
+                                    <p>Close</p>
+                                </div>
+                            </div>
+                        }
+                        {videoLinks[selectedIndex] ?
+                            <>
+                                <div className={styles.ShareIconMain}><ShareOption /></div>
+                                <div className={styles.contents}>
+                                    <h5>{modalsubheading[selectedIndex]}</h5>
+                                    <p>{subdescriptions[selectedIndex]}</p>
+                                </div>
+                            </>
+                            : null}
+
                     </div>
                 </Modal>
             )}
@@ -272,7 +331,7 @@ const QuickBytes = () => {
                     </div>
                 </div>
                 <div className={styles.bytesflex}>
-                    <div className={styles.Bytes} >
+                    <div className={styles.Bytes} onClick={() => handleOpenModal(3)} >
                         <div className={styles.vidIcon}>
                             <img src={icons[2]} alt="icon" />
 
