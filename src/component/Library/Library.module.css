@@ -555,7 +555,7 @@ h4 {
 }
 
 .filterOptions {
-    margin-top: 20px;
+    margin-top: -25px;
     padding-inline: 15px;
 }
 
@@ -672,7 +672,13 @@ h4 {
     border: none;
     border-radius: 20px;
 }
-
+.ShareIconMain{
+    position: absolute;
+    top: 15%;
+    right: 3%;
+    border: 2px solid white;
+    border-radius: 50%;
+}
 .contents {
     padding: 20px;
 }

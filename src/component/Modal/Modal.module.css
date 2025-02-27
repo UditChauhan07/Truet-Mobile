@@ -5,7 +5,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.486); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.486);
+  /* Semi-transparent background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,11 +30,16 @@
 .closeButton {
   position: absolute;
   top: 5%;
-  left: 5%;
+  right: 5%;
   font-size: 24px;
   border: none;
   background: transparent;
   cursor: pointer;
+  width: 5%;
+}
+
+.closeButton img {
+  width: 100%;
 }
 
 /* Keyframe Animations */
@@ -41,6 +47,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -51,6 +58,7 @@
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -70,6 +78,7 @@
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -80,6 +89,7 @@
     transform: translateX(0);
     opacity: 1;
   }
+
   to {
     transform: translateX(100%);
     opacity: 0;

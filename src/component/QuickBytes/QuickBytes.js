@@ -3,6 +3,7 @@ import styles from "../Library/Library.module.css"
 import Modal from "../Modal/Modal";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import ShareOption from "../Dashboard/ShareOption"
 
 const countries = [
     { code: "US", name: "US", flag: "UsFlag-img.png" },
@@ -295,7 +296,9 @@ const QuickBytes = () => {
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                             ></iframe>
+                            
                         </div>
+                        <div className={styles.ShareIconMain}><ShareOption /></div>
                         <div className={styles.contents}>
                             <h5>{modalsubheading[selectedIndex]}</h5>
                             <p>{subdescriptions[selectedIndex]}</p>
