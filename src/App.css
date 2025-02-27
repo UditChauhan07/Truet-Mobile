@@ -79,7 +79,7 @@ body {
 
 
 #offCANVAS .offcanvas.offcanvas-bottom {
-  height: 100vh !important;
+  height: 70vh !important;
 }
 #offCANVAS .offcanvas-header {
   justify-content: space-between;

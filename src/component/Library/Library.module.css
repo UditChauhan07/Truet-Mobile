@@ -569,7 +569,7 @@ h4 {
     color: #000000;
     margin-bottom: 15px;
     cursor: pointer;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .checkbox input,
@@ -789,4 +789,9 @@ h4 {
         border-radius: 15px;
         min-height: 80px;
     }
+}
+
+.filterOptions {
+    margin-top: -25px;
+    padding-inline: 15px;
 }
