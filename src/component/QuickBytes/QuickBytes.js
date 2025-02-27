@@ -44,12 +44,9 @@ const QuickBytes = () => {
         "Benefits",
     ];
     const subdescriptions = [
-        "Experience crystal-clear sound, vivid visuals, and seamless connectivity—perfect for business, education, and entertainment. Upgrade today!",
-        "Experience crystal-clear sound, vivid visuals, and seamless connectivity.",
-        "Achieving a high sales score requires a strategic approach, consistent effort, and smart selling techniques. This checklist will guide you through essential steps to boost your sales performance and ensure every interaction adds value to the customer.",
-        "With 235 active deals in progress, Truet empowers sales teams with AI-driven insights and real-time assistance to accelerate deal closures. By providing instant access to the right information, Truet helps sales reps stay ahead of customer needs, handle objections smoothly, and drive higher success rates.",
-        "Step-by-step guide on how to apply the product effectively.",
-        "AI-powered real-time assistance ensures instant support, while interactive learning keeps users engaged. Visual infographics and analytics help track performance. CRM integrations provide a seamless experience, and gamification boosts engagement. With a mobile-first approach, users can access content anytime, anywhere.",
+        "Polystick® XFR is a dual-purpose fire resistant and self-adhered waterproofing underlayment approved for applications up to 265°F.",
+        "Polystick® XFR is a dual-purpose fire resistant and self-adhered waterproofing underlayment approved for applications up to 265°F.",
+        "Polystick P is a self-adhered high-temp waterproofing underlayment for use under metal and various other roof coverings. The top surface comprises a UV-resistant high, strong polyolefin composite film with Hi-Tread™ slip-resistant coating, which is mated to a high-temperature SBS (elastomeric) self-adhered compound.",
     ];
     const titles = [
         "Audio Visual Byte",
@@ -106,7 +103,7 @@ const QuickBytes = () => {
         if (isOpenCalender) {
             setTimeout(() => {
                 document.addEventListener("mousedown", handleClickOutside);
-            }, 100); // تھوڑا سا delay تاکہ event ٹھیک سے attach ہو
+            }, 100); 
         } else {
             document.removeEventListener("mousedown", handleClickOutside);
         }
@@ -219,67 +216,11 @@ const QuickBytes = () => {
 
                             </div>
 
-                            {/* Pipeline Section */}
-                            {/* <div className={styles.filterSection}>
-                                <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
-                                    <h4>Pipeline</h4>
-                                    <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-                                </div>
-                                {openSections.pipeline && (
-                                    <div className={styles.filterOptions}>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" defaultChecked />
-                                            <span>Polyflex 5.0 PDS</span>
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" />
-                                            <span>Polyflex 5.0 PDS</span>
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" />
-                                            <span>Polyflex 5.0 PDS</span>
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" />
-                                            <span>Greater than $500</span>
-                                        </label>
-                                    </div>
-                                )}
-                            </div> */}
-
-                            {/* Sort by Section */}
-                            {/* <div className={styles.filterSection}>
-                                <div className={styles.sectionHeader} onClick={() => toggleSection("sortby")}>
-                                    <h4>Sort by</h4>
-                                    <span className={openSections.sortby ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-                                </div>
-                                {openSections.sortby && (
-                                    <div className={styles.filterOptions}>
-                                        <label className={styles.radio}>
-                                            <input type="radio" name="sort" defaultChecked />
-                                            <span>Most Relevant First</span>
-                                        </label>
-                                        <label className={styles.radio}>
-                                            <input type="radio" name="sort" />
-                                            <span>Most Relevant First</span>
-                                        </label>
-                                        <label className={styles.radio}>
-                                            <input type="radio" name="sort" />
-                                            <span>Most Relevant First</span>
-                                        </label>
-                                        <label className={styles.radio}>
-                                            <input type="radio" name="sort" />
-                                            <span>Most Relevant First</span>
-                                        </label>
-                                    </div>
-                                )}
-                            </div> */}
                         </div>
 
                     </div>
                 </div>
             </div>
-            {/* Modal Component */}
             {/* Modal Component */}
             {isModalOpen && selectedIndex !== null && (
                 <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
