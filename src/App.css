@@ -64,6 +64,11 @@ body {
   border: none;
 }
 
+.offCANVAS_ShareMain img{
+  width: unset !important;
+}
+
+
 .offcanvas-body .share{
   font-size: 21px;
   color: #0F0F0F;

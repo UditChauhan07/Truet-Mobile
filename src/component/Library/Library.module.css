@@ -217,7 +217,10 @@
 
 }
 
-
+.slideCard img {
+    width: -webkit-fill-available;
+    max-width: 100%;
+}
 
 .content h2 {
     font-size: 18px;
@@ -725,7 +728,7 @@ h4 {
 
 }
 
-@media (max-width:410px) {
+@media (max-width:420px) {
     .shareDiv {
         display: block;
 
