@@ -219,6 +219,7 @@
 
 .slideCard img {
     width: -webkit-fill-available;
+    max-width: 100%;
 }
 
 .content h2 {
@@ -728,6 +729,9 @@ h4 {
 }
 /* Table css Start */
 
+
+@media (max-width:420px) {
+
 .tableContainer {
     width: 100%;
     overflow-x: auto;
@@ -771,6 +775,7 @@ h4 {
 
 }
 @media (max-width:410px) {
+
     .shareDiv {
         display: block;
 

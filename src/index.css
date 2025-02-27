@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+html, body {
+  touch-action: manipulation; /* Prevents zooming on double-tap */
+  -webkit-user-select: none; /* Disables text selection */
+  user-select: none;
+}
