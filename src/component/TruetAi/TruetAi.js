@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../TruetAi/TruetAi.module.css'
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate,  } from "react-router-dom";
 
 
 const TruetAi = () => {

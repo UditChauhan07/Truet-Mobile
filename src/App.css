@@ -39,17 +39,21 @@ body {
   padding: 0;
   
 }
-
-#offCANVAS .offcanvas {
-  max-width: 70% !important;
+.offcanvas.offcanvas-end {
+  width: 70% !important;
 }
 
-#footerCANVA .offcanvas.offcanvas-bottom {
-  height: 82vh !important;
+
+#offCANVAS .offcanvas.offcanvas-bottom {
+  height: 100vh !important;
+}
+#offCANVAS .offcanvas-header {
+  justify-content: space-between;
 }
 
-#FiltterCANVA .offcanvas.offcanvas-bottom {
-  height: 50vh !important;
+#FiltterCANVA .offcanvas.offcanvas-end {
+  /* height: 50vh !important; */
+  width: 70% !important;
 }
 
 #filterCheck input[type="checkbox"] {
@@ -66,7 +70,7 @@ body {
 }
 
 .offcanvas-body {
-  padding: 0px 20px  20px 20px !important;
+  padding: 0px 15px 20px 15px !important;
 }
 
 @media screen and (min-width: 768px) {

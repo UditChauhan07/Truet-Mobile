@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styles from "../Library/Library.module.css"
 import Modal from "../Modal/Modal";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const countries = [
     { code: "US", name: "US", flag: "UsFlag-img.png" },
@@ -9,6 +11,9 @@ const countries = [
     { code: "DE", name: "Germany", flag: "images/germany.png" },
 ];
 const QuickBytes = () => {
+    const [startDate, setStartDate] = useState(null);
+    const [isOpenCalender, setIsOpenCalender] = useState(false);
+
     const [isModalOpen, setModalOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(countries[0]);
@@ -88,6 +93,25 @@ const QuickBytes = () => {
     };
 
 
+    const calendarRef = useRef(null);
+
+    const handleClickOutside = (event) => {
+        if (calendarRef.current && !calendarRef.current.contains(event.target)) {
+            setIsOpenCalender(false);
+        }
+    };
+
+    useEffect(() => {
+        if (isOpenCalender) {
+            setTimeout(() => {
+                document.addEventListener("mousedown", handleClickOutside);
+            }, 100); // تھوڑا سا delay تاکہ event ٹھیک سے attach ہو
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [isOpenCalender]);
+
     return (
         <div>
             <div className={styles.Library}>
@@ -105,34 +129,97 @@ const QuickBytes = () => {
             </div>
             {/* Offcanvas */}
             <div id="offCANVAS">
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
                     <div className="offcanvas-header">
                         <h5 className={styles.menuTittle}>Filters</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        {/* <p data-bs-dismiss="offcanvas" aria-label="Close">Clear All</p> */}
                     </div>
                     <div class="offcanvas-body">
                         <div className={styles.filtersContainer}>
                             <div className={styles.filterSection}>
                                 <div className={styles.sectionHeader} onClick={() => toggleSection("dealflow")}>
-                                    <h4>Dealflow</h4>
+                                    <h4>Type of Byte</h4>
                                     <span className={openSections.dealflow ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
                                 </div>
                                 {openSections.dealflow && (
                                     <div className={styles.filterOptions}>
                                         <label className={styles.checkbox}>
+                                            <span>Audio Visual </span>
                                             <input type="checkbox" defaultChecked />
-                                            <span>All Open Deals</span>
+
                                         </label>
                                         <label className={styles.checkbox}>
-                                            <input type="checkbox" />
-                                            <span>Members only deals</span>
+                                            <span>Infographic</span>
+                                            <input type="checkbox" defaultChecked />
+
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <span>Data Model</span>
+                                            <input type="checkbox" defaultChecked />
+
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <span>Insights</span>
+                                            <input type="checkbox" defaultChecked />
                                         </label>
                                     </div>
                                 )}
                             </div>
+                            {/* Input Search Start */}
+                            <div className={styles.SearchMain}>
+                                <div className={styles.FolderDiv}>
+                                    <img src='svg/Folder-Icon.svg' alt='' />
+                                    <p>Explore Topic</p>
+                                </div>
+                                <div>
+                                    <div className={styles.search_box}>
+                                        <span className={styles.icon}><img src='svg/Search_Icon.svg' alt='' /></span>
+                                        <input type="text" placeholder="Search by Topic" />
+                                    </div>
+                                </div>
+
+                                <div className={styles.FolderDiv}>
+                                    <img src='svg/User-check_icon.svg' alt='' />
+                                    <p>Search by Expert</p>
+                                </div>
+                                <div>
+                                    <div className={styles.search_box}>
+                                        <span className={styles.icon}><img src='svg/Search_Icon.svg' alt='' /></span>
+                                        <input type="text" placeholder="Search by Expert Name" />
+                                    </div>
+                                </div>
+                                <div ref={calendarRef} className={styles.container}>
+                                    {/* Calendar Open Button */}
+                                    <div className={styles.FolderDiv} onClick={() => setIsOpenCalender(!isOpenCalender)}>
+                                        <img src="svg/Calendar-icon.svg" alt="Calendar Icon" />
+                                        <p>Published Date Range</p>
+                                    </div>
+
+                                    {/* Calendar Dropdown */}
+                                    {isOpenCalender && (
+                                        <div className={styles.datePickerWrapper}>
+                                            <DatePicker
+                                                selected={startDate}
+                                                onChange={(date) => setStartDate(date)}
+                                                inline
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                                <div className={styles.BothBtn}>
+                                    <div className={styles.showBtn}  aria-label="Close" data-bs-dismiss="offcanvas">
+                                        <p>Show</p>
+                                    </div>
+                                    <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
+                                        <p>Close</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                             {/* Pipeline Section */}
-                            <div className={styles.filterSection}>
+                            {/* <div className={styles.filterSection}>
                                 <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
                                     <h4>Pipeline</h4>
                                     <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
@@ -157,10 +244,10 @@ const QuickBytes = () => {
                                         </label>
                                     </div>
                                 )}
-                            </div>
+                            </div> */}
 
                             {/* Sort by Section */}
-                            <div className={styles.filterSection}>
+                            {/* <div className={styles.filterSection}>
                                 <div className={styles.sectionHeader} onClick={() => toggleSection("sortby")}>
                                     <h4>Sort by</h4>
                                     <span className={openSections.sortby ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
@@ -185,7 +272,7 @@ const QuickBytes = () => {
                                         </label>
                                     </div>
                                 )}
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>
@@ -263,7 +350,7 @@ const QuickBytes = () => {
                     </div>
                 </div>
                 <div className={styles.bytesflex}>
-                    <div className={styles.Bytes}onClick={() => handleOpenModal(2)} >
+                    <div className={styles.Bytes} onClick={() => handleOpenModal(2)} >
                         <div className={styles.vidIcon}>
                             <img src={icons[4]} alt="icon" />
 
