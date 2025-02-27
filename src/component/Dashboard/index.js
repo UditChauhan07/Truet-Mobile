@@ -7,6 +7,7 @@ import WeeklyRevenue from "../chartAndGraphs/WeeklyRevenue";
 import DailyTraffic from "../chartAndGraphs/DailyTraffic";
 import Footer from "../Footer/index";
 import PieChartComponent from "../chartAndGraphs/pieChart"
+import MobileShare from "./ShareOption"
 
 const Index = () => {
   const [isOpen2, setIsOpen2] = useState(false);
@@ -85,7 +86,8 @@ const Index = () => {
             <div className={styles.tableTittle}>
               <h2>Top Chart Sales Reps</h2>
               <div>
-                <img src="/More-icon.svg" />
+                <MobileShare><img src="/More-icon.svg" /></MobileShare>
+
               </div>
             </div>
 

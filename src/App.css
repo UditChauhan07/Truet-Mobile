@@ -40,6 +40,36 @@ body {
   
 }
 
+.offCANVAS_ShareMain{
+  position: relative;
+  width: 100%;
+}
+
+#offCANVAS_Share{
+  /* position: relative; */
+
+}
+
+#offCANVAS_Share .offcanvas{
+  width: 100% !important;
+  /* position:absolute; */
+  height: 180px;
+  bottom: 0;
+}
+
+#offCANVAS_Share .offcanvas.offcanvas-end{
+  bottom: 0 !important;
+  top: unset !important;
+  border-radius: 20px 20px 0 0px;
+}
+
+.offcanvas-body .share{
+  font-size: 21px;
+  color: #0F0F0F;
+  font-weight: 700;
+}
+
+
 #offCANVAS .offcanvas {
   max-width: 70% !important;
 }
@@ -57,6 +87,8 @@ body {
   height: 18px;
 
 }
+
+
 
 
 

@@ -25,7 +25,7 @@ const Index = () => {
               />
             </i>
             <span className={isActive("/home") ? styles.activeText : ""}>
-              Home
+              Dashboard
             </span>
           </div>
 
@@ -41,7 +41,7 @@ const Index = () => {
               />
             </i>
             <span className={isActive("/sales") ? styles.activeText : ""}>
-              Sales
+              Sales Enablement
             </span>
           </div>
 
@@ -69,9 +69,7 @@ const Index = () => {
 
             </div>
           </div>
-          {/* <div className={styles.faHome} onClick={() => navigate("/truet-ai")} >
-            <img src="/AI-MIC.svg" alt="Mic" />
-          </div> */}
+        
         </div>
 
 
