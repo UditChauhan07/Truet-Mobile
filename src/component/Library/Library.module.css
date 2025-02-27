@@ -706,23 +706,70 @@ h4 {
     margin-block: 1rem;
 }
 
-/* .shareButton {
-    height: 50px;
-    background-color: #4318FF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 2rem;
-} */
+/* Must DO sell Css start */
+.sellDiv{
+    margin-top: 20px;  
+}
+.ModalTitle{
+    color: #000000;
 
-/* .shareButton p {
-    color: #ffff;
+}
+.SubmitBtn{
+    background-color: #6b4eff;
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 30px;
+    padding: 10px;
+}
+.SubmitBtn p{
+    text-align: center;
     margin-bottom: 0px;
-} */
 
+}
+/* Table css Start */
 
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: auto;
+    white-space: nowrap;
+    color: #2B3674;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+  }
+  
+  th, td {
+    padding: 6px;
+    text-align: left;
+  }
+  
+  th {
+    color: #a0a0a0;
+    font-weight: 500;
+    font-size: 14px;
+    color:#A3AED0
+  }
+  
+  .checked {
+    accent-color: #623ce6;
+  }
+  .trafficDiv .trafficTittle h2{
+    font-size: 13px;
+    margin-bottom: 0px;
+  }
+
+@media (max-width :375px){
+    .chartsvg2 img {
+        margin-top: 25px;
+    }
+
+}
 @media (max-width:410px) {
     .shareDiv {
         display: block;
