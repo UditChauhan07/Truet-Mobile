@@ -571,7 +571,10 @@ h4 {
     cursor: pointer;
     /* justify-content: space-between; */
 }
+.checkbox{
+    justify-content: space-between;
 
+}
 .checkbox input,
 .radio input {
     accent-color: #7C3AED;
