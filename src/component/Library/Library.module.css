@@ -804,14 +804,16 @@ th {
 .accessDivMod {
     display: flex;
     background-color: #11047A;
-    width: max-content;
     padding:4px 14px;
     border-radius: 20px;
     margin: auto;
 }
 .accessDivMod p{
     color: #fff;
-    margin-bottom: 0px;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
 }
 
 /* Opporunity css Start */
