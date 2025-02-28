@@ -18,6 +18,24 @@ const Library = () => {
     navigate("/chat");
   };
 
+  const handleShare = () => {
+    if (navigator.contacts && navigator.contacts.select) {
+      // Try opening the phone's contact picker (works only on some browsers like Chrome on Android)
+      navigator.contacts.select(["name", "tel"], { multiple: false })
+        .then((contacts) => {
+          if (contacts.length > 0) {
+            alert(`Selected Contact: ${contacts[0].name} - ${contacts[0].tel}`);
+          }
+        })
+        .catch((error) => console.error("Error accessing contacts:", error));
+    } else if (/Android/i.test(navigator.userAgent)) {
+      // Open Android contacts using Intent URL
+      window.location.href = "intent://contacts#Intent;scheme=content;action=android.intent.action.PICK;type=vnd.android.cursor.dir/contact;end";
+    } else {
+      alert("Your device does not support opening contacts directly.");
+    }
+  
+  };
   return (
     <selection>
       <Navbar></Navbar>
@@ -270,7 +288,7 @@ const Library = () => {
               <div className={styles.teamtittle}>
                 <h2>Team members (Ask a Question)</h2>
               </div>
-              <div>
+              <div onClick={handleShare}> 
                 <img src="/add-icon.svg"/>
                 {/* <ShareOption/> */}
               </div>
