@@ -105,6 +105,9 @@ const Slide2 = () => {
             <div>
             <p>{selectedCard.desc}</p>
             </div>
+            <div className={styles.accessDivMod}>
+              <p>Access</p>
+            </div>
           </div>
         )}
       </Modal2>

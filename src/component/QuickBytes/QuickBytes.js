@@ -289,7 +289,7 @@ const QuickBytes = () => {
                                     </label>
                                 </div>
                                 <div className={styles.SubmitBtn}>
-                                    <p>Submit</p>
+                                    <p>Okay</p>
                                 </div>
                                 {/* <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
                                     <p>Close</p>
