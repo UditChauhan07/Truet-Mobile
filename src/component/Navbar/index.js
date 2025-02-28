@@ -10,6 +10,9 @@ import { Offcanvas } from "bootstrap";
 import { useNavigate, useLocation } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import AutoCompleteSearch from "./AutoComplete";
+import AutoCompleteSearch2 from "./AutoComplete2";
+import HeaderSearch from "./HeaderSearch";
 
 
 
@@ -164,9 +167,11 @@ function Navbar() {
         </div>
       </div>
       <div className={styles.searchbar}>
-        <div className={styles.searchinput}>
+        {/* <div className={styles.searchinput}>
           <input type="text" placeholder="Search here" />
-        </div>
+         
+        </div> */}
+        <HeaderSearch/>
         <div className={styles.filterIcon} data-bs-toggle="offcanvas"
           data-bs-target={`#${offcanvasId}`}
           aria-controls={offcanvasId}
@@ -220,10 +225,12 @@ function Navbar() {
                                     <p>Explore Topic</p>
                                 </div>
                                 <div>
-                                    <div className={styles.search_box}>
+                                    {/* <div className={styles.search_box}>
                                         <span className={styles.icon}><img src='svg/Search_Icon.svg' alt='' /></span>
                                         <input type="text" placeholder="Search by Topic" />
-                                    </div>
+                                        
+                                    </div> */}
+                                    <AutoCompleteSearch/>
                                 </div>
 
                                 <div className={styles.FolderDiv}>
@@ -231,10 +238,12 @@ function Navbar() {
                                     <p>Search by Expert</p>
                                 </div>
                                 <div>
-                                    <div className={styles.search_box}>
+                                    {/* <div className={styles.search_box}>
                                         <span className={styles.icon}><img src='svg/Search_Icon.svg' alt='' /></span>
                                         <input type="text" placeholder="Search by Expert Name" />
-                                    </div>
+                                    </div> */}
+
+                                    <AutoCompleteSearch2/>
                                 </div>
                                 <div ref={calendarRef} className={styles.container}>
                                     {/* Calendar Open Button */}
@@ -282,20 +291,22 @@ function Navbar() {
               {/* <h2>Filter</h2> */}
               <div>
                 <div className={styles.checkDiv} id="filterCheck">
+                  <div>  <input type="radio" id="vehicle1" name="vehicle1" value="Bike" /></div>
                   <div><p>Daily Traffic</p></div>
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" /></div>
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
+                
+                  <div>  <input type="radio" id="vehicle1" name="vehicle1" value="Bike" /></div>
                   <div><p>Pie Chart</p></div>
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" /></div>
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
+                  <div>  <input type="radio" id="vehicle1" name="vehicle1" value="Bike" /></div>
                   <div><p>Weekly Revenue</p></div>
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" /></div>
+
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
+                  <div>  <input type="radio" id="vehicle1" name="vehicle1" value="Bike" /></div>
                   <div><p>Total Spent</p></div>
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" /></div>
                 </div>
               </div>
 

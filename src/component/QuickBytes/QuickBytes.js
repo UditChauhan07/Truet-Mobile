@@ -249,43 +249,43 @@ const QuickBytes = () => {
                                 <div className={styles.sellDiv}>
                                     <label className={styles.checkbox}>
                                         <span>Capturing Distributor Mind</span>
-                                        <input type="checkbox" defaultChecked />
+                                        <input type="checkbox" checked />
                                     </label>
                                     <label className={styles.checkbox}>
                                         <span>Safety Datasheet</span>
-                                        <input type="checkbox" defaultChecked />
+                                        <input type="checkbox" checked />
                                     </label>
                                     <label className={styles.checkbox}>
                                         <span>Product Datasheets</span>
-                                        <input type="checkbox" defaultChecked />
+                                        <input type="checkbox" checked />
                                     </label>
                                     <label className={styles.checkbox}>
                                         <span>PolyGlass Case Studies</span>
-                                        <input type="checkbox" defaultChecked />
+                                        <input type="checkbox" checked />
                                     </label>
                                     <label className={styles.checkbox}>
                                         <span>PolyGlass Sales Process</span>
-                                        <input type="checkbox" defaultChecked />
+                                        <input type="checkbox" checked />
                                     </label>
                                     <label className={styles.checkbox}>
                                         <span>Opportunity Management</span>
-                                        <input type="checkbox" defaultChecked />
+                                        <input type="checkbox" checked />
                                     </label>
                                     <label className={styles.checkbox}>
                                         <span>Outreach Best Practices</span>
-                                        <input type="checkbox" defaultChecked />
+                                        <input type="checkbox" checked />
                                     </label>
                                     <label className={styles.checkbox}>
                                         <span>Salesforce(Official CRM)</span>
-                                        <input type="checkbox" />
+                                        <input type="checkbox" disabled />
                                     </label>
                                     <label className={styles.checkbox}>
                                         <span>MOfficial LMS</span>
-                                        <input type="checkbox" />
+                                        <input type="checkbox" disabled/>
                                     </label>
                                     <label className={styles.checkbox}>
                                         <span>Polyglass.com</span>
-                                        <input type="checkbox" />
+                                        <input type="checkbox" disabled/>
                                     </label>
                                 </div>
                                 <div className={styles.SubmitBtn}>
