@@ -39,6 +39,8 @@ const HeaderSearch = () => {
     setShowSuggestions(false);
   };
 
+
+  console.log(searchTerm)
   return (
     <div ref={containerRef} className="autocomplete-container" style={{ width: "100%", margin: "5px 1px 5px", position: "relative" }}>
       <input
@@ -55,6 +57,19 @@ const HeaderSearch = () => {
           border: "1px solid #d3d3e3",
         }}
       />
+      {searchTerm ? <div style={{
+          // width: "15%",
+          padding: "14px",
+          fontSize: "14px",
+          borderRadius: "25px",
+          border: "1px solid #d3d3e3",
+          background:"#3843ff",
+          color:"#fff",
+          right: "0px",
+    position: "absolute",
+    float: "right",
+    top: "1px",
+        }} >Go</div>: null}
       {showSuggestions && (
         <ul
           style={{

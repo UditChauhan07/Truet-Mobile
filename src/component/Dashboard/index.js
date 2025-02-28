@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./style.module.css";
 import Navbar from "../Navbar/index";
 import Graph from "../EnablementGraph/index";
@@ -32,7 +32,7 @@ const Index = () => {
 
           {/* dashbord  dic start*/}
           <div className={styles.MainTraffic}>
-<DailyTraffic></DailyTraffic>
+            <DailyTraffic></DailyTraffic>
 
             {/* <div className={styles.trafficDiv}>
               <div className={styles.trafficMain}>
@@ -54,7 +54,7 @@ const Index = () => {
             <div className={styles.trafficDiv}>
 
               <PieChartComponent></PieChartComponent>
-              
+
             </div>
           </div>
           <div className={styles.tableMain}>
@@ -77,7 +77,7 @@ const Index = () => {
                   </tr>
                 </thead>
                 <tbody>
-                <tr>
+                  <tr>
                     <td>
                       <span>Jasmine Kim</span>
                     </td>
@@ -136,7 +136,7 @@ const Index = () => {
               <table className={styles.table}>
                 <thead>
                   <tr className={styles.Headingtable}>
-                    <th>Name</th>
+                    <th>Product Name</th>
                     <th>Sale Target</th>
                     <th>Sale Amount</th>
                     <th>Diff.</th>
@@ -145,7 +145,11 @@ const Index = () => {
                 <tbody>
                   <tr>
                     <td>
-                      <span>Jessica Lanoue</span>
+                      <div className={styles.ProductDiv}>
+                        <img src="svg/green-drop.svg" alt="" />
+                        <span>Polimer Bitumen</span>
+                      </div>
+
                     </td>
                     <td>$196.57K</td>
                     <td>$316.90K</td>
@@ -153,9 +157,9 @@ const Index = () => {
                   </tr>
                   <tr>
                     <td>
-                      <div>
-                        
-                        <span>Bruno</span>
+                      <div className={styles.ProductDiv}>
+                      <img src="svg/red-drop.svg" alt="" />
+                        <span>Liquid waterproofing</span>
                       </div>
                     </td>
                     <td>$0.00K</td>
@@ -164,8 +168,10 @@ const Index = () => {
                   </tr>
                   <tr>
                     <td>
-                      {" "}
-                      <span>Karla</span>
+                    <div className={styles.ProductDiv}>
+                    <img src="svg/green-drop.svg" alt="" />
+                      <span>Acustic insulation</span>
+                      </div>
                     </td>
                     <td>$267.45K</td>
                     <td>$367.45K</td>
@@ -174,8 +180,10 @@ const Index = () => {
 
                   <tr>
                     <td>
-                      {" "}
-                      <span>Niklas</span>
+                    <div className={styles.ProductDiv}>
+                    <img src="svg/green-drop.svg" alt="" />
+                      <span>Synthetic membranes</span>
+                      </div>
                     </td>
                     <td>$93.45K</td>
                     <td>$293.45K</td>
@@ -184,8 +192,10 @@ const Index = () => {
 
                   <tr>
                     <td>
-                      {" "}
-                      <span>Jonny Brew</span>
+                    <div className={styles.ProductDiv}>
+                    <img src="svg/red-drop.svg" alt="" />
+                      <span>Thermal insulation</span>
+                      </div>
                     </td>
                     <td>$00.00K</td>
                     <td>$436.59K</td>

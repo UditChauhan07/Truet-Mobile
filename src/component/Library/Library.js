@@ -1,4 +1,4 @@
-import React, { useState,} from "react";
+import React, { useState, } from "react";
 import Navbar from "../Navbar";
 import styles from "../Library/Library.module.css";
 import Footer from "../Footer/index";
@@ -6,7 +6,9 @@ import { useNavigate } from "react-router-dom";
 import QuickBytes from "../QuickBytes/QuickBytes";
 import Slide1 from "../Slide/Slide1";
 import Slide2 from "../Slide/Slide2"
-
+import Modal from '../Modal/Modal'
+import ShareOption from "../Dashboard/ShareOption"
+import Opportunities from "../Opportunities/Opportunities";
 
 
 const Library = () => {
@@ -14,14 +16,46 @@ const Library = () => {
   const [isOpen3, setIsOpen3] = useState(false);
   const [isOpen4, setIsOpen4] = useState(false);
 
+  const [isModalOpen, setModalOpen] = useState(false);
+
   const navigate = useNavigate();
   const handleChatNavigation = () => {
     navigate("/chat");
   };
 
- 
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
   return (
     <selection>
+      {isModalOpen !== null && (
+        <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+          <div className={styles.contentDetails}>
+            <div className={styles.modTitle}>
+              <h5> Audio Visual Byte</h5>
+            </div>
+
+            <div className={styles.visualImg}>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/sHNX_AawsiM"
+                title="Embedded Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            <div className={styles.ShareIconMain}><ShareOption /></div>
+            <div className={styles.contents}>
+              <h5>Audio Visual Byte</h5>
+              <p >    Polystick® XFR is a dual-purpose fire resistant and self-adhered waterproofing underlayment approved for applications up to 265°F.
+              </p>
+            </div>
+          </div>
+        </Modal>
+      )}
       <Navbar></Navbar>
       <div className={styles.LibraryMain}>
 
@@ -31,8 +65,8 @@ const Library = () => {
           <div className={styles.KnowledgeTittle}>
             <h2>The Knowledge Matrix</h2>
           </div>
-          <Slide1/>
-          <Slide2/>
+          <Slide1 />
+          <Slide2 />
         </div>
         <div className={styles.resourcesMain}>
           <div className={styles.resourcesTittle}>
@@ -43,8 +77,8 @@ const Library = () => {
               <div className={styles.teamtittle}>
                 <h2>Team members (Ask a Question)</h2>
               </div>
-              <div > 
-                <img src="/add-icon.svg"/>
+              <div >
+                <img src="/add-icon.svg" />
                 {/* <ShareOption/> */}
               </div>
             </div>
@@ -148,23 +182,15 @@ const Library = () => {
                   <img src="/Avatars-Group.png" alt="" />
                 </div>
                 <div>
-                  <div className={styles.started}>
+                  <div className={styles.started} onClick={handleOpenModal}>
                     <p>Get Started</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className={styles.security}>
-            <div className={styles.securityDetails}>
-              <img src="/thumb-icon.svg" alt="" />
-              <h2>Apply for more sales opportunities in your region.</h2>
-              <p>Discover products to boost your revenue.</p>
-            </div>
-            <div className={styles.cards}>
-              <p>Find sales opportunities.</p>
-            </div>
-          </div>
+          
+          <Opportunities />
 
         </div>
       </div>
