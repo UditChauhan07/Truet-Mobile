@@ -48,7 +48,10 @@ body {
   position: relative;
   width: 100%;
 }
+.offCANVAS_ShareMain img{
+  width: unset !important;
 
+}
 
 
 #offCANVAS_Share .offcanvas{

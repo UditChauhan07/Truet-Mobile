@@ -60,12 +60,12 @@ const HeaderSearch = () => {
           style={{
             listStyleType: "none",
             padding: "10px",
-            margin: 0,
+            margin: "4px",
             background: "#fff",
             borderRadius: "5px",
             border: "1px solid #ccc",
-            position: "absolute",
-            width: "100%",
+            position: "fixed",
+            width: "75%",
             zIndex: 1000,
             maxHeight: "200px",
             overflowY: "auto"
