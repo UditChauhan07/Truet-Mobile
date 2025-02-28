@@ -291,9 +291,9 @@ const QuickBytes = () => {
                                 <div className={styles.SubmitBtn}>
                                     <p>Submit</p>
                                 </div>
-                                <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
+                                {/* <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
                                     <p>Close</p>
-                                </div>
+                                </div> */}
                             </div>
                         }
                         {videoLinks[selectedIndex] ?
