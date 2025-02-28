@@ -118,6 +118,10 @@ body {
 input[type="checkbox"] {
   accent-color: #4318ff;
 }
+input[type="radio"] {
+  accent-color: #4318ff;
+}
+
 
 /* @supports (-webkit-touch-callout: none) {
   .slideCard img {
@@ -136,3 +140,5 @@ input[type="checkbox"] {
   height: auto; 
   object-fit: cover; 
 } */
+
+

@@ -766,6 +766,25 @@ h4 {
     font-size: 13px;
     margin-bottom: 0px;
   }
+  /*  */
+/* Slide1 Css Start Modal2*/
+.modalContentInner p{
+    line-height: 25px;
+    margin-bottom: 10px;
+    color: #000000;
+    max-height: 200px;
+    overflow: auto;
+    padding-right: 5px;
+}
+.modImg{
+    margin-top: 30px;
+}
+.modalContentInner h2{
+    color: #000;
+    margin-top: 10px;
+}
+
+
 
 @media (max-width :375px){
     .chartsvg2 img {

@@ -4,7 +4,8 @@ import styles from "../Library/Library.module.css";
 import Footer from "../Footer/index";
 import { useNavigate } from "react-router-dom";
 import QuickBytes from "../QuickBytes/QuickBytes";
-import ShareOption from "../Dashboard/ShareOption"
+import Slide1 from "../Slide/Slide1";
+import Slide2 from "../Slide/Slide2"
 
 
 
@@ -18,24 +19,7 @@ const Library = () => {
     navigate("/chat");
   };
 
-  const handleShare = () => {
-    if (navigator.contacts && navigator.contacts.select) {
-      // Try opening the phone's contact picker (works only on some browsers like Chrome on Android)
-      navigator.contacts.select(["name", "tel"], { multiple: false })
-        .then((contacts) => {
-          if (contacts.length > 0) {
-            alert(`Selected Contact: ${contacts[0].name} - ${contacts[0].tel}`);
-          }
-        })
-        .catch((error) => console.error("Error accessing contacts:", error));
-    } else if (/Android/i.test(navigator.userAgent)) {
-      // Open Android contacts using Intent URL
-      window.location.href = "intent://contacts#Intent;scheme=content;action=android.intent.action.PICK;type=vnd.android.cursor.dir/contact;end";
-    } else {
-      alert("Your device does not support opening contacts directly.");
-    }
-  
-  };
+ 
   return (
     <selection>
       <Navbar></Navbar>
@@ -47,237 +31,8 @@ const Library = () => {
           <div className={styles.KnowledgeTittle}>
             <h2>The Knowledge Matrix</h2>
           </div>
-          <div className={styles.slideMain}>
-            <div className={styles.slideDiv}>
-              <div className={styles.slideCard}>
-                <img src="images/card-Img1.png" alt="" />
-                <div className={styles.cardDeatils}>
-                  <div className={styles.content}>
-                    <h2>Capturing Distributor Mind</h2>
-                    <p>By Manny Gates</p>
-                  </div>
-                  <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt="" />
-                  </div>
-                </div>
-                <div className={styles.shareDiv}>
-                  <div className={styles.source}>
-                    <p>Source: </p>
-                    <span>Official LMS</span>
-                  </div>
-                  <div className={styles.accessMain}>
-                    <div className={styles.share} >
-                    <ShareOption/>
-                    </div>
-                   
-
-                    <div className={styles.accessDiv}>
-                      <p>Access</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.slideDiv}>
-              <div className={styles.slideCard}>
-                <img src="images/card-Img2.png" alt="" />
-                <div className={styles.cardDeatils}>
-                  <div className={styles.content}>
-                    <h2>Safety Datasheet</h2>
-                    <p>By Manny Gates</p>
-                  </div>
-                  <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt="" />
-                  </div>
-                </div>
-                <div className={styles.shareDiv}>
-                  <div className={styles.source}>
-                    <p>Source: </p>
-                    <span>Polyglass.com</span>
-                  </div>
-                  <div className={styles.accessMain}>
-                    <div className={styles.share}>
-                    <ShareOption/>
-
-                    </div>
-                    <div className={styles.accessDiv}>
-                      <p>Access</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.slideDiv}>
-              <div className={styles.slideCard}>
-                <img src="images/card-Img3.png" alt="" />
-                <div className={styles.cardDeatils}>
-                  <div className={styles.content}>
-                    <h2>Product Datasheets</h2>
-                    <p>By Manny Gates</p>
-                  </div>
-                  <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt="" />
-                  </div>
-                </div>
-                <div className={styles.shareDiv}>
-                  <div className={styles.source}>
-                    <p>Source: </p>
-                    <span>Polyglass.com</span>
-                  </div>
-                  <div className={styles.accessMain}>
-                    <div className={styles.share}>
-                    <ShareOption/>
-                    </div>
-                    <div className={styles.accessDiv}>
-                      <p>Access</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.slideDiv}>
-              <div className={styles.slideCard}>
-                <img src="images/card-Img4.png" alt="" />
-                <div className={styles.cardDeatils}>
-                  <div className={styles.content}>
-                    <h2>PolyGlass Case Studies</h2>
-                    <p>By Manny Gates</p>
-                  </div>
-                  <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt="" />
-                  </div>
-                </div>
-                <div className={styles.shareDiv}>
-                  <div className={styles.source}>
-                    <p>Source: </p>
-                    <span>Polyglass.com</span>
-                  </div>
-                  <div className={styles.accessMain}>
-                    <div className={styles.share}>
-                    <ShareOption/>
-                    </div>
-                    <div className={styles.accessDiv}>
-                      <p>Access</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.slideMain}>
-            <div className={styles.slideDiv}>
-              <div className={styles.slideCard}>
-                <img src="images/polly-glass.png" alt="" />
-                <div className={styles.cardDeatils}>
-                  <div className={styles.content}>
-                    <h2>PolyGlass Sales Process</h2>
-                    <p>By Peter Will</p>
-                  </div>
-                  <div className={styles.user}>
-                    <img src="images/Avatars-Group2.png" alt="" />
-                  </div>
-                </div>
-                <div className={styles.shareDiv}>
-                  <div className={styles.source}>
-                    <p>Source: </p>
-                    <span>Salesforce</span>
-                  </div>
-                  <div className={styles.accessMain}>
-                    <div className={styles.share}>
-                    <ShareOption/>
-                    </div>
-                    <div className={styles.accessDiv}>
-                      <p>Access</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.slideDiv}>
-              <div className={styles.slideCard}>
-                <img src="images/polly-glass2.png" alt="" />
-                <div className={styles.cardDeatils}>
-                  <div className={styles.content}>
-                    <h2>Opportunity Management</h2>
-                    <p>By Manny Gates</p>
-                  </div>
-                  <div className={styles.user}>
-                    <img src="images/Avatars-Group3.png" alt="" />
-                  </div>
-                </div>
-                <div className={styles.shareDiv}>
-                  <div className={styles.source}>
-                    <p>Source: </p>
-                    <span>Official LMS</span>
-                  </div>
-                  <div className={styles.accessMain}>
-                    <div className={styles.share}>
-                    <ShareOption/>
-                    </div>
-                    <div className={styles.accessDiv}>
-                      <p>Access</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.slideDiv}>
-              <div className={styles.slideCard}>
-                <img src="images/polly-glass3.png" alt="" />
-                <div className={styles.cardDeatils}>
-                  <div className={styles.content}>
-                    <h2>Outreach Best Practices</h2>
-                    <p>By Mark Benjamin</p>
-                  </div>
-                  <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt="" />
-                  </div>
-                </div>
-                <div className={styles.shareDiv}>
-                  <div className={styles.source}>
-                    <p>Source: </p>
-                    <span>Official LMS</span>
-                  </div>
-                  <div className={styles.accessMain}>
-                    <div className={styles.share}>
-                    <ShareOption/>
-                    </div>
-                    <div className={styles.accessDiv}>
-                      <p>Access</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.slideDiv}>
-              <div className={styles.slideCard}>
-                <img src="images/polly-glass4.png" alt="" />
-                <div className={styles.cardDeatils}>
-                  <div className={styles.content}>
-                    <h2>Sales Playbook</h2>
-                    <p>By Manny Gates</p>
-                  </div>
-                  <div className={styles.user}>
-                    <img src="/Avatars-Group.png" alt="" />
-                  </div>
-                </div>
-                <div className={styles.shareDiv}>
-                  <div className={styles.source}>
-                    <p>Source: </p>
-                    <span>Official LMS</span>
-                  </div>
-                  <div className={styles.accessMain}>
-                    <div className={styles.share}>
-                    <ShareOption/>
-                    </div>
-                    <div className={styles.accessDiv}>
-                      <p>Access</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Slide1/>
+          <Slide2/>
         </div>
         <div className={styles.resourcesMain}>
           <div className={styles.resourcesTittle}>
@@ -288,7 +43,7 @@ const Library = () => {
               <div className={styles.teamtittle}>
                 <h2>Team members (Ask a Question)</h2>
               </div>
-              <div onClick={handleShare}> 
+              <div > 
                 <img src="/add-icon.svg"/>
                 {/* <ShareOption/> */}
               </div>
