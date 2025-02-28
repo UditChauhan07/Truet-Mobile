@@ -804,7 +804,6 @@ th {
 .accessDivMod {
     display: flex;
     background-color: #11047A;
-    /* width: max-content; */
     padding:4px 14px;
     border-radius: 20px;
     margin: auto;
