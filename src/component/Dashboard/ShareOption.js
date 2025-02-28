@@ -14,14 +14,31 @@ const ShareComponent = () => {
 
 
 
+const handleShare = () => {
+  const shareData = {
+    title: "Check out this event!",
+    text: "I found an awesome event for you!",
+    url: window.location.href, // Current event URL
+  };
 
+  if (navigator.share) {
+    navigator.share(shareData)
+      .then(() => console.log("Shared successfully!"))
+      .catch((error) => console.error("Error sharing:", error));
+  } else {
+    // Fallback: Copy link to clipboard
+    navigator.clipboard.writeText(shareData.url);
+    alert("Link copied to clipboard!");
+  }
+};
   return (
     <div className="offCANVAS_ShareMain">
       <div type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight" >
-        <img src="/share-icon.svg" alt="" />
-
+        {/* <img src="/share-icon.svg" alt="" /> */}
+        
       </div>
-
+      
+        <div onClick={handleShare}>   <img src="/share-icon.svg" alt="" /> </div>
 
       {/* content */}
 

@@ -245,7 +245,7 @@ const QuickBytes = () => {
                                 ></iframe>
                             </div> :
                             <div>
-                                <h2 className={styles.ModalTitle}>Insights</h2>
+                                <h2 className={styles.ModalTitle}>Must Complete to Sell</h2>
                                 <div className={styles.sellDiv}>
                                     <label className={styles.checkbox}>
                                         <span>Capturing Distributor Mind</span>
