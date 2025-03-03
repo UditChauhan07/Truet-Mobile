@@ -12,12 +12,8 @@ const TruetAi = () => {
                 <div className={styles.backButton} onClick={() => navigate('/home')}>
                     <img src='svg/arrowLeft.svg' alt='' />
                 </div>
-                <div className={styles.Profile}>
-                    <img src='/Profile1.png' alt='' />
-                </div>
-                <div className={styles.ProfileName}>
-                    <p>Truiet Ai</p>
-                </div>
+
+
             </div>
             <div className={styles.chatBody}>
                 <div className={styles.logo}>
@@ -35,7 +31,7 @@ const TruetAi = () => {
                 {/* <div className={styles.inputDiv}>
                     <input type='text' placeholder='Type here or Click MIC to Talk' />
                 </div> */}
-                    <ContactSearch/>
+                <ContactSearch />
                 <div className={styles.container}>
                     <div className={styles.bubble}>
                         <div className={styles.micIcon}><img src='svg/mic-icon.svg' /></div>

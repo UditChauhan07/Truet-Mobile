@@ -1,44 +1,19 @@
-.headerbar {
-    background-color: #3843FF;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    gap: 5px;
-}
-
 .backButton {
-    /* width: 10%; */
-    margin: 2px 0px 2px 0px;
-}
-
-.Profile {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-
-}
-
-.Profile img {
-    width: 100%;
+    width: 10%;
+    margin: 15px;
 }
 
 .backButton img {
-    /* width: 100%; */
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
+
+
+
+
 .chatBody {
     height: 80vh;
 }
-.ProfileName p {
-    margin-bottom: 0px;
-    color: #fff;
-    font-size: 18px;
 
-
-}
 
 /* TRUET AI CSS START */
 .logo {
