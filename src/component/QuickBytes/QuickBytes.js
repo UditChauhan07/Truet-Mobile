@@ -376,14 +376,14 @@ const QuickBytes = () => {
                 <div className={styles.contentDetails}>
                     <div className={styles.modTitle}>
                         <h5>Features & Benefits</h5>
-                        <object
+                        <iframe
                             src="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
                             type="application/pdf"
                             width="100%"
                             height="500px"
                         >
                             <p>Features & Benefits <a href="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf" target="_blank">pdf</a>.</p>
-                        </object>
+                        </iframe>
                     </div>
                 </div>
             </Modal> : null}
@@ -393,14 +393,17 @@ const QuickBytes = () => {
                 <div className={styles.contentDetails}>
                     <div className={styles.modTitle}>
                         <h5>Technical Specs</h5>
-                        <object
+                        {/* <object
                             src="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
                             type="application/pdf"
                             width="100%"
                             height="500px"
                         >
                             <p>Technical Specs <a href="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf" target="_blank">pdf</a>.</p>
-                        </object>
+                        </object> */}
+                        <p>
+                            Click <a href="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf" target="_blank">here</a> to view the PDF.
+                        </p>
                     </div>
                 </div>
             </Modal> : null}
