@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const dataList = [
-  "", 
+  "",
 ];
 
 const HeaderSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState([]); // Initially empty
   const [showSuggestions, setShowSuggestions] = useState(false); // Hide suggestions initially
-  const containerRef = useRef(null); 
+  const containerRef = useRef(null);
 
   useEffect(() => {
     if (searchTerm.trim() === "") {
@@ -19,7 +19,7 @@ const HeaderSearch = () => {
         item.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredData(filtered);
-      setShowSuggestions(true); // Ensure suggestions box opens even if no match found
+      setShowSuggestions(true);
     }
   }, [searchTerm]);
 
@@ -58,18 +58,18 @@ const HeaderSearch = () => {
         }}
       />
       {searchTerm ? <div style={{
-          // width: "15%",
-          padding: "14px",
-          fontSize: "14px",
-          borderRadius: "25px",
-          border: "1px solid #d3d3e3",
-          background:"#3843ff",
-          color:"#fff",
-          right: "0px",
-    position: "absolute",
-    float: "right",
-    top: "1px",
-        }} >Go</div>: null}
+        // width: "15%",
+        padding: "14px",
+        fontSize: "14px",
+        borderRadius: "25px",
+        border: "1px solid #d3d3e3",
+        background: "#3843ff",
+        color: "#fff",
+        right: "0px",
+        position: "absolute",
+        float: "right",
+        top: "1px",
+      }} >Go</div> : null}
       {showSuggestions && (
         <ul
           style={{
