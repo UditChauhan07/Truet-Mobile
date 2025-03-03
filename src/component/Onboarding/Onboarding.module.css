@@ -1,3 +1,9 @@
+.headerPart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px 30px 20px;
+}
 .OnboardingTitle p {
     margin-bottom: 0px;
     color: #787C81;
