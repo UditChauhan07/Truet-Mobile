@@ -45,6 +45,29 @@
     margin-bottom: 0px;
 
 }
+.signP{
+    margin-inline: 10px;
+    margin-bottom: 0px;
+}
+.skipMain{
+    min-height: 120px;
+}
+.skipDiv{
+    background-color: #4318FF;
+    width: max-content;
+    padding: 20px 30px;
+    border-radius: 30px;
+    margin-top: 2rem;
+    right: 5%;
+    position: absolute;
+
+}
+.skipDiv p{
+    color: #fff;
+    margin-bottom: 0px;
+
+}
+
 @media (max-width:375px){
     .bodyMain{
         padding: 3px;
