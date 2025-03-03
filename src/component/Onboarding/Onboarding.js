@@ -19,7 +19,7 @@ const Onboarding = () => {
                 </div>
             </div>
             <div className={styles.bodypart}>
-                <div></div>
+                <div> <img src='svg/marketing.scg' alt=''/></div>
 
             </div>
 

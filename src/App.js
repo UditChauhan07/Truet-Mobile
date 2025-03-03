@@ -18,8 +18,8 @@ function App() {
 
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<Onboarding />}></Route> */}
-          <Route path="/" element={<SignUp />}></Route>
+          <Route path="/" element={<Onboarding />}></Route>
+          {/* <Route path="/" element={<SignUp />}></Route> */}
           <Route path="home" element={<Dashboard />}></Route>
           <Route path="sales" element={<Library />}></Route>
           <Route path="truet-ai" element={<TruetAi />}></Route>
