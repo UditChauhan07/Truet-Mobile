@@ -26,6 +26,7 @@ const QuickBytes = () => {
     });
     const [tableOpen, setTableOpen] = useState(false)
     const [featureOpen, setfeatureOpen] = useState(false)
+    const [istechnical, setisTechnical] = useState(false)
     const toggleSection = (section) => {
         setOpenSections({ ...openSections, [section]: !openSections[section] });
     };
@@ -117,6 +118,9 @@ const QuickBytes = () => {
     }
     const feature = () => {
         setfeatureOpen(true)
+    }
+    const technical = () => {
+        setisTechnical(true)
     }
     return (
         <div>
@@ -371,18 +375,35 @@ const QuickBytes = () => {
             {featureOpen ? <Modal isOpen={featureOpen} onClose={() => setfeatureOpen(false)}>
                 <div className={styles.contentDetails}>
                     <div className={styles.modTitle}>
-
                         <h5>Features & Benefits</h5>
-                        <iframe
-                            src="https://polyglass.us/wp-content/uploads/2023/03/2023-Sparc-Brochure-2023-NL_web.pdf"
+                        <object
+                            src="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
+                            type="application/pdf"
                             width="100%"
                             height="500px"
-                            style={{ border: "none" }}
-                        ></iframe>
+                        >
+                            <p>Features & Benefits <a href="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf" target="_blank">pdf</a>.</p>
+                        </object>
                     </div>
                 </div>
             </Modal> : null}
 
+            {/* FeatureOpen Div */}
+            {istechnical ? <Modal isOpen={setisTechnical} onClose={() => setisTechnical(false)}>
+                <div className={styles.contentDetails}>
+                    <div className={styles.modTitle}>
+                        <h5>Technical Specs</h5>
+                        <object
+                            src="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
+                            type="application/pdf"
+                            width="100%"
+                            height="500px"
+                        >
+                            <p>Technical Specs <a href="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf" target="_blank">pdf</a>.</p>
+                        </object>
+                    </div>
+                </div>
+            </Modal> : null}
 
             <div className={styles.bytesMain}>
                 <div className={styles.bytesflex}>
@@ -463,7 +484,7 @@ const QuickBytes = () => {
                             <strong>{subtitles[6]}</strong>
                         </div>
                     </div>
-                    <div className={styles.Bytes} >
+                    <div className={styles.Bytes} onClick={technical}>
                         <div className={styles.vidIcon}>
                             <img src={icons[7]} alt="icon" />
 
