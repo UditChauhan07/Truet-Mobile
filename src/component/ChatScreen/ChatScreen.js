@@ -29,11 +29,20 @@ const ChatScreen = () => {
           <img src="svg/arrowLeft.svg" alt="Back" />
         </div>
         <div className={styles.Profile}>
-          <img src="images/ChatPerson.png" alt="Profile" />
+          <img src="svg/Adelasvg.svg" alt="Profile" />
         </div>
         <div className={styles.ProfileName}>
-          <p>Truiet Ai</p>
+          <p>Adela Parkson</p>
         </div>
+        <div className={styles.calldiv}>
+          <div>
+            <img src='svg/video-call.svg' />
+          </div>
+          <div>
+            <img src='svg/voice-call.svg' />
+          </div>
+        </div>
+
       </div>
 
       <div className={styles.chatContainer}>
@@ -52,7 +61,7 @@ const ChatScreen = () => {
             ) : (
               <>
                 <span className={styles.profilePic}>
-                  <img src="images/ChatPerson.png" alt="Receiver" />
+                  <img src="svg/receiver.svg" alt="Receiver" />
                 </span>
                 <div className={styles.bubble}>{message.text}</div>
               </>
@@ -70,7 +79,7 @@ const ChatScreen = () => {
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
           />
-          
+
           {/* Conditionally Show Send Button */}
           {inputMessage.trim() !== "" && (
             <button onClick={sendMessage} className={styles.sendButton}>Send</button>

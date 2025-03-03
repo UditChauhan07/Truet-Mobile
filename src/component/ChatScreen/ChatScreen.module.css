@@ -1,4 +1,4 @@
-.ChatMian{
+.ChatMian {
     height: 100vh;
     background-color: #fff;
 }
@@ -34,6 +34,7 @@
 .backButton img {
     /* width: 100%; */
 }
+
 .ProfileName p {
     margin-bottom: 0px;
     color: #fff;
@@ -52,6 +53,15 @@
 
 .backPage img {
     width: 100%;
+}
+
+.calldiv{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    right: 20px;
+    position: absolute;
+
 }
 
 .chatContainer {
@@ -100,7 +110,7 @@
 }
 
 .sender .bubble {
-    background: #755dfc;
+    background: #3843FF;
     color: white;
     border-top-right-radius: 5px;
 }
@@ -125,10 +135,12 @@
     margin-top: 10px;
     height: 50px;
 }
-.inputContainer{
+
+.inputContainer {
     position: relative;
 }
-.sendButton{
+
+.sendButton {
     position: absolute;
     right: 20px;
     border: none;

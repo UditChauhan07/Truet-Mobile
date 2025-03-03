@@ -1,0 +1,11 @@
+.OnboardingTitle p {
+    margin-bottom: 0px;
+    color: #787C81;
+    font-size: 14px;
+}
+
+.OnboardingTitle h1 {
+    font-size: 22px;
+    color: #000;
+    font-weight: 500;
+}
