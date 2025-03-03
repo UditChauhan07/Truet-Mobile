@@ -134,7 +134,8 @@
 .notificationDiv {
     display: flex;
     align-items: center;
-    gap: 50px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .profile {
