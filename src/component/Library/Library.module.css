@@ -573,8 +573,16 @@ h4 {
     /* justify-content: space-between; */
 }
 
-.checkbox {
+.checkbox2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+    cursor: pointer;
     justify-content: space-between;
+
 
 }
 

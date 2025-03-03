@@ -247,43 +247,43 @@ const QuickBytes = () => {
                             <div>
                                 <h2 className={styles.ModalTitle}>Must Complete to Sell</h2>
                                 <div className={styles.sellDiv}>
-                                    <label className={styles.checkbox}>
+                                    <label className={styles.checkbox2}>
                                         <span>Capturing Distributor Mind</span>
                                         <input type="checkbox" checked />
                                     </label>
-                                    <label className={styles.checkbox}>
+                                    <label className={styles.checkbox2}>
                                         <span>Safety Datasheet</span>
                                         <input type="checkbox" checked />
                                     </label>
-                                    <label className={styles.checkbox}>
+                                    <label className={styles.checkbox2}>
                                         <span>Product Datasheets</span>
                                         <input type="checkbox" checked />
                                     </label>
-                                    <label className={styles.checkbox}>
+                                    <label className={styles.checkbox2}>
                                         <span>PolyGlass Case Studies</span>
                                         <input type="checkbox" checked />
                                     </label>
-                                    <label className={styles.checkbox}>
+                                    <label className={styles.checkbox2}>
                                         <span>PolyGlass Sales Process</span>
                                         <input type="checkbox" checked />
                                     </label>
-                                    <label className={styles.checkbox}>
+                                    <label className={styles.checkbox2}>
                                         <span>Opportunity Management</span>
                                         <input type="checkbox" checked />
                                     </label>
-                                    <label className={styles.checkbox}>
+                                    <label className={styles.checkbox2}>
                                         <span>Outreach Best Practices</span>
                                         <input type="checkbox" checked />
                                     </label>
-                                    <label className={styles.checkbox}>
+                                    <label className={styles.checkbox2}>
                                         <span>Salesforce(Official CRM)</span>
                                         <input type="checkbox" disabled />
                                     </label>
-                                    <label className={styles.checkbox}>
+                                    <label className={styles.checkbox2}>
                                         <span>MOfficial LMS</span>
                                         <input type="checkbox" disabled/>
                                     </label>
-                                    <label className={styles.checkbox}>
+                                    <label className={styles.checkbox2}>
                                         <span>Polyglass.com</span>
                                         <input type="checkbox" disabled/>
                                     </label>
