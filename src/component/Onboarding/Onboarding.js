@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from '../Onboarding/Onboarding.module.css'
 
+
+
 const Onboarding = () => {
     return (
         <div className={styles.OnboardingMain}>
@@ -9,16 +11,18 @@ const Onboarding = () => {
                     <p>Welcome to,</p>
                     <h1>New <b>SalesRep</b> Onboarding</h1>
                     <div className={styles.logo}>
-                        <img alt='svg/Logo.svg' src=''/>
-
+                        <img src='svg/Logo.svg' alt='' />
                     </div>
-
                 </div>
                 <div>
-                    <img src='svg/cloud.svg' alt=''/>
+                    <img src='images/cloudPng.png' alt='' />
                 </div>
+            </div>
+            <div className={styles.bodypart}>
+                <div></div>
 
             </div>
+
         </div>
     )
 }

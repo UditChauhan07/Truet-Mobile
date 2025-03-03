@@ -116,7 +116,7 @@ const QuickBytes = () => {
         setTableOpen(true)
     }
     const feature = () => {
-        // setfeatureOpen(true)
+        setfeatureOpen(true)
     }
     return (
         <div>
@@ -142,83 +142,83 @@ const QuickBytes = () => {
                     </div>
                     <div class="offcanvas-body">
                         {/* Sort by Section */}
-            <div className={styles.filterSection}>
-              <div className={styles.sectionHeader} onClick={() => toggleSection("sortby")}>
-                <h4>Sort by</h4>
-                <span className={openSections.sortby ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-              </div>
-              {openSections.sortby && (
-                <div className={styles.filterOptions}>
-                  <label className={styles.radio}>
-                    <input type="radio" name="sort" defaultChecked />
-                    <span>Most Relevant First</span>
-                  </label>
-                  <label className={styles.radio}>
-                    <input type="radio" name="sort" />
-                    <span>Most Relevant First</span>
-                  </label>
-                  <label className={styles.radio}>
-                    <input type="radio" name="sort" />
-                    <span>Most Relevant First</span>
-                  </label>
-                  <label className={styles.radio}>
-                    <input type="radio" name="sort" />
-                    <span>Most Relevant First</span>
-                  </label>
-                </div>
-              )}
-            </div>
-                    <div className={styles.filterMain}>
-            <div className={styles.filterSection}>
-              <div className={styles.sectionHeader} onClick={() => toggleSection("dealflow")}>
-                <h4>Dealflow</h4>
-                <span className={openSections.dealflow ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-              </div>
-              {openSections.dealflow && (
-                <div className={styles.filterOptions}>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" defaultChecked />
-                    <span>All Open Deals</span>
-                  </label>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" />
-                    <span>Members only deals</span>
-                  </label>
-                </div>
-              )}
-            </div>
-            {/* Pipeline Section */}
-            <div className={styles.filterSection}>
-              <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
-                <h4>Pipeline</h4>
-                <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-              </div>
-              {openSections.pipeline && (
-                <div className={styles.filterOptions}>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" defaultChecked />
-                    <span>Polyflex 5.0 PDS</span>
-                  </label>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" />
-                    <span>Polyflex 5.0 PDS</span>
-                  </label>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" />
-                    <span>Polyflex 5.0 PDS</span>
-                  </label>
-                  <label className={styles.checkbox}>
-                    <input type="checkbox" />
-                    <span>Greater than $500</span>
-                  </label>
-                </div>
-              )}
-            </div>
+                        <div className={styles.filterSection}>
+                            <div className={styles.sectionHeader} onClick={() => toggleSection("sortby")}>
+                                <h4>Sort by</h4>
+                                <span className={openSections.sortby ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+                            </div>
+                            {openSections.sortby && (
+                                <div className={styles.filterOptions}>
+                                    <label className={styles.radio}>
+                                        <input type="radio" name="sort" defaultChecked />
+                                        <span>Most Relevant First</span>
+                                    </label>
+                                    <label className={styles.radio}>
+                                        <input type="radio" name="sort" />
+                                        <span>Most Relevant First</span>
+                                    </label>
+                                    <label className={styles.radio}>
+                                        <input type="radio" name="sort" />
+                                        <span>Most Relevant First</span>
+                                    </label>
+                                    <label className={styles.radio}>
+                                        <input type="radio" name="sort" />
+                                        <span>Most Relevant First</span>
+                                    </label>
+                                </div>
+                            )}
+                        </div>
+                        <div className={styles.filterMain}>
+                            <div className={styles.filterSection}>
+                                <div className={styles.sectionHeader} onClick={() => toggleSection("dealflow")}>
+                                    <h4>Dealflow</h4>
+                                    <span className={openSections.dealflow ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+                                </div>
+                                {openSections.dealflow && (
+                                    <div className={styles.filterOptions}>
+                                        <label className={styles.checkbox}>
+                                            <input type="checkbox" defaultChecked />
+                                            <span>All Open Deals</span>
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <input type="checkbox" />
+                                            <span>Members only deals</span>
+                                        </label>
+                                    </div>
+                                )}
+                            </div>
+                            {/* Pipeline Section */}
+                            <div className={styles.filterSection}>
+                                <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
+                                    <h4>Pipeline</h4>
+                                    <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+                                </div>
+                                {openSections.pipeline && (
+                                    <div className={styles.filterOptions}>
+                                        <label className={styles.checkbox}>
+                                            <input type="checkbox" defaultChecked />
+                                            <span>Polyflex 5.0 PDS</span>
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <input type="checkbox" />
+                                            <span>Polyflex 5.0 PDS</span>
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <input type="checkbox" />
+                                            <span>Polyflex 5.0 PDS</span>
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <input type="checkbox" />
+                                            <span>Greater than $500</span>
+                                        </label>
+                                    </div>
+                                )}
+                            </div>
 
 
-            
 
-          </div>
+
+                        </div>
 
                     </div>
                 </div>
@@ -281,11 +281,11 @@ const QuickBytes = () => {
                                     </label>
                                     <label className={styles.checkbox2}>
                                         <span>MOfficial LMS</span>
-                                        <input type="checkbox" disabled/>
+                                        <input type="checkbox" disabled />
                                     </label>
                                     <label className={styles.checkbox2}>
                                         <span>Polyglass.com</span>
-                                        <input type="checkbox" disabled/>
+                                        <input type="checkbox" disabled />
                                     </label>
                                 </div>
                                 <div className={styles.SubmitBtn}>
@@ -372,8 +372,13 @@ const QuickBytes = () => {
                 <div className={styles.contentDetails}>
                     <div className={styles.modTitle}>
 
-                        <h5>FEATURER data</h5>
-
+                        <h5>Features & Benefits</h5>
+                        <iframe
+                            src="https://polyglass.us/wp-content/uploads/2023/03/2023-Sparc-Brochure-2023-NL_web.pdf"
+                            width="100%"
+                            height="500px"
+                            style={{ border: "none" }}
+                        ></iframe>
                     </div>
                 </div>
             </Modal> : null}
