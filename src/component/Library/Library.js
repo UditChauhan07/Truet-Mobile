@@ -22,6 +22,9 @@ const Library = () => {
   const handleChatNavigation = () => {
     navigate("/chat");
   };
+  const handleContactList = () => {
+    navigate("/Contactlist");
+  };
 
   const handleOpenModal = () => {
     setModalOpen(true);
@@ -77,9 +80,8 @@ const Library = () => {
               <div className={styles.teamtittle}>
                 <h2>Team members (Ask a Question)</h2>
               </div>
-              <div >
-                <img src="/add-icon.svg" />
-                {/* <ShareOption/> */}
+              <div className={styles.contactList} onClick={handleContactList}>
+                <img src="/add-icon.svg" />        
               </div>
             </div>
             <div className={styles.member}>

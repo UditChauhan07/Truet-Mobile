@@ -8,6 +8,7 @@ import Dashboard from "./component/Dashboard";
 import Library from "./component/Library/Library";
 import TruetAi from "./component/TruetAi/TruetAi";
 import ChatScreen from "./component/ChatScreen/ChatScreen";
+import Contactlist from "./component/ContactList/Contactlist";
 
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
           <Route path="home" element={<Dashboard />}></Route>
           <Route path="sales" element={<Library />}></Route>  
           <Route path="truet-ai" element={<TruetAi />}></Route>   
-          <Route path="chat" element={<ChatScreen />}></Route>          
+          <Route path="chat" element={<ChatScreen />}></Route>       
+          <Route path="Contactlist" element={<Contactlist />}></Route>          
+
         </Routes>
       </BrowserRouter>
     </div>
