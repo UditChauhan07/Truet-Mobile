@@ -9,20 +9,22 @@ import Library from "./component/Library/Library";
 import TruetAi from "./component/TruetAi/TruetAi";
 import ChatScreen from "./component/ChatScreen/ChatScreen";
 import Contactlist from "./component/ContactList/Contactlist";
+import Onboarding from "./component/Onboarding/Onboarding";
 
 
 function App() {
   return (
     <div className="App">
-     
+
       <BrowserRouter>
         <Routes>
+          {/* <Route path="/" element={<Onboarding />}></Route> */}
           <Route path="/" element={<SignUp />}></Route>
           <Route path="home" element={<Dashboard />}></Route>
-          <Route path="sales" element={<Library />}></Route>  
-          <Route path="truet-ai" element={<TruetAi />}></Route>   
-          <Route path="chat" element={<ChatScreen />}></Route>       
-          <Route path="Contactlist" element={<Contactlist />}></Route>          
+          <Route path="sales" element={<Library />}></Route>
+          <Route path="truet-ai" element={<TruetAi />}></Route>
+          <Route path="chat" element={<ChatScreen />}></Route>
+          <Route path="Contactlist" element={<Contactlist />}></Route>
 
         </Routes>
       </BrowserRouter>
