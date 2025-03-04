@@ -82,7 +82,7 @@ body {
 
 
 #offCANVAS .offcanvas.offcanvas-bottom {
-  height: 70vh !important;
+  height: 80vh !important;
 }
 #offCANVAS .offcanvas-header {
   justify-content: space-between;
@@ -149,10 +149,13 @@ input[type="checkbox"] {
   height: 16px;
   width: 16px;
 }
+
+
+
+
 input[type="radio"] {
   accent-color: #7C3AED;
 }
-
 
 /* @supports (-webkit-touch-callout: none) {
   .slideCard img {

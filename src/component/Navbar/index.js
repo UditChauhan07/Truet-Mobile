@@ -68,15 +68,15 @@ function Navbar() {
 
         <div className={styles.sidebar}>
           <div className={styles.language}>
-            {/* <LanguageChange/> */}
+            <LanguageChange/>
 
-            <select
+            {/* <select
               className={styles.dropdown1}>
               <option>English</option>
               <option>Spanish</option>
               <option>Italian</option>
-            </select>
-           
+            </select> */}
+
 
 
           </div>
@@ -236,9 +236,14 @@ function Navbar() {
               </div>
               <div className={styles.ListData}>
                 <ul>
-                  <p>Capturing Distributor Mind</p>
-                  <p>Safety Datasheet</p>
-                  <p>Product Datasheets</p>
+                  <div className={styles.expertcheck}>
+                    <span><input type="checkbox" className={styles.Checked01} checked /></span><p>Capturing Distributor Mind</p>
+                  </div>
+                  <div className={styles.expertcheck}>
+                    <span><input type="checkbox" className={styles.Checked01} checked /></span><p>Safety Datasheet</p></div>
+                  <div className={styles.expertcheck}>
+                    <span><input type="checkbox" className={styles.Checked01} checked /></span><p>Product Datasheets</p>
+                  </div>
                 </ul>
               </div>
 
@@ -251,10 +256,16 @@ function Navbar() {
               </div>
               <div className={styles.ListData}>
                 <ul>
-                  <p>Jasmine Kim</p>
-                  <p>Allison Kauffman</p>
-                  <p>Paula Carmer</p>
-                  <p>Kim Logan</p>
+                  <div className={styles.expertcheck}>
+                    <span><input type="checkbox" className={styles.Checked01} checked /></span> <p>Adela Parkson</p>
+                  </div>
+                  <div className={styles.expertcheck}>
+                    <span><input type="checkbox" className={styles.Checked01} checked /></span> <p>Christian Mad</p>
+                  </div>
+                  <div className={styles.expertcheck}>
+                    <span><input type="checkbox" className={styles.Checked01} checked /></span>  <p>Jason Stathan</p>
+                  </div>
+
                 </ul>
               </div>
               <div ref={calendarRef} className={styles.container}>
@@ -325,11 +336,11 @@ function Navbar() {
                   <div><p>Product Top Chart</p></div>
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled/></div>
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled /></div>
                   <div><p>Team Members</p></div>
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled/></div>
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled /></div>
                   <div><p>Sales Opportunities</p></div>
                 </div>
               </div>

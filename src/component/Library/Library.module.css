@@ -2,7 +2,7 @@
     background-color: #F4F7FE;
     font-family: "DM Sans", serif;
     padding-block: 1rem;
-    margin-top: 10rem;
+    margin-top: 7.5rem;
 }
 
 .Library {
@@ -75,6 +75,47 @@
     color: #2B3674;
     font-size: 14px;
 }
+
+.ProductDiv {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageNumber {
+    background-color: #f0f0f0;
+    /* Light gray background */
+    color: #333;
+    /* Dark text */
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    transition: background 0.3s, color 0.3s;
+}
+
+.pageNumber:hover {
+    background-color: #ccc;
+    /* Darker gray on hover */
+}
+
+.active {
+    background-color: #7c3aed;
+    /* Purple color for active page */
+    color: white;
+    border: 1px solid #7c3aed;
+}
+
 
 .boardContainer {
     display: flex;
@@ -821,16 +862,19 @@ th {
     color: #000;
     margin-top: 10px;
 }
-.GroupDiv{
+
+.GroupDiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
 
 }
-.GroupDiv p{
+
+.GroupDiv p {
     margin-bottom: 0px;
 }
+
 .accessDivMod {
     display: flex;
     background-color: #4318FF;

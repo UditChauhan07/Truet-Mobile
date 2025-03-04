@@ -5,10 +5,19 @@ import { useNavigate } from "react-router-dom";
 const ChatScreen = () => {
   const navigate = useNavigate();
   const [messages, setMessages] = useState([
-    { text: "Hi, Mandy", sender: true },
-    { text: "I've tried the app", sender: true },
-    { text: "Really?", sender: false },
-    { text: "Yeah, It's really good!", sender: true }
+    { text: "Hi! Looking for a financial tool?", sender: true },
+    { text: "Yes, need help tracking expenses", sender: false },
+    { text: "ProfitXpert automates that! Plus, real-time reports. Want a quick demo?", sender: true },
+    { text: "Sounds good! What’s the cost?", sender: false },
+    { text: " Starts at $29/month after a 14-day free trial. Shall I set up your demo?", sender: true },
+    { text: "Yes, please!", sender: false },
+    { text: "Yeah, It's really good!", sender: true },
+    { text: "Done! Check your email for details. Excited to help you! 🚀", sender: false },
+    { text: "Thank you", sender: true },
+
+
+
+
   ]);
   const [inputMessage, setInputMessage] = useState("");
 
@@ -36,7 +45,7 @@ const ChatScreen = () => {
         </div>
         <div className={styles.calldiv}>
           <div>
-            <img src='svg/video-call.svg' />
+            {/* <img src='svg/video-call.svg' /> */}
           </div>
           <div>
             <img src='svg/voice-call.svg' />
