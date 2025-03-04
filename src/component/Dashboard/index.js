@@ -8,6 +8,8 @@ import DailyTraffic from "../chartAndGraphs/DailyTraffic";
 import Footer from "../Footer/index";
 import PieChartComponent from "../chartAndGraphs/pieChart"
 import MobileShare from "./ShareOption"
+import TeamMembers from "../TeamMembers/TeamMembers";
+import Opportunities from "../Opportunities/Opportunities";
 
 const Index = () => {
   const [isOpen2, setIsOpen2] = useState(false);
@@ -205,7 +207,11 @@ const Index = () => {
               </table>
             </div>
           </div>
+          <TeamMembers/>
+          <Opportunities/>
+
         </div>
+      
         <Footer></Footer>
       </div>
     </div>

@@ -39,8 +39,8 @@ const QuickBytes = () => {
     // Modal Content//
 
     const modalsubheading = [
-        "Audio Visual Byte",
-        "Audio Visual Byte",
+        "Product Description",
+        "Typical Applications",
         "Preparation & Knowledge",
         "AI-driven insights",
         "Audio Visual Byte",
@@ -130,7 +130,7 @@ const QuickBytes = () => {
                 </div>
                 <div className={styles.shortMain} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight2">
                     <div className={styles.shortTittle}>
-                        <p>Short by</p>
+                        <p>Sort by</p>
                     </div>
                     <div className={styles.shortIcon}>
                         <img src="/Vector.svg" alt="" />
@@ -393,17 +393,14 @@ const QuickBytes = () => {
                 <div className={styles.contentDetails}>
                     <div className={styles.modTitle}>
                         <h5>Technical Specs</h5>
-                        {/* <object
+                        <iframe
                             src="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
                             type="application/pdf"
                             width="100%"
                             height="500px"
                         >
-                            <p>Technical Specs <a href="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf" target="_blank">pdf</a>.</p>
-                        </object> */}
-                        <p>
-                            Click <a href="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf" target="_blank">here</a> to view the PDF.
-                        </p>
+                            <p>Features & Benefits <a href="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf" target="_blank">pdf</a>.</p>
+                        </iframe>
                     </div>
                 </div>
             </Modal> : null}
