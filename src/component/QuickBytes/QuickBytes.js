@@ -323,8 +323,7 @@ const QuickBytes = () => {
                                     <tr className={styles.Headingtable}>
                                         <th>Name</th>
                                         <th>Company Name</th>
-                                        <th> Status</th>
-
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -332,136 +331,117 @@ const QuickBytes = () => {
                                         <td>
                                             <div className={styles.ProductDiv}>
                                                 <img src="svg/green-drop.svg" alt="" />
-                                                <span>Emily Carter</span>
+                                                <span>Ava Mitchell</span>
                                             </div>
                                         </td>
-                                        <td>NovaTech Solutions</td>
+                                        <td>BlueWave Technologies</td>
                                         <td>Active</td>
-
                                     </tr>
                                     <tr>
                                         <td>
                                             <div className={styles.ProductDiv}>
                                                 <img src="svg/red-drop.svg" alt="" />
-                                                <span>Jason Reynolds</span>
+                                                <span>Daniel Roberts</span>
                                             </div>
                                         </td>
-                                        <td>Skyline Innovations</td>
+                                        <td>Pioneer Systems</td>
                                         <td>Inactive</td>
-
                                     </tr>
                                     <tr>
                                         <td>
                                             <div className={styles.ProductDiv}>
                                                 <img src="svg/green-drop.svg" alt="" />
-                                                <span>Sarah Patel</span>
+                                                <span>Olivia Hayes</span>
                                             </div>
                                         </td>
-                                        <td>GreenLeaf Organics</td>
+                                        <td>EcoFuture Solutions</td>
                                         <td>Active</td>
-
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div className={styles.ProductDiv}>
-                                                <img src="svg/green-drop.svg" alt="" />
-                                                <span>Michael Chen</span>
-                                            </div>
-
-                                        </td>
-                                        <td>Quantum Dynamics</td>
-                                        <td>Active</td>
-
                                     </tr>
                                     <tr>
                                         <td>
                                             <div className={styles.ProductDiv}>
                                                 <img src="svg/green-drop.svg" alt="" />
-                                                <span>Michael Chen</span>
+                                                <span>William Carter</span>
                                             </div>
-
                                         </td>
-                                        <td>Quantum Dynamics</td>
+                                        <td>Velocity Networks</td>
                                         <td>Active</td>
-
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/red-drop.svg" alt="" />
+                                                <span>Sophia Bennett</span>
+                                            </div>
+                                        </td>
+                                        <td>Zenith Enterprises</td>
+                                        <td>Inactive</td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div className={styles.ProductDiv}>
                                                 <img src="svg/green-drop.svg" alt="" />
-                                                <span>Michael Chen</span>
+                                                <span>James Anderson</span>
                                             </div>
-
                                         </td>
-                                        <td>Quantum Dynamics</td>
+                                        <td>NeonWave Technologies</td>
                                         <td>Active</td>
-
                                     </tr>
                                     <tr>
                                         <td>
                                             <div className={styles.ProductDiv}>
                                                 <img src="svg/green-drop.svg" alt="" />
-                                                <span>Michael Chen</span>
+                                                <span>Emma Brooks</span>
                                             </div>
-
                                         </td>
-                                        <td>Quantum Dynamics</td>
+                                        <td>NextGen Robotics</td>
                                         <td>Active</td>
-
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/red-drop.svg" alt="" />
+                                                <span>Benjamin Foster</span>
+                                            </div>
+                                        </td>
+                                        <td>CloudSync Solutions</td>
+                                        <td>Inactive</td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div className={styles.ProductDiv}>
                                                 <img src="svg/green-drop.svg" alt="" />
-                                                <span>Michael Chen</span>
+                                                <span>Lucas Taylor</span>
                                             </div>
-
                                         </td>
-                                        <td>Quantum Dynamics</td>
+                                        <td>AI Nexus Labs</td>
                                         <td>Active</td>
-
                                     </tr>
                                     <tr>
                                         <td>
                                             <div className={styles.ProductDiv}>
                                                 <img src="svg/green-drop.svg" alt="" />
-                                                <span>Michael Chen</span>
+                                                <span>Chloe Martinez</span>
                                             </div>
-
                                         </td>
-                                        <td>Quantum Dynamics</td>
+                                        <td>SmartGrid Innovations</td>
                                         <td>Active</td>
-
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <div className={styles.ProductDiv}>
-                                                <img src="svg/green-drop.svg" alt="" />
-                                                <span>Michael Chen</span>
-                                            </div>
-
-                                        </td>
-                                        <td>Quantum Dynamics</td>
-                                        <td>Active</td>
-
-                                    </tr>
-                                    
-
                                 </tbody>
                             </table>
                             <div className={styles.pagination}>
-                                        {[1, 2, 3].map((num) => (
-                                            <span
-                                                key={num}
-                                                className={`${styles.pageNumber} ${activePage === num ? styles.active : ""}`}
-                                                onClick={() => setActivePage(num)}
-                                            >
-                                                {num}
-                                            </span>
-                                        ))}
-                                    </div>
+                                {[1, 2, 3].map((num) => (
+                                    <span
+                                        key={num}
+                                        className={`${styles.pageNumber} ${activePage === num ? styles.active : ""}`}
+                                        onClick={() => setActivePage(num)}
+                                    >
+                                        {num}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </Modal> : null}
