@@ -814,56 +814,60 @@ th {
 .accessDivMod {
     display: flex;
     background-color: #11047A;
-    padding:8px 14px;
+    padding: 8px 14px;
     border-radius: 20px;
     margin: auto;
 }
-.accessDivMod p{
+
+.accessDivMod p {
     color: #fff;
     display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
 /* Opporunity css Start */
-.OpportunitiesDiv{
+.OpportunitiesDiv {
     margin-top: 40px;
     padding-inline: 20px;
 }
-.OppContent{
+
+.OppContent {
     padding-bottom: 1.5rem;
 }
-.OppContent h1{
+
+.OppContent h1 {
     font-size: 22px;
     color: #000;
     text-align: start;
     font-weight: 800;
 }
-.OppContent h2{
+
+.OppContent h2 {
     font-size: 18px;
     color: #000;
     font-weight: 600;
-   
+
 }
-.logoImg{
+
+.logoImg {
     padding-top: 20px;
-    
     margin: auto;
     border: 1px solid #dadada;
     border-radius: 15px;
     padding: 3rem 1rem;
     margin-bottom: 1rem;
 }
-.logoImg img{
-    width: 100%;
 
+.logoImg img {
+    width: 100%;
 }
-.OppContent li{
+
+.OppContent li {
     margin-bottom: 20px;
     font-size: 1rem;
     color: #3843FF;
-
 }
 
 
@@ -877,7 +881,6 @@ th {
 @media (max-width:420px) {
     .shareDiv {
         display: block;
-
     }
 
     .source {
