@@ -62,7 +62,7 @@ const LanguageChange = () => {
             icon.src = "svg/languageLogo.svg"; // 👈 Yahan apni image ka path set karein
             icon.alt = "Language Icon";
             icon.style.position = "absolute";
-            icon.style.right = "5px";
+            icon.style.right = "-5px";
             icon.style.top = "50%";
             icon.style.transform = "translateY(-50%)";
             icon.style.pointerEvents = "none"; // Click effect na ho
