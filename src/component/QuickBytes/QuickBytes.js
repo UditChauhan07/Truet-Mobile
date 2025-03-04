@@ -452,8 +452,7 @@ const QuickBytes = () => {
                     <div className={styles.modTitle}>
                         <h5>Features & Benefits</h5>
                         <iframe
-                            src="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
-                            type="application/pdf"
+                            src="https://docs.google.com/gview?embedded=true&url=https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
                             width="100%"
                             height="500px"
                         >
@@ -469,8 +468,7 @@ const QuickBytes = () => {
                     <div className={styles.modTitle}>
                         <h5>Technical Specs</h5>
                         <iframe
-                            src="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
-                            type="application/pdf"
+                            src="https://docs.google.com/gview?embedded=true&url=https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
                             width="100%"
                             height="500px"
                         >
