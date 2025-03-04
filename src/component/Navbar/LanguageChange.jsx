@@ -14,7 +14,7 @@ const LanguageChange = () => {
     window.googleTranslateElementInit = () => {
       new window.google.translate.TranslateElement(
         {
-          pageLanguage: "en", // ✅ Default English Set Kiya
+          pageLanguage: "eng", // Default English
           includedLanguages: "en,es,it",
           autoDisplay: false,
         },
@@ -24,52 +24,30 @@ const LanguageChange = () => {
       setTimeout(() => {
         const selectBox = document.querySelector(".goog-te-combo");
         if (selectBox) {
-          // ✅ Default English Select Karna
-          selectBox.value = "en";
-          selectBox.dispatchEvent(new Event("change")); // Google ko notify karna
+          selectBox.value = "eng"; // Default English set
+          selectBox.dispatchEvent(new Event("change")); 
 
-          // ✅ Language Mapping (ESP → ENG)
           const languageMap = {
+            Italian: "ITA",
             English: "ENG",
             Spanish: "ESP",
-            Italian: "ITA",
           };
 
+          // "Select your language" ko hatane ke liye first option delete karein
+          if (selectBox.options[0]?.text.includes("Select")) {
+            selectBox.remove(0);
+          }
+
+          // Dropdown options rename karein
           Array.from(selectBox.options).forEach((option) => {
             if (languageMap[option.text]) {
               option.text = languageMap[option.text];
             }
           });
 
-          // ✅ Jo label dropdown ke saath dikh raha hai usko bhi ENG karna
           const label = document.querySelector(".goog-te-gadget-simple span");
           if (label) {
-            label.innerText = "ENG";
-          }
-
-          const wrapper = selectBox.parentElement;
-          if (wrapper) {
-            wrapper.style.position = "relative";
-
-            selectBox.style.appearance = "none";
-            selectBox.style.background = "none";
-            selectBox.style.padding = "5px 30px 5px 10px";
-            selectBox.style.cursor = "pointer";
-            selectBox.style.fontSize = "14px";
-
-            // ✅ Custom Logo Insert Karna
-            const icon = document.createElement("img");
-            icon.src = "svg/languageLogo.svg"; // 👈 Yahan apni image ka path set karein
-            icon.alt = "Language Icon";
-            icon.style.position = "absolute";
-            icon.style.right = "-5px";
-            icon.style.top = "50%";
-            icon.style.transform = "translateY(-50%)";
-            icon.style.pointerEvents = "none"; // Click effect na ho
-            icon.style.width = "30px";
-            icon.style.height = "30px";
-
-            wrapper.appendChild(icon);
+            label.innerText = "ENG"; // Label bhi update karein
           }
         }
       }, 2000);

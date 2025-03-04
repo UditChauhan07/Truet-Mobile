@@ -9,6 +9,7 @@ import Footer from "../Footer/index";
 import PieChartComponent from "../chartAndGraphs/pieChart"
 
 
+
 const Index = () => {
  
   useEffect(() => {
@@ -209,8 +210,7 @@ const Index = () => {
               </table>
             </div>
           </div>
-          {/* <TeamMembers/> */}
-          {/* <Opportunities/> */}
+      
 
         </div>
 
