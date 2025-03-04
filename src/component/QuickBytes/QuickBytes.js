@@ -429,7 +429,9 @@ const QuickBytes = () => {
                                     </tr>
                                 </tbody>
                             </table>
-                            <div className={styles.pagination}>
+                            
+                        </div>
+                        <div className={styles.pagination}>
                                 {[1, 2, 3].map((num) => (
                                     <span
                                         key={num}
@@ -440,8 +442,6 @@ const QuickBytes = () => {
                                     </span>
                                 ))}
                             </div>
-                        </div>
-
                     </div>
                 </div>
             </Modal> : null}
