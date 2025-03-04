@@ -8,6 +8,7 @@ import Slide2 from "../Slide/Slide2"
 import Modal from '../Modal/Modal'
 import ShareOption from "../Dashboard/ShareOption"
 import TeamMembers from "../TeamMembers/TeamMembers";
+import Opportunities from "../Opportunities/Opportunities";
 
 
 const Library = () => {
@@ -61,7 +62,7 @@ const Library = () => {
           <div className={styles.resourcesTittle}>
             <h2>Other Resources</h2>
           </div>
-    
+          <TeamMembers />
           <div className={styles.business}>
             <div className={styles.header}>
               <div>
@@ -98,8 +99,8 @@ const Library = () => {
               </div>
             </div>
           </div>
-          
-       
+          <Opportunities />
+
 
         </div>
       </div>

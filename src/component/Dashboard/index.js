@@ -81,15 +81,22 @@ const Index = () => {
                 <tbody>
                   <tr>
                     <td>
-                      <span>Jasmine Kim</span>
+                      <div className={styles.ProductDiv}>
+                        <img src="svg/green-drop.svg" alt="" />
+                        <span>Jasmine Kim</span>
+                      </div>
                     </td>
+
                     <td>$93.45K</td>
                     <td>$266.31K</td>
                     <td>$172.86K</td>
                   </tr>
                   <tr>
                     <td>
-                      <span>Allison Kauffman</span>
+                      <div className={styles.ProductDiv}>
+                        <img src="svg/green-drop.svg" alt="" />
+                        <span>Allison Kauffman</span>
+                      </div>
                     </td>
                     <td>$6.93K</td>
                     <td>$146.61K</td>
@@ -97,8 +104,12 @@ const Index = () => {
                   </tr>
                   <tr>
                     <td>
-                      <span>Paula Carmer</span>
+                      <div className={styles.ProductDiv}>
+                        <img src="svg/red-drop.svg" alt="" />
+                        <span>Paula Carmer</span>
+                      </div>
                     </td>
+
                     <td>$0.00K</td>
                     <td>$95.34K</td>
                     <td>$95.34K</td>
@@ -106,7 +117,10 @@ const Index = () => {
 
                   <tr>
                     <td>
-                      <span>Kim Logan</span>
+                    <div className={styles.ProductDiv}>
+                        <img src="svg/green-drop.svg" alt="" />
+                        <span>Kim Logan</span>
+                      </div>
                     </td>
                     <td>$34.79K</td>
                     <td>$135.68K</td>
@@ -115,7 +129,10 @@ const Index = () => {
 
                   <tr>
                     <td>
-                      <span>Kate Block</span>
+                    <div className={styles.ProductDiv}>
+                        <img src="svg/green-drop.svg" alt="" />
+                        <span>Kate Block</span>
+                      </div>
                     </td>
                     <td>$93.43k</td>
                     <td>$266.31k</td>
@@ -160,7 +177,7 @@ const Index = () => {
                   <tr>
                     <td>
                       <div className={styles.ProductDiv}>
-                      <img src="svg/red-drop.svg" alt="" />
+                        <img src="svg/red-drop.svg" alt="" />
                         <span>Liquid waterproofing</span>
                       </div>
                     </td>
@@ -170,9 +187,9 @@ const Index = () => {
                   </tr>
                   <tr>
                     <td>
-                    <div className={styles.ProductDiv}>
-                    <img src="svg/green-drop.svg" alt="" />
-                      <span>Acustic insulation</span>
+                      <div className={styles.ProductDiv}>
+                        <img src="svg/green-drop.svg" alt="" />
+                        <span>Acustic insulation</span>
                       </div>
                     </td>
                     <td>$267.45K</td>
@@ -182,9 +199,9 @@ const Index = () => {
 
                   <tr>
                     <td>
-                    <div className={styles.ProductDiv}>
-                    <img src="svg/green-drop.svg" alt="" />
-                      <span>Synthetic membranes</span>
+                      <div className={styles.ProductDiv}>
+                        <img src="svg/green-drop.svg" alt="" />
+                        <span>Synthetic membranes</span>
                       </div>
                     </td>
                     <td>$93.45K</td>
@@ -194,9 +211,9 @@ const Index = () => {
 
                   <tr>
                     <td>
-                    <div className={styles.ProductDiv}>
-                    <img src="svg/red-drop.svg" alt="" />
-                      <span>Thermal insulation</span>
+                      <div className={styles.ProductDiv}>
+                        <img src="svg/red-drop.svg" alt="" />
+                        <span>Thermal insulation</span>
                       </div>
                     </td>
                     <td>$00.00K</td>
@@ -207,11 +224,11 @@ const Index = () => {
               </table>
             </div>
           </div>
-          <TeamMembers/>
-          <Opportunities/>
+          {/* <TeamMembers/> */}
+          {/* <Opportunities/> */}
 
         </div>
-      
+
         <Footer></Footer>
       </div>
     </div>

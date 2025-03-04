@@ -197,6 +197,8 @@
     margin-bottom: 10px;
 }
 
+/* Slide Css Start */
+
 .slideMain {
     display: flex;
     gap: 12px;
@@ -276,8 +278,17 @@
 .accessMain {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
 }
+
+.bootmBar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+
 
 /* Business CSS Start CSS start */
 .resourcesMain {
@@ -810,13 +821,22 @@ th {
     color: #000;
     margin-top: 10px;
 }
+.GroupDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
 
+}
+.GroupDiv p{
+    margin-bottom: 0px;
+}
 .accessDivMod {
     display: flex;
-    background-color: #11047A;
+    background-color: #4318FF;
     padding: 8px 14px;
     border-radius: 20px;
-    margin: auto;
+    width: 100%;
 }
 
 .accessDivMod p {

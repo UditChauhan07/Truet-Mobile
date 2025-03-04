@@ -13,6 +13,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import AutoCompleteSearch from "./AutoComplete";
 import AutoCompleteSearch2 from "./AutoComplete2";
 import HeaderSearch from "./HeaderSearch";
+import LanguageChange from "./LanguageChange";
 
 
 
@@ -67,6 +68,7 @@ function Navbar() {
 
         <div className={styles.sidebar}>
           <div className={styles.language}>
+            {/* <LanguageChange/> */}
 
             <select
               className={styles.dropdown1}>
@@ -74,7 +76,7 @@ function Navbar() {
               <option>Spanish</option>
               <option>Italian</option>
             </select>
-            {/* <img src={language}/> */}
+           
 
 
           </div>
@@ -245,11 +247,6 @@ function Navbar() {
                 <p>Search by Expert</p>
               </div>
               <div>
-                {/* <div className={styles.search_box}>
-                                        <span className={styles.icon}><img src='svg/Search_Icon.svg' alt='' /></span>
-                                        <input type="text" placeholder="Search by Expert Name" />
-                                    </div> */}
-
                 <AutoCompleteSearch2 />
               </div>
               <div className={styles.ListData}>
@@ -306,22 +303,34 @@ function Navbar() {
               {/* <h2>Filter</h2> */}
               <div>
                 <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="radio" id="vehicle1" name="vehicle1" value="Bike" /></div>
-                  <div><p>Daily Traffic</p></div>
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked /></div>
+                  <div><p>Sales Track</p></div>
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
 
-                  <div>  <input type="radio" id="vehicle1" name="vehicle1" value="Bike" /></div>
-                  <div><p>Pie Chart</p></div>
-                </div>
-                <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="radio" id="vehicle1" name="vehicle1" value="Bike" /></div>
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked /></div>
                   <div><p>Weekly Revenue</p></div>
+                </div>
+                <div className={styles.checkDiv} id="filterCheck">
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked /></div>
+                  <div><p>Lead Scales</p></div>
 
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="radio" id="vehicle1" name="vehicle1" value="Bike" /></div>
-                  <div><p>Total Spent</p></div>
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked /></div>
+                  <div><p>Team Top Chart</p></div>
+                </div>
+                <div className={styles.checkDiv} id="filterCheck">
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked /></div>
+                  <div><p>Product Top Chart</p></div>
+                </div>
+                <div className={styles.checkDiv} id="filterCheck">
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled/></div>
+                  <div><p>Team Members</p></div>
+                </div>
+                <div className={styles.checkDiv} id="filterCheck">
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled/></div>
+                  <div><p>Sales Opportunities</p></div>
                 </div>
               </div>
 

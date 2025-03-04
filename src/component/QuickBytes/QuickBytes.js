@@ -145,34 +145,36 @@ const QuickBytes = () => {
                         <p data-bs-dismiss="offcanvas" aria-label="Close"><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></p>
                     </div>
                     <div class="offcanvas-body">
-                        {/* Sort by Section */}
-                        <div className={styles.filterSection}>
-                            <div className={styles.sectionHeader} onClick={() => toggleSection("sortby")}>
-                                <h4>Sort by</h4>
-                                <span className={openSections.sortby ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-                            </div>
-                            {openSections.sortby && (
-                                <div className={styles.filterOptions}>
-                                    <label className={styles.radio}>
-                                        <input type="radio" name="sort" defaultChecked />
-                                        <span>Most Relevant First</span>
-                                    </label>
-                                    <label className={styles.radio}>
-                                        <input type="radio" name="sort" />
-                                        <span>Most Relevant First</span>
-                                    </label>
-                                    <label className={styles.radio}>
-                                        <input type="radio" name="sort" />
-                                        <span>Most Relevant First</span>
-                                    </label>
-                                    <label className={styles.radio}>
-                                        <input type="radio" name="sort" />
-                                        <span>Most Relevant First</span>
-                                    </label>
+                         {/* Pipeline Section */}
+                         <div className={styles.filterSection}>
+                                <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
+                                    <h4>Pipeline</h4>
+                                    <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
                                 </div>
-                            )}
-                        </div>
-                        <div className={styles.filterMain}>
+                                {openSections.pipeline && (
+                                    <div className={styles.filterOptions}>
+                                        <label className={styles.checkbox}>
+                                            <input type="checkbox" defaultChecked/>
+                                            <span>Polyflex 5.0 PDS</span>
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <input type="checkbox"  />
+                                            <span>Product Description</span>
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <input type="checkbox" />
+                                            <span>Typical Applications </span>
+                                        </label>
+                                        <label className={styles.checkbox}>
+                                            <input type="checkbox" />
+                                            <span>Application Instructions</span>
+                                        </label>
+                                        
+                                    </div>
+                                )}
+                            </div>
+                            {/* Dealflow section */}
+                            <div className={styles.filterMain}>
                             <div className={styles.filterSection}>
                                 <div className={styles.sectionHeader} onClick={() => toggleSection("dealflow")}>
                                     <h4>Dealflow</h4>
@@ -191,38 +193,35 @@ const QuickBytes = () => {
                                     </div>
                                 )}
                             </div>
-                            {/* Pipeline Section */}
-                            <div className={styles.filterSection}>
-                                <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
-                                    <h4>Pipeline</h4>
-                                    <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-                                </div>
-                                {openSections.pipeline && (
-                                    <div className={styles.filterOptions}>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" defaultChecked />
-                                            <span>Polyflex 5.0 PDS</span>
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" />
-                                            <span>Polyflex 5.0 PDS</span>
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" />
-                                            <span>Polyflex 5.0 PDS</span>
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" />
-                                            <span>Greater than $500</span>
-                                        </label>
-                                    </div>
-                                )}
-                            </div>
-
-
-
-
                         </div>
+                        {/* Sort by Section */}
+                        <div className={styles.filterSection}>
+                            <div className={styles.sectionHeader} onClick={() => toggleSection("sortby")}>
+                                <h4>Sort by</h4>
+                                <span className={openSections.sortby ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
+                            </div>
+                            {openSections.sortby && (
+                                <div className={styles.filterOptions}>
+                                    <label className={styles.radio}>
+                                        <input type="radio" name="sort" defaultChecked />
+                                        <span>Most Relevant First</span>
+                                    </label>
+                                    <label className={styles.radio}>
+                                        <input type="radio" name="sort" />
+                                        <span>Newest First</span>
+                                    </label>
+                                    <label className={styles.radio}>
+                                        <input type="radio" name="sort" />
+                                        <span>Oldest First</span>
+                                    </label>
+                                    <label className={styles.radio}>
+                                        <input type="radio" name="sort" />
+                                        <span>A to Z</span>
+                                    </label>
+                                </div>
+                            )}
+                        </div>
+                       
 
                     </div>
                 </div>

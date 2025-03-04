@@ -6,15 +6,14 @@ import ContactSearch from '../Navbar/ContactSearch';
 
 const TruetAi = () => {
     const navigate = useNavigate();
+    
     return (
         <div>
-            <div className={styles.headerbar}>
-                <div className={styles.backButton} onClick={() => navigate('/home')}>
-                    <img src='svg/arrowLeft.svg' alt='' />
-                </div>
-
-
-            </div>
+           <div className={styles.headerbar}>
+      <div className={styles.backButton} onClick={() => navigate(-1)}>
+        <img src="svg/arrowLeft.svg" alt="Back" />
+      </div>
+    </div>
             <div className={styles.chatBody}>
                 <div className={styles.logo}>
 
@@ -28,9 +27,7 @@ const TruetAi = () => {
                 </div>
             </div>
             <div className={styles.inputAi}>
-                {/* <div className={styles.inputDiv}>
-                    <input type='text' placeholder='Type here or Click MIC to Talk' />
-                </div> */}
+
                 <ContactSearch />
                 <div className={styles.container}>
                     <div className={styles.bubble}>

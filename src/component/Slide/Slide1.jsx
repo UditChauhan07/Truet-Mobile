@@ -12,7 +12,7 @@ const Slide1 = () => {
       id: 1,
       img: "images/card-Img1.png",
       title: "Capturing Distributor Mind",
-      author: "By Manny Gates",
+      author: "By Andrew Ng",
       source: "Official LMS",
       desc: "Capturing distributor mind is a strategic guide designed to help businesses understand and influence distributor behavior. It covers key insights into building strong relationships, enhancing product positioning, and creating compelling value propositions. By leveraging psychological triggers and data-driven approaches, businesses can effectively engage distributors, boost sales, and establish long-term partnerships for sustainable growth."
     },
@@ -20,7 +20,7 @@ const Slide1 = () => {
       id: 2,
       img: "images/card-Img2.png",
       title: "Safety Datasheet",
-      author: "By Manny Gates",
+      author: "By BColt Steele",
       source: "Polyglass.com",
       desc: "A Safety Datasheet (SDS) is a critical document that provides detailed information about the properties, hazards, and safe handling of chemicals and materials. It outlines important safety measures, including first-aid procedures, fire-fighting guidelines, storage conditions, and disposal methods. SDS helps businesses comply with regulatory standards, ensuring workplace safety and minimizing environmental risks. By offering clear instructions on protective equipment and emergency response, it enables workers to handle hazardous substances responsibly, reducing potential health and safety hazards. Whether in manufacturing, laboratories, or industrial settings, an SDS is essential for maintaining a safe and compliant work environment."
     },
@@ -28,7 +28,7 @@ const Slide1 = () => {
       id: 3,
       img: "images/card-Img3.png",
       title: "Product Datasheets",
-      author: "By Manny Gates",
+      author: "By Angela Yu",
       source: "Polyglass.com",
       desc: "A Product Datasheet is an essential document that provides a comprehensive overview of a product’s specifications, features, and usage guidelines. It serves as a technical reference, offering details such as dimensions, materials, performance capabilities, and compliance with industry standards. Product datasheets help customers, engineers, and distributors make informed decisions by outlining key benefits, installation instructions, and maintenance recommendations. Whether for electronics, industrial equipment, or consumer goods, these datasheets ensure transparency and clarity, enabling efficient product evaluation and seamless integration into various applications."
     },
@@ -36,7 +36,7 @@ const Slide1 = () => {
       id: 4,
       img: "images/card-Img4.png",
       title: "PolyGlass Case Studies",
-      author: "By Manny Gates",
+      author: "By Stephen Grider",
       source: "Polyglass.com",
       desc: "PolyGlass Case Studies showcase real-world applications of PolyGlass products, highlighting their performance, durability, and innovation across various industries. These case studies provide insights into how businesses and contractors have successfully implemented PolyGlass solutions in roofing, waterproofing, and construction projects. They detail challenges faced, solutions applied, and measurable outcomes, demonstrating the effectiveness of PolyGlass materials in enhancing building longevity and efficiency. By analyzing these success stories, professionals can better understand best practices, product benefits, and how PolyGlass can be integrated into their own projects for superior results."
     },
@@ -84,7 +84,8 @@ const Slide1 = () => {
                   <div className={styles.share}>
                     <ShareOption />
                   </div>
-                  <div className={styles.accessDiv}>
+
+                  <div className={styles.accessDiv} onClick={() => openModal(card)} >
                     <p>Access</p>
                   </div>
                 </div>
@@ -101,14 +102,20 @@ const Slide1 = () => {
             <img className={styles.modImg} src={selectedCard.img} alt={selectedCard.title} />
             <h2>{selectedCard.title}</h2>
             <p>{selectedCard.author}</p>
-            <p>
-              <strong>Source:</strong> {selectedCard.source}
-            </p>
+            <div className={styles.GroupDiv}>
+              <p>
+                <strong>Source:</strong> {selectedCard.source}
+              </p>
+              <img src="/Avatars-Group.png" alt="User" />
+            </div>
             <div>
               <p>{selectedCard.desc}</p>
             </div>
-            <div className={styles.accessDivMod}>
-              <p>Access</p>
+            <div className={styles.bootmBar}>
+              <div className={styles.accessDivMod}>
+                <p>Access</p>
+              </div>
+              <div><ShareOption /></div>
             </div>
           </div>
         )}
