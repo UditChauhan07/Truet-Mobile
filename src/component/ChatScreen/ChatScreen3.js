@@ -2,35 +2,38 @@ import React, { useState } from 'react';
 import styles from "../ChatScreen/ChatScreen.module.css";
 import { useNavigate } from "react-router-dom";
 
-const ChatScreen = () => {
-  const navigate = useNavigate();
-  const [messages, setMessages] = useState([
-    { text: "Hi! Looking for a financial tool?", sender: true },
-    { text: "Yes, need help tracking expenses", sender: false },
-    { text: "ProfitXpert automates that! Plus, real-time reports. Want a quick demo?", sender: true },
-    { text: "Sounds good! What’s the cost?", sender: false },
-    { text: " Starts at $29/month after a 14-day free trial. Shall I set up your demo?", sender: true },
-    { text: "Yes, please!", sender: false },
-    { text: "Yeah, It's really good!", sender: true },
-    { text: "Done! Check your email for details. Excited to help you! 🚀", sender: false },
-    { text: "Thank you", sender: true },
+const ChatScreen3 = () => {
+     const navigate = useNavigate();
+      const [messages, setMessages] = useState([
+        { text: "Hi! 👋 Looking for something?", sender: true },
+        { text: "Yeah, do you have a good CRM tool?", sender: false },
+        { text: "Yes! What features do you need?", sender: true },
+        { text: "Lead tracking & automation mainly.", sender: false },
+        { text: "Perfect! Our CRM does that + more. Want a demo?", sender: true },
+        { text: "How much does it cost?", sender: false },
+        { text: "Starts at $XX/month. Free trial available!", sender: true },
+        { text: "Nice! Send me the link.", sender: false },
+        { text: "Here you go: [Link] 🚀 Let me know if you need help!", sender: true },
+        { text: "Got it! Thanks.", sender: false },
+        { text: "Anytime! Enjoy your trial. 😊!", sender: true },
 
 
-
-
-  ]);
-  const [inputMessage, setInputMessage] = useState("");
-
-  const sendMessage = () => {
-    if (inputMessage.trim() === "") return; 
-
-    // Add the new message to the chat
-    setMessages([...messages, { text: inputMessage, sender: true }]);
-
-    // Clear input field
-    setInputMessage("");
-  };
-
+    
+    
+    
+    
+      ]);
+      const [inputMessage, setInputMessage] = useState("");
+    
+      const sendMessage = () => {
+        if (inputMessage.trim() === "") return;
+    
+        // Add the new message to the chat
+        setMessages([...messages, { text: inputMessage, sender: true }]);
+    
+        // Clear input field
+        setInputMessage("");
+      };
   return (
     <div className={styles.ChatMian}>
       <div className={styles.headerbar}>
@@ -38,10 +41,10 @@ const ChatScreen = () => {
           <img src="svg/arrowLeft.svg" alt="Back" />
         </div>
         <div className={styles.Profile}>
-          <img src="svg/Adelasvg.svg" alt="Profile" />
+          <img src="svg/jason.svg" alt="Profile" />
         </div>
         <div className={styles.ProfileName}>
-          <p>Adela Parkson</p>
+          <p>Jason Statham</p>
         </div>
         <div className={styles.calldiv}>
           <div>
@@ -70,7 +73,7 @@ const ChatScreen = () => {
             ) : (
               <>
                 <span className={styles.profilePic}>
-                  <img src="svg/receiver.svg" alt="Receiver" />
+                  <img src="svg/raceiver3.svg" alt="Receiver" />
                 </span>
                 <div className={styles.bubble}>{message.text}</div>
               </>
@@ -96,7 +99,7 @@ const ChatScreen = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ChatScreen;
+export default ChatScreen3

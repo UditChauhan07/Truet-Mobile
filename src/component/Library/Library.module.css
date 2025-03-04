@@ -724,7 +724,7 @@ h4 {
 .modTitle h5 {
     font-size: 22px;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 5px;
     text-align: center;
     color: #000000;
 }
@@ -870,7 +870,10 @@ th {
     margin-bottom: 10px;
 
 }
-
+.GroupDiv img{
+    position: relative;
+    top: -40px;
+}
 .GroupDiv p {
     margin-bottom: 0px;
 }

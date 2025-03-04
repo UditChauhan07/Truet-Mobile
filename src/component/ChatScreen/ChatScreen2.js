@@ -2,18 +2,22 @@ import React, { useState } from 'react';
 import styles from "../ChatScreen/ChatScreen.module.css";
 import { useNavigate } from "react-router-dom";
 
-const ChatScreen = () => {
+const ChatScreen2 = () => {
   const navigate = useNavigate();
   const [messages, setMessages] = useState([
-    { text: "Hi! Looking for a financial tool?", sender: true },
-    { text: "Yes, need help tracking expenses", sender: false },
-    { text: "ProfitXpert automates that! Plus, real-time reports. Want a quick demo?", sender: true },
-    { text: "Sounds good! What’s the cost?", sender: false },
-    { text: " Starts at $29/month after a 14-day free trial. Shall I set up your demo?", sender: true },
-    { text: "Yes, please!", sender: false },
-    { text: "Yeah, It's really good!", sender: true },
-    { text: "Done! Check your email for details. Excited to help you! 🚀", sender: false },
-    { text: "Thank you", sender: true },
+    { text: "Hey! 👋 Need help?", sender: true },
+    { text: "Hi! Looking for a tool to manage my team.", sender: false },
+    { text: "Gotcha! How many people?", sender: true },
+    { text: "20. We struggle with task tracking.", sender: false },
+    { text: "Our tool has tracking, reminders & team chat. Free trial?", sender: true },
+    { text: "Yes! Is it free?", sender: false },
+    { text: "Yep! 14 days, no card needed. Want the link?", sender: true },
+    { text: "Sure!", sender: false },
+    { text: "Here it is: [Link] 🚀 Let me know if you need help!", sender: true },
+    { text: "Signed up!", sender: false },
+    { text: "Awesome! 🎉 Welcome aboard!", sender: true },
+
+
 
 
 
@@ -22,7 +26,7 @@ const ChatScreen = () => {
   const [inputMessage, setInputMessage] = useState("");
 
   const sendMessage = () => {
-    if (inputMessage.trim() === "") return; 
+    if (inputMessage.trim() === "") return;
 
     // Add the new message to the chat
     setMessages([...messages, { text: inputMessage, sender: true }]);
@@ -30,7 +34,6 @@ const ChatScreen = () => {
     // Clear input field
     setInputMessage("");
   };
-
   return (
     <div className={styles.ChatMian}>
       <div className={styles.headerbar}>
@@ -38,7 +41,7 @@ const ChatScreen = () => {
           <img src="svg/arrowLeft.svg" alt="Back" />
         </div>
         <div className={styles.Profile}>
-          <img src="svg/Adelasvg.svg" alt="Profile" />
+          <img src="svg/Christian.svg" alt="Profile" />
         </div>
         <div className={styles.ProfileName}>
           <p>Adela Parkson</p>
@@ -70,7 +73,7 @@ const ChatScreen = () => {
             ) : (
               <>
                 <span className={styles.profilePic}>
-                  <img src="svg/receiver.svg" alt="Receiver" />
+                  <img src="svg/raceiver2.svg" alt="Receiver" />
                 </span>
                 <div className={styles.bubble}>{message.text}</div>
               </>
@@ -96,7 +99,7 @@ const ChatScreen = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ChatScreen;
+export default ChatScreen2
