@@ -719,6 +719,7 @@ h4 {
 /* Modale CSS start */
 .contentDetails {
     padding: 20px;
+   
 }
 
 .modTitle h5 {
@@ -896,7 +897,8 @@ th {
 
 /* Opporunity css Start */
 .OpportunitiesDiv {
-    margin-top: 40px;
+    margin-top: 20px;
+
     padding-inline: 20px;
 }
 
@@ -909,6 +911,7 @@ th {
     color: #000;
     text-align: start;
     font-weight: 800;
+    margin-bottom: 20px;
 }
 
 .OppContent h2 {
@@ -968,4 +971,21 @@ th {
 .filterOptions {
     margin-top: -25px;
     padding-inline: 15px;
+}
+.LisDataMain{
+    overflow: auto;
+    max-height: 600px;
+}
+.OppContent h2{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.LisDataMain h4{
+    
+    color: #3843FF;
+}
+.LisDataMain p{
+color: gray;
+line-height: 24px;
+padding: 5px 10px  ;
 }
