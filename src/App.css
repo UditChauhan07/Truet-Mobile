@@ -130,15 +130,20 @@ iframe#\:1\.container {
 .goog-te-gadget .goog-te-combo {
   margin: 4px 0;
   border: unset;
+  color: #A3AED0;
+  
 }
 .VIpgJd-ZVi9od-aZ2wEe-OiiCO{
   display: none !important;
 }
-
 #goog-gt-tt{
 
   display: none !important;
   }
+  textarea:focus, input:focus, select:focus{
+    outline: none;
+}
+  
 /*End Google language change css  */
 
 

@@ -155,20 +155,20 @@ const QuickBytes = () => {
                                 <div className={styles.filterOptions}>
                                     <label className={styles.checkbox}>
                                         <input type="checkbox" defaultChecked />
-                                        <span>Polyflex 5.0 PDS</span>
+                                        <span>Polstick euphoria</span>
                                     </label>
                                     <label className={styles.checkbox}>
                                         <input type="checkbox" />
-                                        <span>Product Description</span>
+                                        <span>Polystick xfr</span>
                                     </label>
                                     <label className={styles.checkbox}>
                                         <input type="checkbox" />
-                                        <span>Typical Applications </span>
+                                        <span>Midi fleece</span>
                                     </label>
-                                    <label className={styles.checkbox}>
+                                    {/* <label className={styles.checkbox}>
                                         <input type="checkbox" />
                                         <span>Application Instructions</span>
-                                    </label>
+                                    </label> */}
 
                                 </div>
                             )}
@@ -429,19 +429,19 @@ const QuickBytes = () => {
                                     </tr>
                                 </tbody>
                             </table>
-                            
+
                         </div>
                         <div className={styles.pagination}>
-                                {[1, 2, 3].map((num) => (
-                                    <span
-                                        key={num}
-                                        className={`${styles.pageNumber} ${activePage === num ? styles.active : ""}`}
-                                        onClick={() => setActivePage(num)}
-                                    >
-                                        {num}
-                                    </span>
-                                ))}
-                            </div>
+                            {[1, 2, 3].map((num) => (
+                                <span
+                                    key={num}
+                                    className={`${styles.pageNumber} ${activePage === num ? styles.active : ""}`}
+                                    onClick={() => setActivePage(num)}
+                                >
+                                    {num}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </Modal> : null}
@@ -458,6 +458,7 @@ const QuickBytes = () => {
                         >
                             <p>Features & Benefits <a href="https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf" target="_blank">pdf</a>.</p>
                         </iframe>
+
                     </div>
                 </div>
             </Modal> : null}

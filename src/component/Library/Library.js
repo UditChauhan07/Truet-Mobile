@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar";
 import styles from "../Library/Library.module.css";
 import Footer from "../Footer/index";
@@ -18,7 +18,7 @@ const Library = () => {
   };
 
   useEffect(() => {
- 
+
     if (!window.location.href.includes("reloaded")) {
       window.location.replace(window.location.href + "?reloaded=true");
     }
@@ -30,7 +30,7 @@ const Library = () => {
         <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
           <div className={styles.contentDetails}>
             <div className={styles.modTitle}>
-              <h5> Audio Visual Byte</h5>
+              <h5>Polstick XFR</h5>
             </div>
 
             <div className={styles.visualImg}>
@@ -46,8 +46,8 @@ const Library = () => {
 
             <div className={styles.ShareIconMain}><ShareOption /></div>
             <div className={styles.contents}>
-              <h5>Audio Visual Byte</h5>
-              <p >    Polystick® XFR is a dual-purpose fire resistant and self-adhered waterproofing underlayment approved for applications up to 265°F.
+              <h5>Polstick XFR</h5>
+              <p >Polystick® XFR is a dual-purpose fire resistant and self-adhered waterproofing underlayment approved for applications up to 265°F.
               </p>
             </div>
           </div>

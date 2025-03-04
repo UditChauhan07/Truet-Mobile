@@ -10,9 +10,16 @@ const TeamMembers = () => {
       const handleChatNavigation = () => {
         navigate("/chat");
       };
+      const handleChatNavigation2 = () => {
+        navigate("/chat2");
+      };
+      const handleChatNavigation3 = () => {
+        navigate("/chat3");
+      };
       const handleContactList = () => {
         navigate("/Contactlist");
       };
+      
   return (
     <div>
       <div className={styles.teamDiv}>
@@ -49,7 +56,7 @@ const TeamMembers = () => {
 
             </div>
             <div className={styles.member}>
-              <div className={styles.memberDetails} >
+              <div className={styles.memberDetails} onClick={handleChatNavigation2}>
                 <img src="/Profile2.png" alt="" />
                 <div className={styles.name}>
                   <p>Christian Mad</p>
@@ -64,7 +71,7 @@ const TeamMembers = () => {
 
                 {/* Dropdown Menu */}
                 {isOpen3 && (
-                  <div className={styles.menuDropdown}>
+                  <div className={styles.menuDropdown} >
                     <p>Remove</p>
                     <p>Chat</p>
                   </div>
@@ -72,7 +79,7 @@ const TeamMembers = () => {
               </div>
             </div>
             <div className={styles.member}>
-              <div className={styles.memberDetails} >
+              <div className={styles.memberDetails} onClick={handleChatNavigation3} >
                 <img src="/Profile3.png" alt="" />
                 <div className={styles.name}>
                   <p>Jason Statham</p>
