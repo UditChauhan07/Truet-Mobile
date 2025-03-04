@@ -14,7 +14,7 @@ const countries = [
 const QuickBytes = () => {
     const [startDate, setStartDate] = useState(null);
     const [isOpenCalender, setIsOpenCalender] = useState(false);
-
+    const [activePage, setActivePage] = useState(1);
     const [isModalOpen, setModalOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(countries[0]);
@@ -145,36 +145,36 @@ const QuickBytes = () => {
                         <p data-bs-dismiss="offcanvas" aria-label="Close"><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></p>
                     </div>
                     <div class="offcanvas-body">
-                         {/* Pipeline Section */}
-                         <div className={styles.filterSection}>
-                                <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
-                                    <h4>Pipeline</h4>
-                                    <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
-                                </div>
-                                {openSections.pipeline && (
-                                    <div className={styles.filterOptions}>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" defaultChecked/>
-                                            <span>Polyflex 5.0 PDS</span>
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox"  />
-                                            <span>Product Description</span>
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" />
-                                            <span>Typical Applications </span>
-                                        </label>
-                                        <label className={styles.checkbox}>
-                                            <input type="checkbox" />
-                                            <span>Application Instructions</span>
-                                        </label>
-                                        
-                                    </div>
-                                )}
+                        {/* Pipeline Section */}
+                        <div className={styles.filterSection}>
+                            <div className={styles.sectionHeader} onClick={() => toggleSection("pipeline")}>
+                                <h4>Pipeline</h4>
+                                <span className={openSections.pipeline ? styles.arrowUp : styles.arrowDown}><img src="svg/dropdown-Icon.svg" alt="" /></span>
                             </div>
-                            {/* Dealflow section */}
-                            <div className={styles.filterMain}>
+                            {openSections.pipeline && (
+                                <div className={styles.filterOptions}>
+                                    <label className={styles.checkbox}>
+                                        <input type="checkbox" defaultChecked />
+                                        <span>Polyflex 5.0 PDS</span>
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <input type="checkbox" />
+                                        <span>Product Description</span>
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <input type="checkbox" />
+                                        <span>Typical Applications </span>
+                                    </label>
+                                    <label className={styles.checkbox}>
+                                        <input type="checkbox" />
+                                        <span>Application Instructions</span>
+                                    </label>
+
+                                </div>
+                            )}
+                        </div>
+                        {/* Dealflow section */}
+                        <div className={styles.filterMain}>
                             <div className={styles.filterSection}>
                                 <div className={styles.sectionHeader} onClick={() => toggleSection("dealflow")}>
                                     <h4>Dealflow</h4>
@@ -221,7 +221,7 @@ const QuickBytes = () => {
                                 </div>
                             )}
                         </div>
-                       
+
 
                     </div>
                 </div>
@@ -316,7 +316,7 @@ const QuickBytes = () => {
             {tableOpen ? <Modal isOpen={tableOpen} onClose={() => setTableOpen(false)}>
                 <div className={styles.contentDetails}>
                     <div className={styles.modTitle}>
-                        <h5>Table data</h5>
+                        <h5>Active Deals</h5>
                         <div className={styles.tableContainer}>
                             <table className={styles.table}>
                                 <thead>
@@ -330,7 +330,10 @@ const QuickBytes = () => {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <span>Emily Carter</span>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/green-drop.svg" alt="" />
+                                                <span>Emily Carter</span>
+                                            </div>
                                         </td>
                                         <td>NovaTech Solutions</td>
                                         <td>Active</td>
@@ -338,7 +341,10 @@ const QuickBytes = () => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>Jason Reynolds</span>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/red-drop.svg" alt="" />
+                                                <span>Jason Reynolds</span>
+                                            </div>
                                         </td>
                                         <td>Skyline Innovations</td>
                                         <td>Inactive</td>
@@ -346,7 +352,10 @@ const QuickBytes = () => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>Sarah Patel</span>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/green-drop.svg" alt="" />
+                                                <span>Sarah Patel</span>
+                                            </div>
                                         </td>
                                         <td>GreenLeaf Organics</td>
                                         <td>Active</td>
@@ -355,16 +364,103 @@ const QuickBytes = () => {
 
                                     <tr>
                                         <td>
-                                            <span>Michael Chen</span>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/green-drop.svg" alt="" />
+                                                <span>Michael Chen</span>
+                                            </div>
+
                                         </td>
                                         <td>Quantum Dynamics</td>
                                         <td>Active</td>
 
                                     </tr>
+                                    <tr>
+                                        <td>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/green-drop.svg" alt="" />
+                                                <span>Michael Chen</span>
+                                            </div>
 
+                                        </td>
+                                        <td>Quantum Dynamics</td>
+                                        <td>Active</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/green-drop.svg" alt="" />
+                                                <span>Michael Chen</span>
+                                            </div>
+
+                                        </td>
+                                        <td>Quantum Dynamics</td>
+                                        <td>Active</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/green-drop.svg" alt="" />
+                                                <span>Michael Chen</span>
+                                            </div>
+
+                                        </td>
+                                        <td>Quantum Dynamics</td>
+                                        <td>Active</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/green-drop.svg" alt="" />
+                                                <span>Michael Chen</span>
+                                            </div>
+
+                                        </td>
+                                        <td>Quantum Dynamics</td>
+                                        <td>Active</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/green-drop.svg" alt="" />
+                                                <span>Michael Chen</span>
+                                            </div>
+
+                                        </td>
+                                        <td>Quantum Dynamics</td>
+                                        <td>Active</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className={styles.ProductDiv}>
+                                                <img src="svg/green-drop.svg" alt="" />
+                                                <span>Michael Chen</span>
+                                            </div>
+
+                                        </td>
+                                        <td>Quantum Dynamics</td>
+                                        <td>Active</td>
+
+                                    </tr>
+                                    
 
                                 </tbody>
                             </table>
+                            <div className={styles.pagination}>
+                                        {[1, 2, 3].map((num) => (
+                                            <span
+                                                key={num}
+                                                className={`${styles.pageNumber} ${activePage === num ? styles.active : ""}`}
+                                                onClick={() => setActivePage(num)}
+                                            >
+                                                {num}
+                                            </span>
+                                        ))}
+                                    </div>
                         </div>
                     </div>
                 </div>

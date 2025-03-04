@@ -1,6 +1,7 @@
-.logo img{
+.logo img {
     width: 85%;
 }
+
 .Navbar {
     display: flex;
     justify-content: space-between;
@@ -58,14 +59,15 @@
     background-image: url("../images/languagePoly.svg");
     background-repeat: no-repeat;
     background-position: right 0px center;
-    background-size: 25px;}
-  
-  /* Fix for Safari */
-  .dropdown1::-ms-expand {
-    display: none;
-  }
+    background-size: 25px;
+}
 
-  
+/* Fix for Safari */
+.dropdown1::-ms-expand {
+    display: none;
+}
+
+
 
 
 .filterIcon {
@@ -188,6 +190,7 @@
     font-size: 24px;
     font-weight: bold;
 }
+
 /* .FlterTittle h2 {
     color: #000;
     font-size: 24px;
@@ -209,17 +212,19 @@
     color: #fff;
     border-radius: 30px;
     padding: 10px;
-    
+
 }
 
 .showBtn p {
     margin-bottom: 0px;
     text-align: center;
 }
+
 .closeBtn {
     margin-top: 20px;
 }
-.closeBtn p{
+
+.closeBtn p {
     margin-bottom: 0px;
     text-align: center;
 
@@ -283,14 +288,16 @@ h4 {
 /* Sales Filter */
 .FolderDiv {
     display: flex;
-align-items: center;
-justify-content: start;
-gap: 10px;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
 }
+
 .FolderDiv p {
-   
-margin-bottom: 0;
+
+    margin-bottom: 0;
 }
+
 .search_box {
     align-items: center;
     background: #fff;
@@ -301,6 +308,7 @@ margin-bottom: 0;
     /* margin-inline: 40px; */
     padding: 8px 15px;
 }
+
 .search_box input {
     border: none;
     color: #6c757d;
@@ -308,19 +316,38 @@ margin-bottom: 0;
     outline: none;
     width: 100%;
 }
+
 .icon {
     color: #2c2e83;
     font-size: 18px;
     margin-right: 8px;
 }
+
 .icon img {
     width: 15px;
 }
 
-.ListData{
-
+.ListData {
+    /* margin-bottom: 10px; */
 }
-.ListData p{
-    margin-bottom: 10px;
+
+.ListData p {
+    margin-bottom: 0px;
     text-decoration: none;
+}
+
+.Checked01 {
+    accent-color: #c2c1c1 !important;
+    width: 14px !important;
+    height: 14px !important;
+}
+
+
+
+
+.expertcheck {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
 }

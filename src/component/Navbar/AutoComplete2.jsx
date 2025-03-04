@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const dataList = [
-  "Jasmine Kim", "Allison Kauffman", "Paula Carmer", "Kim Logan", 
+  "Adela Parkson", "Christian Mad", "Jason Stathan", 
 ];
 
 const AutoCompleteSearch2 = () => {
@@ -46,7 +46,7 @@ const AutoCompleteSearch2 = () => {
         {/* <span class="icon__Kj5DB"><img alt="" src="svg/Search_Icon.svg"/></span> */}
       <input
         type="text"
-        placeholder="Search by topic"
+        placeholder="Search by Expert"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         onFocus={() => setShowSuggestions(true)}

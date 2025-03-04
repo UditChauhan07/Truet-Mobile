@@ -7,13 +7,16 @@ import WeeklyRevenue from "../chartAndGraphs/WeeklyRevenue";
 import DailyTraffic from "../chartAndGraphs/DailyTraffic";
 import Footer from "../Footer/index";
 import PieChartComponent from "../chartAndGraphs/pieChart"
-import MobileShare from "./ShareOption"
-import TeamMembers from "../TeamMembers/TeamMembers";
-import Opportunities from "../Opportunities/Opportunities";
+
 
 const Index = () => {
-  const [isOpen2, setIsOpen2] = useState(false);
-  const options = ["Daily", "Weekly", "Monthly", "Yearly"];
+ 
+  useEffect(() => {
+ 
+    if (!window.location.href.includes("reloaded")) {
+      window.location.replace(window.location.href + "?reloaded=true");
+    }
+  }, []);
 
   return (
     <div className={styles.p1}>
@@ -35,24 +38,6 @@ const Index = () => {
           {/* dashbord  dic start*/}
           <div className={styles.MainTraffic}>
             <DailyTraffic></DailyTraffic>
-
-            {/* <div className={styles.trafficDiv}>
-              <div className={styles.trafficMain}>
-                <div className={styles.trafficTittle}>
-                  <h2>Daily Traffic</h2>
-                </div>
-                <div className={styles.trafficGrow}>
-                  <img src="/arrow_drop_up.svg" />
-                  <p>+2.45%</p>
-                </div>
-              </div>
-              <div className={styles.visitors}>
-                <h1>2.579</h1> <span>Visitors</span>
-              </div>
-              <div className={styles.chartsvg}>
-                <img src="/chart.svg" />
-              </div>
-            </div> */}
             <div className={styles.trafficDiv}>
 
               <PieChartComponent></PieChartComponent>

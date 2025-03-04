@@ -1,4 +1,4 @@
-import React, { useState, } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "../Navbar";
 import styles from "../Library/Library.module.css";
 import Footer from "../Footer/index";
@@ -16,6 +16,13 @@ const Library = () => {
   const handleOpenModal = () => {
     setModalOpen(true);
   };
+
+  useEffect(() => {
+ 
+    if (!window.location.href.includes("reloaded")) {
+      window.location.replace(window.location.href + "?reloaded=true");
+    }
+  }, []);
 
   return (
     <selection>

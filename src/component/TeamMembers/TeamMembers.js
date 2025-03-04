@@ -49,7 +49,7 @@ const TeamMembers = () => {
 
             </div>
             <div className={styles.member}>
-              <div className={styles.memberDetails} onClick={handleChatNavigation}>
+              <div className={styles.memberDetails} >
                 <img src="/Profile2.png" alt="" />
                 <div className={styles.name}>
                   <p>Christian Mad</p>
@@ -72,7 +72,7 @@ const TeamMembers = () => {
               </div>
             </div>
             <div className={styles.member}>
-              <div className={styles.memberDetails} onClick={handleChatNavigation}>
+              <div className={styles.memberDetails} >
                 <img src="/Profile3.png" alt="" />
                 <div className={styles.name}>
                   <p>Jason Statham</p>
