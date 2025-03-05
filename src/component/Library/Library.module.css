@@ -1,7 +1,7 @@
 .LibraryMain {
     background-color: #F4F7FE;
     font-family: "DM Sans", serif;
-    padding-block: 1rem;
+    padding: 1rem 0rem 5rem 0rem;
     margin-top: 10rem;
 }
 
@@ -127,7 +127,7 @@
 
 .card1 {
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: left;
@@ -136,11 +136,14 @@
 
 .card2 {
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 15px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: left;
     width: 55%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .cardTitle {
@@ -450,7 +453,7 @@
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     padding: 16px;
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
 }
 
 .securityDetails h2 {
@@ -721,7 +724,13 @@ h4 {
     padding: 20px;
    
 }
-
+.titleFlex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+}
 .modTitle h5 {
     font-size: 22px;
     font-weight: 500;
@@ -843,6 +852,28 @@ th {
     margin-bottom: 0px;
 }
 
+
+/* Total Sales css start */
+.forChart{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+.dailytraffic {
+    padding: 8px;
+    background: white;
+    border-radius: 12px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    max-width: 300px;
+    border: 1px solid #ECECEC;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    width: 50%;
+    min-height: 212px;
+    max-height: 212px;
+  }
 /*  */
 /* Slide1 Css Start Modal2*/
 .modalContentInner p {

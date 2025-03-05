@@ -21,19 +21,8 @@ const Opportunities = () => {
                     <div className={styles.OppContent}>
                         <h1>Find sales opportunities.</h1>
                         <ApportunitySearch />
-
-                        {/* <div className={styles.logoImg}>
-                            <img src='images/Polyglass-Logo.png' alt='' />
-
-                        </div> */}
                         <h2>Our product lines</h2>
-                        {/* <ul>
-                            <li>Polimer Bitumen Membranes</li>
-                            <li>Liquid waterproofing and accessories</li>
-                            <li>Acustic insulation</li>
-                            <li>Synthetic membranes</li>
-                            <li>Thermal insulation</li>
-                        </ul> */}
+                     
                         <div className={styles.LisDataMain} >
                             <div className={styles.ListData} >
                                 <h4>Polimer Bitumen Membranes</h4>

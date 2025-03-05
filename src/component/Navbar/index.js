@@ -22,6 +22,18 @@ function Navbar() {
   const location = useLocation();
   const [startDate, setStartDate] = useState(null);
   const [isOpenCalender, setIsOpenCalender] = useState(false);
+
+  const [isChecked, setIsChecked] = useState(false);
+  const [isSalesChecked, setIsSalesChecked] = useState(false)
+  const [isProductChecked, setisProductChecked] = useState(true)
+  const [isRapChecked, setisRapChecked] = useState(true)
+  const [isChartsChecked, setisChartsChecked] = useState(true)
+  const [isWeeklyChecked, setisWeeklyChecked] = useState(true)
+  const [isSalestrackChecked, setisSalestrackChecked] = useState(true)
+
+
+
+
   const [openSections, setOpenSections] = useState({
     dealflow: true,
     pipeline: true,
@@ -56,6 +68,43 @@ function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpenCalender]);
 
+
+
+
+  // Handle checkbox change
+  const handleCheckboxChange = (event) => {
+    setIsChecked(event.target.checked);
+  };
+  const handleSalesCheckboxChange = (event) => {
+    setIsSalesChecked(event.target.checked);
+  };
+  const handleProductCheckboxChange = (event) => {
+    setisProductChecked(event.target.checked);
+  };
+  const handleRapCheckboxChange = (event) => {
+    setisRapChecked(event.target.checked);
+  };
+  const handleChartsCheckboxChange = (event) => {
+    setisChartsChecked(event.target.checked);
+  };
+  const handleWeeklyCheckboxChange = (event) => {
+    setisWeeklyChecked(event.target.checked);
+  };
+  const  handlesalestrackCheckboxChange= (event) => {
+    setisSalestrackChecked(event.target.checked);
+  };
+
+  let filters = {
+    team_Member: isChecked,
+    sales: isSalesChecked,
+    product: isProductChecked,
+    salesrap: isRapChecked,
+    charts: isChartsChecked,
+    weekly: isWeeklyChecked,
+    salestrack: isSalestrackChecked
+
+  }
+  localStorage.setItem("dashboardfilters", JSON.stringify(filters))
   // Path ke basis par Offcanvas ka ID decide karna
   const offcanvasId = location.pathname === "/sales" ? "offcanvasSales" : "offcanvasHome";
   return (
@@ -68,7 +117,7 @@ function Navbar() {
 
         <div className={styles.sidebar}>
           <div className={styles.language}>
-            <LanguageChange/>
+            <LanguageChange />
 
             {/* <select
               className={styles.dropdown1}>
@@ -314,33 +363,43 @@ function Navbar() {
               {/* <h2>Filter</h2> */}
               <div>
                 <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked /></div>
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked={isSalestrackChecked} onChange={handlesalestrackCheckboxChange}/></div>
                   <div><p>Sales Track</p></div>
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
 
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked /></div>
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked={isWeeklyChecked}
+                    onChange={handleWeeklyCheckboxChange} /></div>
                   <div><p>Weekly Revenue</p></div>
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked /></div>
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked={isChartsChecked} onChange={handleChartsCheckboxChange} /></div>
                   <div><p>Lead Scales</p></div>
 
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked /></div>
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked={isRapChecked}
+                    onChange={handleRapCheckboxChange} /></div>
                   <div><p>Team Top Chart</p></div>
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked /></div>
+                  <div><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked={isProductChecked}
+                    onChange={handleProductCheckboxChange} /></div>
                   <div><p>Product Top Chart</p></div>
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled /></div>
+                  <div>  <input
+                    type="checkbox"
+                    id="vehicle1"
+                    name="vehicle1"
+                    value="Bike"
+                    checked={isChecked}
+                    onChange={handleCheckboxChange}
+                  /></div>
                   <div><p>Team Members</p></div>
                 </div>
                 <div className={styles.checkDiv} id="filterCheck">
-                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled /></div>
+                  <div>  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked={isSalesChecked} onChange={handleSalesCheckboxChange} /></div>
                   <div><p>Sales Opportunities</p></div>
                 </div>
               </div>
