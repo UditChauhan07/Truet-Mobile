@@ -408,7 +408,7 @@ function Navbar() {
                 <div className={styles.showBtn} aria-label="Close" data-bs-dismiss="offcanvas">
                   <p>Show</p>
                 </div>
-                <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
+                <div className={styles.closeBtn}  aria-label="Close" data-bs-dismiss="offcanvas">
                   <p>Close</p>
                 </div>
 
