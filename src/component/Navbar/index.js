@@ -405,7 +405,7 @@ function Navbar() {
               </div>
 
               <div className={styles.BothBtn}>
-                <div className={styles.showBtn}>
+                <div className={styles.showBtn} aria-label="Close" data-bs-dismiss="offcanvas">
                   <p>Show</p>
                 </div>
                 <div className={styles.closeBtn} aria-label="Close" data-bs-dismiss="offcanvas">
