@@ -40,7 +40,7 @@ const HeaderSearch = () => {
   };
 
 
-  console.log(searchTerm)
+
   return (
     <div ref={containerRef} className="autocomplete-container" style={{ width: "100%", margin: "5px 1px 5px", position: "relative" }}>
       <input

@@ -4,6 +4,9 @@ import Modal from "../Modal/Modal";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ShareOption from "../Dashboard/ShareOption"
+import PieChartComponent from '../chartAndGraphs/pieChart';
+import DailyTraffic from '../chartAndGraphs/DailyTraffic';
+import SalesRep from '../Dashboard/SalesRep';
 
 const countries = [
     { code: "US", name: "US", flag: "UsFlag-img.png" },
@@ -27,6 +30,7 @@ const QuickBytes = () => {
     const [tableOpen, setTableOpen] = useState(false)
     const [featureOpen, setfeatureOpen] = useState(false)
     const [istechnical, setisTechnical] = useState(false)
+    const [isSales, setisSales] = useState(false)
     const toggleSection = (section) => {
         setOpenSections({ ...openSections, [section]: !openSections[section] });
     };
@@ -121,6 +125,9 @@ const QuickBytes = () => {
     }
     const technical = () => {
         setisTechnical(true)
+    }
+    const sales = () => {
+        setisSales(true)
     }
     return (
         <div>
@@ -232,7 +239,10 @@ const QuickBytes = () => {
                     <div className={styles.contentDetails}>
                         <div className={styles.modTitle}>
                             {videoLinks[selectedIndex] ?
-                                <h5>{modalsubheading[selectedIndex]}</h5>
+                                <div className={styles.titleFlex}>
+                                    <img src='/video-icon.svg' alt='' />
+                                    <h5>{modalsubheading[selectedIndex]}</h5>
+                                </div>
                                 : null}
 
                         </div>
@@ -247,8 +257,11 @@ const QuickBytes = () => {
                                     allowFullScreen
                                 ></iframe>
                             </div> :
-                            <div>
-                                <h2 className={styles.ModalTitle}>Must Complete to Sell</h2>
+                            <div className={styles.modTitle}>
+                                <div className={styles.titleFlex}>
+                                    <img src='/sell-icon.svg' alt='' />
+                                    <h5> Must Complete to Sell</h5>
+                                </div>
                                 <div className={styles.sellDiv}>
                                     <label className={styles.checkbox2}>
                                         <span>Capturing Distributor Mind</span>
@@ -316,7 +329,10 @@ const QuickBytes = () => {
             {tableOpen ? <Modal isOpen={tableOpen} onClose={() => setTableOpen(false)}>
                 <div className={styles.contentDetails}>
                     <div className={styles.modTitle}>
-                        <h5>Active Deals</h5>
+                        <div className={styles.titleFlex}>
+                            <img src='/deal-Icon.svg' alt='' />
+                            <h5>Active Deals</h5>
+                        </div>
                         <div className={styles.tableContainer}>
                             <table className={styles.table}>
                                 <thead>
@@ -450,7 +466,11 @@ const QuickBytes = () => {
             {featureOpen ? <Modal isOpen={featureOpen} onClose={() => setfeatureOpen(false)}>
                 <div className={styles.contentDetails}>
                     <div className={styles.modTitle}>
-                        <h5>Features & Benefits</h5>
+                        <div className={styles.titleFlex}>
+                            <img src='/inforaphic-icon.svg' alt='' />
+                            <h5>Features & Benefits</h5>
+                        </div>
+
                         <iframe
                             src="https://docs.google.com/gview?embedded=true&url=https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
                             width="100%"
@@ -467,7 +487,10 @@ const QuickBytes = () => {
             {istechnical ? <Modal isOpen={setisTechnical} onClose={() => setisTechnical(false)}>
                 <div className={styles.contentDetails}>
                     <div className={styles.modTitle}>
-                        <h5>Technical Specs</h5>
+                        <div className={styles.titleFlex}>
+                            <img src='/inforaphic-icon.svg' alt='' />
+                            <h5>Technical Specs</h5>
+                        </div>
                         <iframe
                             src="https://docs.google.com/gview?embedded=true&url=https://polyglass.us/wp-content/uploads/2024/01/Polyflex-5.0-PDS_.pdf"
                             width="100%"
@@ -569,9 +592,32 @@ const QuickBytes = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Total sales Div */}
+                {isSales ? <Modal isOpen={setisSales} onClose={() => setisSales(false)}>
+                    <div className={styles.contentDetails}>
+                        <div className={styles.modTitle}>
+                            <div className={styles.titleFlex}>
+                                <img src='/dollor-icon.svg' alt='' />
+                                <h5>Total Sales</h5>
+                            </div>
+
+                        </div>
+                        <div className={styles.forChart}>
+                            <DailyTraffic />
+                            <div className={styles.dailytraffic}>
+                                <PieChartComponent />
+                            </div>
+                        </div>
+                        <div>
+                            <SalesRep />
+                        </div>
+                    </div>
+                </Modal> : null}
+
                 <div className={styles.boardContainer}>
                     {/* Total Sales Card */}
-                    <div className={styles.card1}>
+                    <div className={styles.card1} onClick={sales} >
                         <p className={styles.cardTitle}>Total Sales</p>
                         <h2 className={styles.amount}>$84.31m</h2>
                         <p className={styles.growth}>
@@ -580,9 +626,12 @@ const QuickBytes = () => {
                     </div>
                     {/* Deals by Country Card */}
                     <div className={styles.card2}>
-                        <p className={styles.cardTitle}>Deals by Country</p>
-                        <div className={styles.dropdownMain}>
+                        <div onClick={sales} >
+                            <p className={styles.cardTitle}>Deals by Country</p>
                             <h2 className={styles.amount}>$21,480,000</h2>
+                        </div>
+
+                        <div className={styles.dropdownMain}>
                             <div className={styles.dropdown}>
                                 <div
                                     className={styles.selected}
@@ -596,7 +645,7 @@ const QuickBytes = () => {
 
                                     <span className={styles.arrow}>
                                         <img
-                                            src={isOpen ? "svg/Arrowdoun.svg" : "svg/ArrowDown.svg"}
+                                            src={isOpen ? "svg/ArrowUp.svg" : "svg/ArrowDown.svg"}
                                             alt="Arrow"
                                             className={styles.arrowImage}
                                         />
